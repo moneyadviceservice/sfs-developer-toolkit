@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "SFS Data-Entry Standard Schema",
+	"title": "Standard Financial Statement: Data Entry Schema",
 	"type": "object",
 	"definitions": {
 		"income-expenditure-item": {
