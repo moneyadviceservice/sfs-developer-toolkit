@@ -82,7 +82,7 @@
     "housing-tenure-other": {
       "type": "string",
       "title": "Other housing tenure",
-      "description": "Property description to be completed",
+      "description": "Property description to be completed"
     },
     "client-employment-status": {
       "type": "array",
@@ -95,7 +95,7 @@
     "client-employment-status-other": {
       "type": "string",
       "title": "Client employment status (other)",
-      "description": "Property description to be completed",
+      "description": "Property description to be completed"
     },
     "partner-employment-status": {
       "type": "array",
@@ -108,7 +108,7 @@
     "partner-employment-status-other": {
       "type": "string",
       "title": "Partner employment status (other)",
-      "description": "Property description to be completed",
+      "description": "Property description to be completed"
     },
 
 
