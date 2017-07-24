@@ -1,0 +1,631 @@
+  @charset "UTF-8";
+/*====================================*
+    SITE CSS
+
+\*====================================*/
+/*------------------------------------*    Reset
+\*------------------------------------*/
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  border-style: none;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*====================================*
+    BASE - RESET
+
+\*====================================*/
+/* remove all margins from certain elements */
+body,
+p,
+table,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* remove any white space when inside a block element */
+
+
+@font-face{
+  font-family:"Museo Sans W01_n3";
+  src:url("assets/fonts/fd479df2-01b0-4e3a-a411-915c477f1352.eot?#iefix") format("eot")
+}
+@font-face{
+  font-family:"Museo Sans W01";
+  src:url("assets/fonts/fd479df2-01b0-4e3a-a411-915c477f1352.eot?#iefix");
+  src:url("assets/fonts/fd479df2-01b0-4e3a-a411-915c477f1352.eot?#iefix") format("eot"),url("assets/fonts/1d3191cd-ae8c-45e2-bb04-11e96d8fa974.woff2") format("woff2"),url("assets/fonts/b252d464-65cb-4950-88f7-ac0a1bf79b75.woff") format("woff"),url("assets/fonts/b3d18117-6517-4d3f-afc1-774086ff5fc1.ttf") format("truetype"),url("assets/fonts/b9bed509-0816-43d8-b14b-7525a21f4bde.svg#b9bed509-0816-43d8-b14b-7525a21f4bde") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face{
+  font-family:"Museo Sans W01_i3";
+  src:url("assets/fonts/90e6d1d9-33c0-4c63-9491-85041f7d5fd3.eot?#iefix") format("eot")
+}
+@font-face{
+  font-family:"Museo Sans W01";
+  src:url("assets/fonts/90e6d1d9-33c0-4c63-9491-85041f7d5fd3.eot?#iefix");
+  src:url("assets/fonts/90e6d1d9-33c0-4c63-9491-85041f7d5fd3.eot?#iefix") format("eot"),url("assets/fonts/a0f222f7-39b4-41c9-a5c0-0b9b7e6b8f89.woff2") format("woff2"),url("assets/fonts/96766c08-0e19-43a8-b45d-e95c5b09785c.woff") format("woff"),url("assets/fonts/304f4215-6b57-433a-83f7-2d4c3aaf82e9.ttf") format("truetype"),url("assets/fonts/2acdd065-8f32-4b1d-a7c8-c59fa153ce86.svg#2acdd065-8f32-4b1d-a7c8-c59fa153ce86") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  }
+@font-face{
+  font-family:"Museo Sans W01_n5";
+  src:url("assets/fonts/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix") format("eot")
+}
+@font-face{
+  font-family:"Museo Sans W01";
+  src:url("assets/fonts/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix");
+  src:url("assets/fonts/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix") format("eot"),url("assets/fonts/d9896899-f08c-4750-a874-a9e10d83c2cb.woff2") format("woff2"),url("assets/fonts/d42dd843-62b0-4623-8855-d5882512c3c9.woff") format("woff"),url("assets/fonts/6d532ccb-086c-4000-bab2-5d16862fcf01.ttf") format("truetype"),url("assets/fonts/f56b7407-f97b-4cb3-9ce6-4e13065eec93.svg#f56b7407-f97b-4cb3-9ce6-4e13065eec93") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face{
+  font-family:"Museo Sans W01_n7";
+  src:url("assets/fonts/3d0a39cf-115c-4800-9b1e-31c7912abfc2.eot?#iefix") format("eot")
+}
+@font-face{
+  font-family:"Museo Sans W01";
+  src:url("assets/fonts/3d0a39cf-115c-4800-9b1e-31c7912abfc2.eot?#iefix");
+  src:url("assets/fonts/3d0a39cf-115c-4800-9b1e-31c7912abfc2.eot?#iefix") format("eot"),url("assets/fonts/e2d37f34-6bca-473c-b64d-93811f4dc046.woff2") format("woff2"),url("assets/fonts/eadbb595-a394-48fc-834f-8bf5da15cddf.woff") format("woff"),url("assets/fonts/9bcba093-b507-4b9b-9c83-303003d3815c.ttf") format("truetype"),url("assets/fonts/9a2af429-2624-4bd1-a676-8f0eed3e7e31.svg#9a2af429-2624-4bd1-a676-8f0eed3e7e31") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face{
+  font-family:"Museo Sans W01_n9";
+  src:url("assets/fonts/7e90c1ee-e4b1-46f0-9134-93a8ba421545.eot?#iefix") format("eot")
+}
+@font-face{
+  font-family:"Museo Sans W01";
+  src:url("assets/fonts/7e90c1ee-e4b1-46f0-9134-93a8ba421545.eot?#iefix");
+  src:url("assets/fonts/7e90c1ee-e4b1-46f0-9134-93a8ba421545.eot?#iefix") format("eot"),url("assets/fonts/009ca58d-46af-4651-a359-f0ae2301085b.woff2") format("woff2"),url("assets/fonts/3619b5f4-8df9-44f5-8c53-b7c236e9c74e.woff") format("woff"),url("assets/fonts/9b2d949a-4e1c-435c-8412-f377c80583ae.ttf") format("truetype"),url("assets/fonts/7a319e11-05eb-49ce-bdb7-f692766e6477.svg#7a319e11-05eb-49ce-bdb7-f692766e6477") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+/*====================================*
+    BASE - ROOT
+
+\*====================================*/
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+  font-family: "Museo Sans W01", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 1.1875em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  color: #33333f;
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */
+  -webkit-text-size-adjust: 100%;
+  /* [4] */
+  -ms-text-size-adjust: 100%;
+  /* [4] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [5] */
+  -webkit-font-smoothing: antialiased;
+  /* [5] */
+}
+
+body {
+  font-family: "Museo Sans W01", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*------------------------------------*    box-sizing
+\*------------------------------------*/
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*------------------------------------*    placeholder text
+\*------------------------------------*/
+::input-placeholder {
+  font-style: italic;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
+}
+
+/*------------------------------------*    file upload
+\*------------------------------------*/
+::-webkit-file-upload-button {
+  color: #fff;
+  background: #089dc7;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 6px 12px;
+  -webkit-appearance: none;
+  font-weight: bold;
+  transition: background 0.25s ease-in-out;
+}
+
+::-webkit-file-upload-button:hover {
+  cursor: pointer;
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("/assets/fonts/icomoon.eot?uu7x");
+  src: url("/assets/fonts/icomoon.eot?uu7x#iefix") format("embedded-opentype"), url("/assets/fonts/icomoon.ttf?uu7x") format("truetype"), url("/assets/fonts/icomoon.woff?uu7x") format("woff"), url("/assets/fonts/icomoon.svg?uu7x#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*====================================*
+    @define sfs-form;
+
+    SFS form styles
+    16 = screen
+    39 = print
+
+\*====================================*/
+.a4.port {
+  width: 2480px;
+}
+
+.a4.port .page {
+  width: 2480px;
+  height: 3508px;
+}
+
+.sfs-form {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.4em;
+  letter-spacing: -0.03em;
+}
+
+.a4.port .sfs-form {
+  font-size: 39px;
+}
+
+.sfs-page {
+  position: relative;
+  page-break-after: always;
+  padding: 2.2677em;
+  width: 100%;
+}
+
+.sfs-page:last-child {
+  page-break-after: avoid;
+}
+
+.sfs-form__section {
+  /* hasLayout fix for < IE8 */
+}
+
+.sfs-form__section:before {
+  content: ' ';
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.sfs-form__section:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sfs-form__section--underline {
+  border-bottom: 0.2em solid #00293e;
+  padding-bottom: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+.sfs-col {
+  float: left;
+}
+
+.sfs-col:nth-child(odd) {
+  padding-right: 0.56em;
+}
+
+.sfs-col:nth-child(even) {
+  padding-left: 0.56em;
+}
+
+.sfs-col--full {
+  width: 100%;
+  padding: 0 !important;
+}
+
+.sfs-col--half {
+  width: 50%;
+}
+
+.sfs-col--main {
+  width: 77%;
+}
+
+.sfs-col--side {
+  width: 23%;
+}
+
+.sfs__row {
+  /* hasLayout fix for < IE8 */
+  border-bottom: 0.05em solid #b7b9c2;
+}
+
+.sfs__row:before {
+  content: ' ';
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.sfs__row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sfs__row p {
+  display: inline;
+}
+
+.sfs__row--special-padding {
+  padding-top: 2em;
+}
+
+.sfs__row--special-padding-2 {
+  padding-top: 8.6em;
+}
+
+.sfs__row--address {
+  height: 3.8em;
+}
+
+.sfs__row--dependents .sfs__text:nth-child(3) {
+  margin-right: 3em;
+}
+
+.sfs__logo-wrap {
+  /* hasLayout fix for < IE8 */
+}
+
+.sfs__logo-wrap:before {
+  content: ' ';
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.sfs__logo-wrap:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sfs__logo {
+  width: 9.0866em;
+  float: right;
+}
+
+.sfs__label {
+  font-family: "Museo Sans W01", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 700;
+  text-align: left;
+}
+
+.sfs__label--heading {
+  font-size: 1.1em !important;
+  line-height: 1.32em;
+  color: #00293e;
+  border-bottom: 0.1em solid #00293e;
+}
+
+.sfs__text-block {
+  background-color: #fff;
+  background-image: linear-gradient(transparent 95%, #b7b9c2 5%);
+  background-size: 1.4em 1.4em;
+  height: 43em;
+}
+
+.sfs__text-block--full-page {
+  height: 56em;
+  margin-bottom: 2em;
+}
+
+.sfs__text--fade {
+  color: #939598;
+}
+
+.sfs__text--italic {
+  font-family: "Museo Sans W01", Helvetica, "Roboto", Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.sfs__output {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 0.9em;
+}
+
+.sfs__number_box {
+  padding: 0 0.2em !important;
+}
+
+.sfs__note {
+  padding: 0.3em 0 0.2em 0;
+}
+
+.sfs__note p {
+  display: inline-block;
+  line-height: 1.1em;
+}
+
+.sfs__text--right {
+  text-align: right;
+}
+
+.sfs__text--right-pad {
+  padding-right: 1.46em;
+}
+
+.sfs__checkbox {
+  padding-left: 1em;
+  position: relative;
+}
+
+.sfs__checkbox:before {
+  content: '';
+  width: 0.7em;
+  height: 0.7em;
+  background: #a9acb6;
+  position: absolute;
+  top: 0.19em;
+  left: 0;
+}
+
+.sfs__checkbox.checked:before {
+  content: 'x';
+  line-height: 0.6em;
+  padding-left: 0.05em;
+}
+
+.sfs__whitebox {
+  position: relative;
+}
+
+.sfs__whitebox:before {
+  content: '';
+  width: 0.9388em;
+  height: 0.9388em;
+  border: 0.036em solid #231f20;
+  position: absolute;
+  top: 0;
+  left: 1.75em;
+}
+
+.sfs__table .sfs__whitebox:before {
+  left: 2.14em;
+  top: 3em;
+}
+
+.sfs__whitebox--inline:before,
+.sfs__table .sfs__whitebox--inline:before {
+  top: 0.05em;
+  left: 0;
+  margin-left: 0.5em;
+}
+
+.sfs__table {
+  border-spacing: 0.4em 0;
+  empty-cells: show;
+  width: 100%;
+  border-collapse: collapse;
+  border-color: #fff;
+}
+
+.sfs__table td {
+  vertical-align: top;
+}
+
+.sfs__table td.sfs__label,
+.sfs__table td.sfs__text {
+  border-bottom: 0.05em solid #b7b9c2;
+}
+
+.sfs__table .sfs__total .sfs__label {
+  border-top: 0.1em solid #00293e;
+  border-bottom: 0.1em solid #00293e;
+}
+
+.sfs__table .sfs__total.sfs__total.first .sfs__label {
+  border-bottom: none;
+}
+
+.sfs__table .sfs__total.sfs__total.last .sfs__label {
+  border-top: none;
+}
+
+.sfs__table--priority {
+  margin-top: 1em !important;
+}
+
+.sfs__table--priority .sfs__text--col-2 {
+  border-left: 0.4em solid #fff;
+}
+
+.sfs__table--priority .sfs__text--col-3 {
+  width: 4.22em;
+  border-left: 0.4em solid #fff;
+}
+
+.sfs__table--priority th {
+  border-bottom: 0.1em solid #6c7484;
+}
+
+.sfs__table--non-priority {
+  margin-top: 1em !important;
+}
+
+.sfs__table--non-priority .sfs__text--col-2 {
+  border-left: 0.4em solid #fff;
+}
+
+.sfs__table--non-priority .sfs__text--col-3 {
+  width: 2.79em;
+  border-left: 0.4em solid #fff;
+  position: relative;
+}
+
+.sfs__table--non-priority .sfs__text--col-4 {
+  width: 4.22em;
+  border-left: 0.4em solid #fff;
+}
+
+.sfs__table--non-priority th {
+  border-bottom: 0.1em solid #6c7484;
+}
+
+.sfs__table--priority td,
+.sfs__table--non-priority td {
+  line-height: 1.6em;
+}
+
+.sfs__table-highlight {
+  background: #d2d4d9;
+  width: 6em;
+  height: 1.47em;
+  border-left: 0.4em solid #fff;
+  border-bottom: 0.1em solid #fff;
+}
+
+.sfs__total .sfs__label {
+  text-align: right;
+}
+
+.sfs__total .sfs__table-highlight {
+  background: #959ba8;
+}
+
+.sfs__table--spacing {
+  margin-top: 1.471em !important;
+}
+
+.sfs__signature-box {
+  width: 100%;
+  height: 7.86em;
+  border: 0.1em solid #6c7484;
+  margin-top: 1.1em !important;
+  position: relative;
+  padding: 0.5em;
+}
+
+.sfs__signature-box .sfs__sign {
+  position: absolute;
+  bottom: 1em;
+  left: 0.5em;
+}
+
+.sfs__signature-box .sfs__date {
+  position: absolute;
+  bottom: 1em;
+  right: 9.5em;
+}
+
+.heading--large {
+  font-size: 2em;
+  line-height: 2.4em;
+  color: #00293e;
+  font-family: "Museo Sans W01", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 700;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.extra-padding--top {
+  padding-top: 0.5em;
+}
+
+/*# sourceMappingURL=sfs-form.css.map */
