@@ -7,7 +7,7 @@
       "type": "object",
       "properties": {
         "monthly-amount": { "type": "number" },
-        "notes":          { "type": "string" }
+        "notes": { "type": "string" }
       }
     }
   },

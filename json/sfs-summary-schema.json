@@ -7,20 +7,62 @@
       "type": "object",
       "properties": {
         "creditor":   { "type": "string" },
-        "owed":     { "type": "number" },
-        "offer":    { "type": "number" }
+        "owed":       { "type": "number" },
+        "offer":      { "type": "number" }
       }     
     },
     "non-priority-debt": {
       "type": "object",
       "properties": {
         "creditor":   { "type": "string" },
-        "owed":     { "type": "number" },
-        "offer":    { "type": "number" },
-        "ccj":      { "type": "boolean" }
+        "owed":       { "type": "number" },
+        "offer":      { "type": "number" },
+        "ccj":        { "type": "boolean" }
       }     
     }
   },
+  "required": [
+    "client-name", 
+    "client-date-of-birth", 
+    "is-joint-application",
+    "client-address",
+    "dependent-children-under-16",
+    "dependent-children-16-18",
+    "other-dependents",
+    "non-dependents",
+    "total-number-in-household",
+    "vehicles",
+    "housing-tenure",
+    "client-employment-status",
+    "income-earnings",
+    "income-benefits-tax-credits",
+    "income-pensions",
+    "income-other-income",
+    "total-income",
+    "fixed-costs-home-contents",
+    "fixed-costs-utilities",
+    "fixed-costs-water",
+    "fixed-costs-care-health-costs",
+    "fixed-costs-transport-travel",
+    "fixed-costs-school-costs",
+    "fixed-costs-pensions-insurances",
+    "fixed-costs-professional-costs",
+    "fixed-costs-other-essential-costs",
+    "total-fixed-costs",
+    "flexible-costs-communications-leisure",
+    "flexible-costs-food-housekeeping",
+    "flexible-costs-personal-costs",
+    "total-flexible-costs",
+    "total-outgoings",
+    "savings-contribution",
+    "savings-contribution-considered",
+    "asset-use-considered",
+    "total-priority-debts",
+    "total-non-priority-debts",
+    "debt-admin-fee",
+    "total-available-for-priority-creditors",
+    "total-available-for-non-priority-creditors"
+  ],
   "properties": {
     "client-name": {
       "type": "string",
@@ -100,7 +142,8 @@
       "description": "Property description to be completed",
       "items": {
         "type": "string"
-      }
+      },
+      "minItems": 1
     },
     "client-employment-status-other": {
       "type": "string",
@@ -225,7 +268,7 @@
       "title": "Savings contribution",
       "description": "Savings amount"
     },
-    "savings-been-considered": {
+    "savings-contribution-considered": {
       "type": "boolean",
       "title": "Saving have been considered",
       "description": "Confirmation that a monthly contribution to savings has been considered (or discussed with an adviser)"
