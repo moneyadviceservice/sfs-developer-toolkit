@@ -34,3 +34,15 @@ The aim of these templates is to provide software developers an easy way to gene
 - [sfs-summary-template.html](/html/sfs-summary-template.html)
 - [sfs-data-entry-template.html](/html/sfs-data-entry-template.html) (Coming soon)
 
+
+### References
+The following are usefull references:
+
+- [en.wikipedia.org/wiki/Data_definition_specification](https://en.wikipedia.org/wiki/Data_definition_specification)
+- [json-schema.org](http://json-schema.org/)	
+- [json-schema-validator.herokuapp.com](https://json-schema-validator.herokuapp.com/)
+- [jsonschemavalidator.net](http://www.jsonschemavalidator.net/)
+ 
+
+
+
