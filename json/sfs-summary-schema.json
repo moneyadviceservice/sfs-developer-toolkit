@@ -25,54 +25,54 @@
     "client-name": {
       "type": "string",
       "title": "Client name",
-      "description": "Full name of client"
+      "description": "Client's full name"
     },
     "client-date-of-birth": {
-      "format": "date-time",
       "type": "string",
+      "format": "date-time",
       "title": "Client DOB",
-      "description": "Client date of birth, use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
+      "description": "Client's date of birth, use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
     },
     "is-joint-application": {
       "type": "boolean",
       "title": "Is this a joint application",
-      "description": "Property description to be completed"
+      "description": "State whether this is a joint application where by the income and expenditure of a partner is included"
     },
     "partner-name": {
       "type": "string",
       "title": "Partner Name",
-      "description": "Full name of partner (if applicable)"
+      "description": "Partner's full name (if applicable)"
     },
     "partner-date-of-birth": {
-      "format": "date-time",
       "type": "string",
+      "format": "date-time",
       "title": "Partner DOB",
-      "description": "Partner date of birth (if applicable), use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
+      "description": "Partner's date of birth (if applicable), use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
     },
     "client-address": {
       "type": "string",
       "title": "Client address",
-      "description": "Client permanent address at time of completing budget"
+      "description": "Client's permanent address at time of completing budget"
     },
     "dependent-children-under-16": {
       "type": "integer",
       "title": "Dependent children under 16",
-      "description": "Property description to be completed"
+      "description": "Number of dependent children under 16 who can be considered part of the household"
     },
     "dependent-children-16-18": {
       "type": "integer",
       "title": "Dependent children 16 to 18",
-      "description": "Property description to be completed"
+      "description": "Number of dependent children between 16 and 18 who can be considered part of the household"
     },
     "other-dependents": {
       "type": "integer",
       "title": "Other dependent in household",
-      "description": "Property description to be completed"
+      "description": "Number of other dependent people who can be considered part of the household"
     },
     "non-dependents": {
       "type": "integer",
       "title": "Non dependent in household",
-      "description": "Property description to be completed"
+      "description": "Number of non-dependent people who can be considered part of the household"
     },
     "total-number-in-household": {
       "type": "integer",
@@ -92,7 +92,7 @@
     "housing-tenure-other": {
       "type": "string",
       "title": "Other housing tenure",
-      "description": "Property description to be completed",
+      "description": "Property description to be completed"
     },
     "client-employment-status": {
       "type": "array",
@@ -105,7 +105,7 @@
     "client-employment-status-other": {
       "type": "string",
       "title": "Client employment status (other)",
-      "description": "Property description to be completed",
+      "description": "Property description to be completed"
     },
     "partner-employment-status": {
       "type": "array",
@@ -118,13 +118,12 @@
     "partner-employment-status-other": {
       "type": "string",
       "title": "Partner employment status (other)",
-      "description": "Property description to be completed",
+      "description": "Property description to be completed"
     },
-    
     "income-earnings": {
       "type": "number",
       "title": "Total monthly income from earnings",
-      "description": "The Client's total monthly salary or wages + partner salary or wages and Other earnings (if joint application)"
+      "description": "Client's total monthly salary or wages + partner salary or wages + other earnings (if joint application)"
     },
     "income-benefits-tax-credits": {
       "type": "number",
@@ -146,7 +145,6 @@
       "title": "Total monthly income",
       "description": "The total of all values submitted under income"
     },
-    
     "fixed-costs-home-contents": {
       "type": "number",
       "title": "Home and contents",
@@ -230,14 +228,19 @@
     "savings-been-considered": {
       "type": "boolean",
       "title": "Saving have been considered",
-      "description": "Please confirm that a monthly contribution to savings has been considered (or discussed with an adviser)",
+      "description": "Confirmation that a monthly contribution to savings has been considered (or discussed with an adviser)"
+    },
+    "asset-use-considered": {
+      "type": "boolean",
+      "title": "Asset use has been considered",
+      "description": "Confirmation that the use of any assets to make lump sum payment has been considered (or discussed with an adviser)"
     },
     "priority-debts": {
       "type": "array",
       "title": "Priority Debts",
       "description": "Priority Debts description",
       "items": {
-        $ref: "#/definitions/priority-debt"
+        "$ref": "#/definitions/priority-debt"
       }
     },
     "total-priority-debts": {
@@ -250,7 +253,7 @@
       "title": "Non-Priority Debts",
       "description": "Non-Priority Debts description",
       "items": { 
-        $ref: "#/definitions/non-priority-debt"
+        "$ref": "#/definitions/non-priority-debt"
       }
     },
     "total-non-priority-debts": {
