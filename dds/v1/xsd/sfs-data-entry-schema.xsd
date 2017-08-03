@@ -6,7 +6,6 @@
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-
 	<!-- Definition of custom object types -->
 	<xsd:simpleType name="housing-tenure-type">
 		<xsd:annotation>
@@ -14,7 +13,7 @@
 				This is the description of a housing tenure
 			</xsd:documentation>
 		</xsd:annotation>
-    <xsd:restriction base="xsd:string">
+		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Owner"/>
 			<xsd:enumeration alue="Mortgage"/>
 			<xsd:enumeration value="Living with parents"/>
@@ -30,7 +29,7 @@
 				This is the description of a employment status
 			</xsd:documentation>
 		</xsd:annotation>
-    <xsd:restriction base="xsd:string">
+		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Full-time"/> 
 			<xsd:enumeration value="Part-time"/>
 			<xsd:enumeration value="Unemployed"/>
