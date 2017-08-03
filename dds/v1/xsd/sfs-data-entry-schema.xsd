@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Standard Financial Statement: Data Entry XSD Schema  -->
+<!-- Version 1.0 Draft -->
+<!-- Developed for the Money Advice Service by Electric Putty Ltd. (electricputty.co.uk) -->
+
+<!-- 
+			Naming convention notes:
+
+			The intention of the convention is to make the elements names
+			as transparent and human readable as possible whilst keeping their 
+			lengths to a mininum
+	
+			1. All element names are based on the SFS Data Entry Excel
+			2. All 'short words' have been removed (e.g. &, and, or)
+			3. All content defined in parenthesis have been removed
+			4. All spaces have been replaced with a hyphen
+			5. All letters have been cast as lowercase
+			6. All total elements use their immediate parent element name - e.g. total-earnings
+				(this sometime differs from their name on the Excel file)
+
+			7. All other costs elements use their immediate patent element name - e.g other-professional
+
+			8. Some element names have been shortened or restructured to simplify them and maintain consistency
+					e.g. 'Total salary and wages per month' appears as 'total-earnings'
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<!-- Definition of custom object types -->
+	<xsd:simpleType name="housing-tenure-type">
+		<xsd:annotation>
+			<xsd:documentation>
+				This is the description of a housing tenure
+			</xsd:documentation>
+		</xsd:annotation>
+    <xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Owner"/>
+			<xsd:enumeration alue="Mortgage"/>
+			<xsd:enumeration value="Living with parents"/>
+			<xsd:enumeration value="Tenant - private sector"/>
+			<xsd:enumeration value="Tenant - social"/>
+			<xsd:enumeration alue="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="employment-status-type">
+		<xsd:annotation>
+			<xsd:documentation>
+				This is the description of a employment status
+			</xsd:documentation>
+		</xsd:annotation>
+    <xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Full-time"/> 
+			<xsd:enumeration value="Part-time"/>
+			<xsd:enumeration value="Unemployed"/>
+			<xsd:enumeration value="Not working due to illness / disability"/>
+			<xsd:enumeration value="Self-employed"/>
+			<xsd:enumeration value="Retired"/>
+			<xsd:enumeration value="Carer"/>
+			<xsd:enumeration value="Student"/>
+			<xsd:enumeration value="Other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="income-expenditure-type">
+		<xsd:annotation>
+			<xsd:documentation>
+				This is the description of an income and expenditure item
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="monthly-amount" type="xsd:decimal"/>
+			<xsd:element name="notes" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="priority-debt-type">
+		<xsd:annotation>
+			<xsd:documentation>
+				This is the description of a priority debt
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="creditor" type="xsd:string"/>
+			<xsd:element name="amount-owed" type="xsd:decimal"/>
+			<xsd:element name="repayment-offer" type="xsd:decimal"/>
+			<xsd:element name="notes" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="non-priority-debt-type">
+		<xsd:annotation>
+			<xsd:documentation>
+				This is the description of a non-priority debt
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="creditor" type="xsd:string"/>
+			<xsd:element name="amount-owed" type="xsd:decimal"/>
+			<xsd:element name="repayment-offer" type="xsd:decimal"/>
+			<xsd:element name="ccj" type="xsd:boolean"/>
+			<xsd:element name="notes" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Definition of SFS Data Entry -->
+	<xsd:element name="root" type="root">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="client-name" type="xsd:string"/>
+				<xsd:element name="client-date-of-birth" type="xsd:date"/>
+				<xsd:element name="is-joint-application" type="xsd:boolean"/>
+				<xsd:element name="partner-name" type="xsd:string"/>
+				<xsd:element name="partner-date-of-birth" type="xsd:date"/>
+				<xsd:element name="client-address" type="xsd:string"/>
+				<xsd:element name="dependent-children-under-16" type="xsd:integer"/>
+				<xsd:element name="dependent-children-16-18" type="xsd:integer"/>
+				<xsd:element name="other-dependents" type="xsd:integer"/>
+				<xsd:element name="non-dependents" type="xsd:integer"/>
+				<xsd:element name="total-number-in-household" type="xsd:integer"/>
+				<xsd:element name="vehicles" type="xsd:integer"/>
+				<xsd:element name="housing-tenure" type="housing-tenure-type"/>
+				<xsd:element name="housing-tenure-other" type="xsd:string"/>
+				<xsd:element name="client-employment-status" type="employment-status-type"/>
+				<xsd:element name="client-employment-status-other" type="xsd:string"/>
+				<xsd:element name="partner-employment-status" type="employment-status-type"/>
+				<xsd:element name="partner-employment-status-other" type="xsd:string"/>
+
+				<xsd:element name="overview">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="total-monthly-income"/>
+							<xsd:element ref="total-monthly-outgoings"/>
+							<xsd:element ref="debt-admin-fee"/>
+							<xsd:element ref="savings-contribution"/>
+							<xsd:element ref="debt-admin-fee"/>
+							<xsd:element ref="total-available-for-priority-debts"/>
+							<xsd:element ref="total-available-for-non-priority-debts"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="monthly-income">
+					<xsd:complexType>
+						<xsd:sequence>
+
+							<xsd:element name="earnings">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="client-salary-or-wages" type="income-expenditure-type"/>
+										<xsd:element name="partner-salary-or-wages" type="income-expenditure-type"/>
+										<xsd:element name="other-earnings" type="income-expenditure-type"/>
+										<xsd:element name="total-earnings" type="xsd:decimal"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<xsd:element name="benefits">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="tax-credits-universal-credit" type="income-expenditure-type"/>
+										<xsd:element name="jobseekers-allowance-income-based" type="income-expenditure-type"/>
+										<xsd:element name="jobseekers-allowance-contribution-based" type="income-expenditure-type"/>
+										<xsd:element name="income-support" type="income-expenditure-type"/>
+										<xsd:element name="working-tax-credit" type="income-expenditure-type"/>
+										<xsd:element name="child-tax-credit" type="income-expenditure-type"/>
+										<xsd:element name="child-benefit" type="income-expenditure-type"/>
+										<xsd:element name="employment-support-allowance" type="income-expenditure-type"/>
+										<xsd:element name="disability-benefits" type="income-expenditure-type"/>
+										<xsd:element name="carers-allowance" type="income-expenditure-type"/>
+										<xsd:element name="local-housing-allowance" type="income-expenditure-type"/>
+										<xsd:element name="council-tax-support" type="income-expenditure-type"/>
+										<xsd:element name="other-benefits" type="income-expenditure-type"/>
+										<xsd:element name="total-benefits" type="xsd:decimal"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<xsd:element name="pensions">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="state-pensions" type="income-expenditure-type"/>
+										<xsd:element name="private-work-pensions" type="income-expenditure-type"/>
+										<xsd:element name="pension-credit" type="income-expenditure-type"/>
+										<xsd:element name="other-pensions" type="income-expenditure-type"/>
+										<xsd:element name="total-pensions" type="xsd:decimal"/>	
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<xsd:element name="other-income">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="maintenance-child-support" type="income-expenditure-type"/>
+										<xsd:element name="boarders-lodgers" type="income-expenditure-type"/>
+										<xsd:element name="non-dependants-contributions" type="income-expenditure-type"/>
+										<xsd:element name="student-loans-grants" type="income-expenditure-type"/>
+										<xsd:element name="other-other-income" type="income-expenditure-type"/>
+										<xsd:element name="total-other-income" type="xsd:decimal"/>			
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<xsd:element name="total-monthly-income" type="xsd:decimal"/>
+
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+
+				<xsd:element name="monthly-outgoings">
+					<xsd:complexType>
+						<xsd:sequence>
+
+							<xsd:element name="fixed-costs">
+								<xsd:complexType>
+									<xsd:sequence>
+
+										<xsd:element name="home-contents">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="rent" type="income-expenditure-type"/>
+													<xsd:element name="ground-rent-service-charges" type="income-expenditure-type"/>
+													<xsd:element name="mortgage" type="income-expenditure-type"/>
+													<xsd:element name="mortgage-endowment" type="income-expenditure-type"/>
+													<xsd:element name="secured-loans" type="income-expenditure-type"/>
+													<xsd:element name="council-tax-rates" type="income-expenditure-type"/>
+													<xsd:element name="appliance-furniture-rental" type="income-expenditure-type"/>
+													<xsd:element name="tv-licence" type="income-expenditure-type"/>
+													<xsd:element name="other-home-contents" type="income-expenditure-type"/>
+													<xsd:element name="total-home-contents" type="xsd:decimal"/>	
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+
+										<xsd:element name="utilities">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="gas" type="income-expenditure-type"/>
+													<xsd:element name="electricity" type="income-expenditure-type"/>
+													<xsd:element name="other-utilities" type="income-expenditure-type"/>
+
+													<!-- Need to check this field is required and if so how if differes from 'other-utilities' in this context -->
+													<xsd:element name="other-utilities-expenditure" type="income-expenditure-type"/>
+													<xsd:element name="total-utilities" type="xsd:decimal"/>													
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+
+										<xsd:element name="water">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="water-supply" type="income-expenditure-type"/>
+													<xsd:element name="water-waste" type="income-expenditure-type"/>
+													<xsd:element name="total-water" type="xsd:decimal"/>													
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+
+										<xsd:element name="care-health">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="childcare-costs" type="income-expenditure-type"/>
+													<xsd:element name="adult-care-costs" type="income-expenditure-type"/>
+													<xsd:element name="child-maintenance-child-support" type="income-expenditure-type"/>
+													<xsd:element name="prescriptions-medicines" type="income-expenditure-type"/>
+													<xsd:element name="dentistry-opticians" type="income-expenditure-type"/>
+													<xsd:element name="other-care-health" type="income-expenditure-type"/>
+													<xsd:element name="total-care-health" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>	
+
+										<xsd:element name="transport-travel">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="public-transport" type="income-expenditure-type"/>
+													<xsd:element name="hire-purchase-conditional-sale-vehicle" type="income-expenditure-type"/>
+													<xsd:element name="car-insurance" type="income-expenditure-type"/>
+													<xsd:element name="road-tax" type="income-expenditure-type"/>
+													<xsd:element name="mot-ongoing-maintenance" type="income-expenditure-type"/>
+													<xsd:element name="breakdown-cover" type="income-expenditure-type"/>
+													<xsd:element name="fuel-parking-toll-road-charges" type="income-expenditure-type"/>
+													<xsd:element name="other-transport-travel" type="income-expenditure-type"/>
+													<xsd:element name="total-transport-travel" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>	
+
+										<xsd:element name="school">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="school-uniform" type="income-expenditure-type"/>
+													<xsd:element name="after-school-clubs-school-trips" type="income-expenditure-type"/>
+													<xsd:element name="other-school" type="income-expenditure-type"/>
+													<xsd:element name="total-school" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>	
+
+										<xsd:element name="pensions-insurances">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="pension-payments" type="income-expenditure-type"/>
+													<xsd:element name="life-insurance" type="income-expenditure-type"/>
+													<xsd:element name="mortgage-payment-protection-insurance" type="income-expenditure-type"/>
+													<xsd:element name="buildings-contents-insurance" type="income-expenditure-type"/>
+													<xsd:element name="health-insurance" type="income-expenditure-type"/>
+													<xsd:element name="other-pensions-insurances" type="income-expenditure-type"/>
+													<xsd:element name="total-pensions-insurances" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>	
+
+										<xsd:element name="professional">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="professional-courses" type="income-expenditure-type"/>
+													<xsd:element name="union-fees" type="income-expenditure-type"/>
+													<xsd:element name="professional-fees" type="income-expenditure-type"/>
+													<xsd:element name="other-professional" type="income-expenditure-type"/>
+													<xsd:element name="total-professional" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+
+										<xsd:element name="other-essential" maxOccurs="unbounded" type="income-expenditure-type"/>
+										<xsd:element name="total-other-essential" type="xsd:decimal"/>
+
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<xsd:element name="fixed-costs">
+								<xsd:complexType>
+									<xsd:sequence>
+
+										<xsd:element name="communications-leisure">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="home-phone-internet-tv" type="income-expenditure-type"/>
+													<xsd:element name="mobile-phone" type="income-expenditure-type"/>
+													<xsd:element name="hobbies-leisure-sport" type="income-expenditure-type"/>
+													<xsd:element name="eating-out-outings-clubs-leisure-courses" type="income-expenditure-type"/>
+													<xsd:element name="gifts" type="income-expenditure-type"/>
+													<xsd:element name="pocket-money" type="income-expenditure-type"/>
+													<xsd:element name="newspapers-magazines-stationery-postage" type="income-expenditure-type"/>
+													<xsd:element name="other-communications-leisure" type="income-expenditure-type"/>
+													<xsd:element name="total-communications-leisure" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+
+										<xsd:element name="food-housekeeping">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="groceries" type="income-expenditure-type"/>
+													<xsd:element name="nappies-baby-items" type="income-expenditure-type"/>
+													<xsd:element name="school-work-meals" type="income-expenditure-type"/>
+													<xsd:element name="laundry-dry-cleaning" type="income-expenditure-type"/>
+													<xsd:element name="alcohol" type="income-expenditure-type"/>
+													<xsd:element name="smoking-products" type="income-expenditure-type"/>
+													<xsd:element name="vet-bills-pet-insurance" type="income-expenditure-type"/>
+													<xsd:element name="house-repairs-maintenance" type="income-expenditure-type"/>
+													<xsd:element name="other-food-housekeeping" type="income-expenditure-type"/>
+													<xsd:element name="total-food-housekeeping" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+
+										<xsd:element name="personal">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="clothing-footwear" type="income-expenditure-type"/>
+													<xsd:element name="hairdressing" type="income-expenditure-type"/>
+													<xsd:element name="toiletries" type="income-expenditure-type"/>
+													<xsd:element name="other-personal" type="income-expenditure-type"/>
+													<xsd:element name="total-personal" type="xsd:decimal"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<!-- Fixed + flexible outgoings -->
+							<xsd:element name="total-monthly-outgoings" type="xsd:decimal"/>
+
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<!-- end of monthly-outgoings -->
+
+				<xsd:element name="savings">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="savings-contribution" type="income-expenditure-type"/>
+							<xsd:element name="savings-contribution-considered" type="xsd:boolean"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="debts">
+					<xsd:complexType>
+						<xsd:sequence>
+
+							<xsd:element name="debt-admin-fee" type="income-expenditure-type"/>
+
+							<xsd:element name="total-available-for-priority-debts" type="xsd:decimal">
+								<xsd:annotation>
+									<xsd:documentation>
+										total-monthly-income - total-monthly-outgoings - savings-contribution - debt-admin-fee
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							
+							<xsd:element name="priority-debts" type="priority-debt-type" maxOccurs="unbounded" />
+							<xsd:element name="total-priority-debts" type="xsd:decimal"/>
+							<xsd:element name="total-priority-debt-offers" type="xsd:decimal"/>
+						
+							<xsd:element name="total-available-for-non-priority-debts" type="xsd:decimal">
+								<xsd:annotation>
+									<xsd:documentation>
+										total-monthly-income - total-monthly-outgoings - savings-contribution - debt-admin-fee - total-priority-debt-offers
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+
+							<xsd:element name="non-priority-debts" type="non-priority-debt-type" maxOccurs="unbounded" />
+							<xsd:element name="total-non-priority-debts" type="xsd:decimal"/>
+
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="additional-notes" type="xsd:string" maxOccurs="unbounded" />
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>
