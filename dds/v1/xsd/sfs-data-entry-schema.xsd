@@ -4,27 +4,6 @@
 <!-- Version 1.0 Draft -->
 <!-- Developed for the Money Advice Service by Electric Putty Ltd. (electricputty.co.uk) -->
 
-<!-- 
-			Naming convention notes:
-
-			The intention of the convention is to make the elements names
-			as transparent and human readable as possible whilst keeping their 
-			lengths to a mininum
-	
-			1. All element names are based on the SFS Data Entry Excel
-			2. All 'short words' have been removed (e.g. &, and, or)
-			3. All content defined in parenthesis have been removed
-			4. All spaces have been replaced with a hyphen
-			5. All letters have been cast as lowercase
-			6. All total elements use their immediate parent element name - e.g. total-earnings
-				(this sometime differs from their name on the Excel file)
-
-			7. All other costs elements use their immediate patent element name - e.g other-professional
-
-			8. Some element names have been shortened or restructured to simplify them and maintain consistency
-					e.g. 'Total salary and wages per month' appears as 'total-earnings'
--->
-
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 

@@ -23,7 +23,7 @@ Current schemas are available in XSD and JSON format and include:
 - SFS Data Entry Schema
 
 ---
-####Example Use Case
+#### Example Use Case
 
 There are plans to update the SFS Data Entry Excel file to include an export feature. When developed this will output a DDS compliant XML file. Any compliant software would then, in principle, be able to import this data and continue managing the client’s budget with no need to re-key any data. The potential time saving and error reduction benefits are clear.
 
