@@ -1,323 +1,323 @@
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Standard Financial Statement: Summary Schema",
-  "type": "object",
-  "definitions": {
-    "priority-debt": {
-      "type": "object",
-      "properties": {
-        "creditor":   { "type": "string" },
-        "owed":       { "type": "number" },
-        "offer":      { "type": "number" }
-      }     
-    },
-    "non-priority-debt": {
-      "type": "object",
-      "properties": {
-        "creditor":   { "type": "string" },
-        "owed":       { "type": "number" },
-        "offer":      { "type": "number" },
-        "ccj":        { "type": "boolean" }
-      }     
-    }
-  },
-  "required": [
-    "client-name", 
-    "client-date-of-birth", 
-    "is-joint-application",
-    "client-address",
-    "dependent-children-under-16",
-    "dependent-children-16-18",
-    "other-dependents",
-    "non-dependents",
-    "total-number-in-household",
-    "vehicles",
-    "housing-tenure",
-    "client-employment-status",
-    "income-earnings",
-    "income-benefits-tax-credits",
-    "income-pensions",
-    "income-other-income",
-    "total-income",
-    "fixed-costs-home-contents",
-    "fixed-costs-utilities",
-    "fixed-costs-water",
-    "fixed-costs-care-health-costs",
-    "fixed-costs-transport-travel",
-    "fixed-costs-school-costs",
-    "fixed-costs-pensions-insurances",
-    "fixed-costs-professional-costs",
-    "fixed-costs-other-essential-costs",
-    "total-fixed-costs",
-    "flexible-costs-communications-leisure",
-    "flexible-costs-food-housekeeping",
-    "flexible-costs-personal-costs",
-    "total-flexible-costs",
-    "total-outgoings",
-    "savings-contribution",
-    "savings-contribution-considered",
-    "asset-use-considered",
-    "total-priority-debts",
-    "total-non-priority-debts",
-    "debt-admin-fee",
-    "total-available-for-priority-creditors",
-    "total-available-for-non-priority-creditors"
-  ],
-  "properties": {
-    "client-name": {
-      "type": "string",
-      "title": "Client name",
-      "description": "Client's full name"
-    },
-    "client-date-of-birth": {
-      "type": "string",
-      "format": "date-time",
-      "title": "Client DOB",
-      "description": "Client's date of birth, use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
-    },
-    "is-joint-application": {
-      "type": "boolean",
-      "title": "Is this a joint application",
-      "description": "State whether this is a joint application where by the income and expenditure of a partner is included"
-    },
-    "partner-name": {
-      "type": "string",
-      "title": "Partner Name",
-      "description": "Partner's full name (if applicable)"
-    },
-    "partner-date-of-birth": {
-      "type": "string",
-      "format": "date-time",
-      "title": "Partner DOB",
-      "description": "Partner's date of birth (if applicable), use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
-    },
-    "client-address": {
-      "type": "string",
-      "title": "Client address",
-      "description": "Client's permanent address at time of completing budget"
-    },
-    "dependent-children-under-16": {
-      "type": "integer",
-      "title": "Dependent children under 16",
-      "description": "Number of dependent children under 16 who can be considered part of the household"
-    },
-    "dependent-children-16-18": {
-      "type": "integer",
-      "title": "Dependent children 16 to 18",
-      "description": "Number of dependent children between 16 and 18 who can be considered part of the household"
-    },
-    "other-dependents": {
-      "type": "integer",
-      "title": "Other dependent in household",
-      "description": "Number of other dependent people who can be considered part of the household"
-    },
-    "non-dependents": {
-      "type": "integer",
-      "title": "Non dependent in household",
-      "description": "Number of non-dependent people who can be considered part of the household"
-    },
-    "total-number-in-household": {
-      "type": "integer",
-      "title": "Total number of people in household",
-      "description": "Client + partner (if joint application) + number of dependent children under 16 + number of dependent children 16 to 18 + number of other dependent + number of non-dependetns"
-    },
-    "vehicles": {
-      "type": "integer",
-      "title": "Number of vehicles in household",
-      "description": "Property description to be completed"
-    },
-    "housing-tenure": {
-      "type": "string",
-      "title": "Housing tenure",
-      "description": "This is the financial arrangement under which the client (and partner if joint application) has the right to live in their home"
-    },
-    "housing-tenure-other": {
-      "type": "string",
-      "title": "Other housing tenure",
-      "description": "Property description to be completed"
-    },
-    "client-employment-status": {
-      "type": "array",
-      "title": "Client employment status",
-      "description": "Property description to be completed",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 1
-    },
-    "client-employment-status-other": {
-      "type": "string",
-      "title": "Client employment status (other)",
-      "description": "Property description to be completed"
-    },
-    "partner-employment-status": {
-      "type": "array",
-      "title": "Partner employment",
-      "description": "Property description to be completed",
-      "items": {
-        "type": "string"
-      }
-    },
-    "partner-employment-status-other": {
-      "type": "string",
-      "title": "Partner employment status (other)",
-      "description": "Property description to be completed"
-    },
-    "income-earnings": {
-      "type": "number",
-      "title": "Total monthly income from earnings",
-      "description": "Client's total monthly salary or wages + partner salary or wages + other earnings (if joint application)"
-    },
-    "income-benefits-tax-credits": {
-      "type": "number",
-      "title": "Total monthly income benefits and tax credits",
-      "description": "The total of values submitted under 'Benefits and tax credits'"
-    },
-    "income-pensions": {
-      "type": "number",
-      "title": "Total monthly income from pensions",
-      "description": "The total of values submitted under 'Pensions'"
-    },
-    "income-other-income": {
-      "type": "number",
-      "title": "Total monthly income from other sources",
-      "description": "The total of values submitted under 'Other income'"
-    },
-    "total-income": {
-      "type": "number",
-      "title": "Total monthly income",
-      "description": "The total of all values submitted under income"
-    },
-    "fixed-costs-home-contents": {
-      "type": "number",
-      "title": "Home and contents",
-      "description": "The total of values submitted under Home and contents"
-    },
-    "fixed-costs-utilities": {
-      "type": "number",
-      "title": "Utilities",
-      "description": "The total of values submitted under Utilities"
-    },
-    "fixed-costs-water": {
-      "type": "number",
-      "title": "Water",
-      "description": "The total of values submitted under Water"
-    },
-    "fixed-costs-care-health-costs": {
-      "type": "number",
-      "title": "Care and health costs",
-      "description": "The total of values submitted under Care and health costs"
-    },
-    "fixed-costs-transport-travel": {
-      "type": "number",
-      "title": "Transport and travel",
-      "description": "The total of values submitted under Transport and travel"
-    },
-    "fixed-costs-school-costs": {
-      "type": "number",
-      "title": "School costs",
-      "description": "The total of values submitted under School costs"
-    },
-    "fixed-costs-pensions-insurances": {
-      "type": "number",
-      "title": "Pensions and insurances",
-      "description": "The total of values submitted under Pensions and insurances"
-    },
-    "fixed-costs-professional-costs": {
-      "type": "number",
-      "title": "Professional costs",
-      "description": "The total of values submitted under Professional costs"
-    },
-    "fixed-costs-other-essential-costs": {
-      "type": "number",
-      "title": "Other essential costs",
-      "description": "The total of values submitted under Other essential costs"
-    },
-    "total-fixed-costs": {
-      "type": "number",
-      "title": "Total fixed costs",
-      "description": "The total of all fixed costs values submitted"
-    },
-    "flexible-costs-communications-leisure": {
-      "type": "number",
-      "title": "Communications and leisure",
-      "description": "The total of values submitted under Communications and leisure"
-    },
-    "flexible-costs-food-housekeeping": {
-      "type": "number",
-      "title": "Food and housekeeping",
-      "description": "The total of values submitted under Food and housekeeping"
-    },
-    "flexible-costs-personal-costs": {
-      "type": "number",
-      "title": "Personal costs",
-      "description": "The total of values submitted under Personal costs"
-    },
-    "total-flexible-costs": {
-      "type": "number",
-      "title": "Total flexible costs",
-      "description": "The total of all flexible costs values submitted"
-    },
-    "total-outgoings": {
-      "type": "number",
-      "title": "Total monthly outgoings (fixed and flexible)",
-      "description": "Total fixed costs plus total flexible costs"
-    },
-    "savings-contribution": {
-      "type": "number",
-      "title": "Savings contribution",
-      "description": "Savings amount"
-    },
-    "savings-contribution-considered": {
-      "type": "boolean",
-      "title": "Saving have been considered",
-      "description": "Confirmation that a monthly contribution to savings has been considered (or discussed with an adviser)"
-    },
-    "asset-use-considered": {
-      "type": "boolean",
-      "title": "Asset use has been considered",
-      "description": "Confirmation that the use of any assets to make lump sum payment has been considered (or discussed with an adviser)"
-    },
-    "priority-debts": {
-      "type": "array",
-      "title": "Priority Debts",
-      "description": "Priority Debts description",
-      "items": {
-        "$ref": "#/definitions/priority-debt"
-      }
-    },
-    "total-priority-debts": {
-      "type": "number",
-      "title": "Total priority pebts",
-      "description": "The total amount owned in priority debts"
-    },
-    "non-priority-debts": {
-      "type": "array",
-      "title": "Non-Priority Debts",
-      "description": "Non-Priority Debts description",
-      "items": { 
-        "$ref": "#/definitions/non-priority-debt"
-      }
-    },
-    "total-non-priority-debts": {
-      "type": "number",
-      "title": "Total non-priority pebts",
-      "description": "The total amount owned in non-priority debts"
-    },
-    "debt-admin-fee": {
-      "type": "number",
-      "title": "Debt Administration Fee",
-      "description": "Debt Administration Fee (if applicable)"
-    },
-    "total-available-for-priority-creditors": {
-      "type": "number",
-      "title": "Total available for priority pebts",
-      "description": "Total income - total outgoings - total savings contribution"
-    },
-    "total-available-for-non-priority-creditors": {
-      "type": "number",
-      "title": "Total available for non-priority pebts",
-      "description": "Total income - total outgoings - total savings contribution - total priority debt repayment offers"
-    }
-  }
-}
+// {
+//   "$schema": "http://json-schema.org/draft-04/schema#",
+//   "title": "Standard Financial Statement: Summary Schema",
+//   "type": "object",
+//   "definitions": {
+//     "priority-debt": {
+//       "type": "object",
+//       "properties": {
+//         "creditor":   { "type": "string" },
+//         "owed":       { "type": "number" },
+//         "offer":      { "type": "number" }
+//       }     
+//     },
+//     "non-priority-debt": {
+//       "type": "object",
+//       "properties": {
+//         "creditor":   { "type": "string" },
+//         "owed":       { "type": "number" },
+//         "offer":      { "type": "number" },
+//         "ccj":        { "type": "boolean" }
+//       }     
+//     }
+//   },
+//   "required": [
+//     "client-name", 
+//     "client-date-of-birth", 
+//     "is-joint-application",
+//     "client-address",
+//     "dependent-children-under-16",
+//     "dependent-children-16-18",
+//     "other-dependents",
+//     "non-dependents",
+//     "total-number-in-household",
+//     "vehicles",
+//     "housing-tenure",
+//     "client-employment-status",
+//     "income-earnings",
+//     "income-benefits-tax-credits",
+//     "income-pensions",
+//     "income-other-income",
+//     "total-income",
+//     "fixed-costs-home-contents",
+//     "fixed-costs-utilities",
+//     "fixed-costs-water",
+//     "fixed-costs-care-health-costs",
+//     "fixed-costs-transport-travel",
+//     "fixed-costs-school-costs",
+//     "fixed-costs-pensions-insurances",
+//     "fixed-costs-professional-costs",
+//     "fixed-costs-other-essential-costs",
+//     "total-fixed-costs",
+//     "flexible-costs-communications-leisure",
+//     "flexible-costs-food-housekeeping",
+//     "flexible-costs-personal-costs",
+//     "total-flexible-costs",
+//     "total-outgoings",
+//     "savings-contribution",
+//     "savings-contribution-considered",
+//     "asset-use-considered",
+//     "total-priority-debts",
+//     "total-non-priority-debts",
+//     "debt-admin-fee",
+//     "total-available-for-priority-creditors",
+//     "total-available-for-non-priority-creditors"
+//   ],
+//   "properties": {
+//     "client-name": {
+//       "type": "string",
+//       "title": "Client name",
+//       "description": "Client's full name"
+//     },
+//     "client-date-of-birth": {
+//       "type": "string",
+//       "format": "date-time",
+//       "title": "Client DOB",
+//       "description": "Client's date of birth, use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
+//     },
+//     "is-joint-application": {
+//       "type": "boolean",
+//       "title": "Is this a joint application",
+//       "description": "State whether this is a joint application where by the income and expenditure of a partner is included"
+//     },
+//     "partner-name": {
+//       "type": "string",
+//       "title": "Partner Name",
+//       "description": "Partner's full name (if applicable)"
+//     },
+//     "partner-date-of-birth": {
+//       "type": "string",
+//       "format": "date-time",
+//       "title": "Partner DOB",
+//       "description": "Partner's date of birth (if applicable), use Iso8601 format (e.g. 1975-12-25T00:00:00-0000)"
+//     },
+//     "client-address": {
+//       "type": "string",
+//       "title": "Client address",
+//       "description": "Client's permanent address at time of completing budget"
+//     },
+//     "dependent-children-under-16": {
+//       "type": "integer",
+//       "title": "Dependent children under 16",
+//       "description": "Number of dependent children under 16 who can be considered part of the household"
+//     },
+//     "dependent-children-16-18": {
+//       "type": "integer",
+//       "title": "Dependent children 16 to 18",
+//       "description": "Number of dependent children between 16 and 18 who can be considered part of the household"
+//     },
+//     "other-dependents": {
+//       "type": "integer",
+//       "title": "Other dependent in household",
+//       "description": "Number of other dependent people who can be considered part of the household"
+//     },
+//     "non-dependents": {
+//       "type": "integer",
+//       "title": "Non dependent in household",
+//       "description": "Number of non-dependent people who can be considered part of the household"
+//     },
+//     "total-number-in-household": {
+//       "type": "integer",
+//       "title": "Total number of people in household",
+//       "description": "Client + partner (if joint application) + number of dependent children under 16 + number of dependent children 16 to 18 + number of other dependent + number of non-dependetns"
+//     },
+//     "vehicles": {
+//       "type": "integer",
+//       "title": "Number of vehicles in household",
+//       "description": "Property description to be completed"
+//     },
+//     "housing-tenure": {
+//       "type": "string",
+//       "title": "Housing tenure",
+//       "description": "This is the financial arrangement under which the client (and partner if joint application) has the right to live in their home"
+//     },
+//     "housing-tenure-other": {
+//       "type": "string",
+//       "title": "Other housing tenure",
+//       "description": "Property description to be completed"
+//     },
+//     "client-employment-status": {
+//       "type": "array",
+//       "title": "Client employment status",
+//       "description": "Property description to be completed",
+//       "items": {
+//         "type": "string"
+//       },
+//       "minItems": 1
+//     },
+//     "client-employment-status-other": {
+//       "type": "string",
+//       "title": "Client employment status (other)",
+//       "description": "Property description to be completed"
+//     },
+//     "partner-employment-status": {
+//       "type": "array",
+//       "title": "Partner employment",
+//       "description": "Property description to be completed",
+//       "items": {
+//         "type": "string"
+//       }
+//     },
+//     "partner-employment-status-other": {
+//       "type": "string",
+//       "title": "Partner employment status (other)",
+//       "description": "Property description to be completed"
+//     },
+//     "income-earnings": {
+//       "type": "number",
+//       "title": "Total monthly income from earnings",
+//       "description": "Client's total monthly salary or wages + partner salary or wages + other earnings (if joint application)"
+//     },
+//     "income-benefits-tax-credits": {
+//       "type": "number",
+//       "title": "Total monthly income benefits and tax credits",
+//       "description": "The total of values submitted under 'Benefits and tax credits'"
+//     },
+//     "income-pensions": {
+//       "type": "number",
+//       "title": "Total monthly income from pensions",
+//       "description": "The total of values submitted under 'Pensions'"
+//     },
+//     "income-other-income": {
+//       "type": "number",
+//       "title": "Total monthly income from other sources",
+//       "description": "The total of values submitted under 'Other income'"
+//     },
+//     "total-income": {
+//       "type": "number",
+//       "title": "Total monthly income",
+//       "description": "The total of all values submitted under income"
+//     },
+//     "fixed-costs-home-contents": {
+//       "type": "number",
+//       "title": "Home and contents",
+//       "description": "The total of values submitted under Home and contents"
+//     },
+//     "fixed-costs-utilities": {
+//       "type": "number",
+//       "title": "Utilities",
+//       "description": "The total of values submitted under Utilities"
+//     },
+//     "fixed-costs-water": {
+//       "type": "number",
+//       "title": "Water",
+//       "description": "The total of values submitted under Water"
+//     },
+//     "fixed-costs-care-health-costs": {
+//       "type": "number",
+//       "title": "Care and health costs",
+//       "description": "The total of values submitted under Care and health costs"
+//     },
+//     "fixed-costs-transport-travel": {
+//       "type": "number",
+//       "title": "Transport and travel",
+//       "description": "The total of values submitted under Transport and travel"
+//     },
+//     "fixed-costs-school-costs": {
+//       "type": "number",
+//       "title": "School costs",
+//       "description": "The total of values submitted under School costs"
+//     },
+//     "fixed-costs-pensions-insurances": {
+//       "type": "number",
+//       "title": "Pensions and insurances",
+//       "description": "The total of values submitted under Pensions and insurances"
+//     },
+//     "fixed-costs-professional-costs": {
+//       "type": "number",
+//       "title": "Professional costs",
+//       "description": "The total of values submitted under Professional costs"
+//     },
+//     "fixed-costs-other-essential-costs": {
+//       "type": "number",
+//       "title": "Other essential costs",
+//       "description": "The total of values submitted under Other essential costs"
+//     },
+//     "total-fixed-costs": {
+//       "type": "number",
+//       "title": "Total fixed costs",
+//       "description": "The total of all fixed costs values submitted"
+//     },
+//     "flexible-costs-communications-leisure": {
+//       "type": "number",
+//       "title": "Communications and leisure",
+//       "description": "The total of values submitted under Communications and leisure"
+//     },
+//     "flexible-costs-food-housekeeping": {
+//       "type": "number",
+//       "title": "Food and housekeeping",
+//       "description": "The total of values submitted under Food and housekeeping"
+//     },
+//     "flexible-costs-personal-costs": {
+//       "type": "number",
+//       "title": "Personal costs",
+//       "description": "The total of values submitted under Personal costs"
+//     },
+//     "total-flexible-costs": {
+//       "type": "number",
+//       "title": "Total flexible costs",
+//       "description": "The total of all flexible costs values submitted"
+//     },
+//     "total-outgoings": {
+//       "type": "number",
+//       "title": "Total monthly outgoings (fixed and flexible)",
+//       "description": "Total fixed costs plus total flexible costs"
+//     },
+//     "savings-contribution": {
+//       "type": "number",
+//       "title": "Savings contribution",
+//       "description": "Savings amount"
+//     },
+//     "savings-contribution-considered": {
+//       "type": "boolean",
+//       "title": "Saving have been considered",
+//       "description": "Confirmation that a monthly contribution to savings has been considered (or discussed with an adviser)"
+//     },
+//     "asset-use-considered": {
+//       "type": "boolean",
+//       "title": "Asset use has been considered",
+//       "description": "Confirmation that the use of any assets to make lump sum payment has been considered (or discussed with an adviser)"
+//     },
+//     "priority-debts": {
+//       "type": "array",
+//       "title": "Priority Debts",
+//       "description": "Priority Debts description",
+//       "items": {
+//         "$ref": "#/definitions/priority-debt"
+//       }
+//     },
+//     "total-priority-debts": {
+//       "type": "number",
+//       "title": "Total priority pebts",
+//       "description": "The total amount owned in priority debts"
+//     },
+//     "non-priority-debts": {
+//       "type": "array",
+//       "title": "Non-Priority Debts",
+//       "description": "Non-Priority Debts description",
+//       "items": { 
+//         "$ref": "#/definitions/non-priority-debt"
+//       }
+//     },
+//     "total-non-priority-debts": {
+//       "type": "number",
+//       "title": "Total non-priority pebts",
+//       "description": "The total amount owned in non-priority debts"
+//     },
+//     "debt-admin-fee": {
+//       "type": "number",
+//       "title": "Debt Administration Fee",
+//       "description": "Debt Administration Fee (if applicable)"
+//     },
+//     "total-available-for-priority-creditors": {
+//       "type": "number",
+//       "title": "Total available for priority pebts",
+//       "description": "Total income - total outgoings - total savings contribution"
+//     },
+//     "total-available-for-non-priority-creditors": {
+//       "type": "number",
+//       "title": "Total available for non-priority pebts",
+//       "description": "Total income - total outgoings - total savings contribution - total priority debt repayment offers"
+//     }
+//   }
+// }

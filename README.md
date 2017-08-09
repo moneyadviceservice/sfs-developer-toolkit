@@ -9,7 +9,7 @@ The Developer Toolkit is a set of resources aimed at helping software developers
 - A Data Definition Specification
 - Set of HTML templates
 
-## Data Definition Specification
+## [Data Definition Specification](/dds/readme.md)
 The aim of the DDS is to make the SFS a portable and system agnostic standard. By clearly defining the structure of SFS data, including specific criteria to determine compliance, it will be possible to
 
 - Engender confidence in the SFS through consistency and transparency
@@ -17,7 +17,7 @@ The aim of the DDS is to make the SFS a portable and system agnostic standard. B
 - Provides standardization, making it easier and more efficient to create, modify, verify,
 analyze and share SFS data between products.
 
-Current schemas are available in XSD and JSON format and include:
+Schemas are available in XSD and JSON format and include:
 
 - SFS Budget Summary Schema
 - SFS Data Entry Schema
@@ -41,7 +41,7 @@ The XSD Schemas are written in [XML Schema](https://www.w3.org/2001/XMLSchema), 
 The JSON schemas are written in [JSON Schema](http://json-schema.org/), and currently consists of the following files:
 
 - [sfs-data-entry-schema.json](/dds/v1/json/sfs-data-entry-schema.json) (Coming soon)
-- [sfs-summary-schema.json](/dds/v1/json/sfs-summary-schema.json)
+- [sfs-summary-schema.json](/dds/v1/json/sfs-summary-schema.json) (In progress)
 
 
 ## HTML templates
