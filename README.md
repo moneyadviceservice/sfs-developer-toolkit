@@ -7,7 +7,14 @@ Key to the success of the SFS is absolute standardisation - no matter which soft
 The Developer Toolkit is a set of resources aimed at helping software developers incorporate the SFS into their products. It currently contains:
 
 - A Data Definition Specification
-- Set of HTML templates
+- Set of HTML templates for rendering the SFS
+
+---
+**Please note:** This toolkit it provided pureply as a developer aid. It is not intended in any way to be a mandatory solution for outputting a SFS that would interfere with any implementation plans currently in place or in development
+
+If you have any comments on the resources in this toolkit please contact [malcolm@electricputty.co.uk](mailto:malcolm@electricputty.co.uk)
+
+---
 
 ## [Data Definition Specification](/dds/readme.md)
 The aim of the DDS is to make the SFS a portable and system agnostic standard. By clearly defining the structure of SFS data, including specific criteria to determine compliance, it will be possible to
