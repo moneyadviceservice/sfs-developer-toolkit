@@ -3,6 +3,10 @@
 <!-- Standard Financial Statement: Data Entry XSD Schema  -->
 <!-- Version 1.0 Draft -->
 <!-- Developed for the Money Advice Service by Electric Putty Ltd. (electricputty.co.uk) -->
+<!-- 
+	All elements are required -  in XSD minOccurs defaults to 1
+	All monthly-amount values are validated against a 2 decimal place regex
+-->
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
@@ -15,11 +19,11 @@
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Owner"/>
-			<xsd:enumeration alue="Mortgage"/>
+			<xsd:enumeration value="Mortgage"/>
 			<xsd:enumeration value="Living with parents"/>
 			<xsd:enumeration value="Tenant - private sector"/>
 			<xsd:enumeration value="Tenant - social"/>
-			<xsd:enumeration alue="other"/>
+			<xsd:enumeration value="other"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 
@@ -42,6 +46,15 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
+	<!-- All currency values should be defined to two decimal places e.g. 107.00 -->
+	<xsd:simpleType name="currency-value-type">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:fractionDigits value="2" />
+			<xsd:minExclusive value="0" />
+			<xsd:pattern value="\d+\.\d{2}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
 	<xsd:complexType name="income-expenditure-type">
 		<xsd:annotation>
 			<xsd:documentation>
@@ -49,7 +62,7 @@
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="monthly-amount" type="xsd:decimal"/>
+			<xsd:element name="monthly-amount" type="currency-value-type"/>
 			<xsd:element name="notes" type="xsd:string"/>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -84,7 +97,7 @@
 	</xsd:complexType>
 
 	<!-- Definition of SFS Data Entry -->
-	<xsd:element name="root" type="root">
+	<xsd:element name="root">
 		<xsd:complexType>
 			<xsd:sequence>
 
