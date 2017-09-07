@@ -234,7 +234,7 @@
 													<xsd:element name="electricity" type="income-expenditure-type"/>
 													<xsd:element name="other-utilities" type="income-expenditure-type"/>
 
-													<!-- Need to check this field is required and if so how if differes from 'other-utilities' in this context -->
+													<!-- TODO: Need to check this field is required and if so how if differes from 'other-utilities' in this context -->
 													<xsd:element name="other-utilities-expenditure" type="income-expenditure-type"/>
 													<xsd:element name="total-utilities" type="currency-value-type"/>													
 												</xsd:sequence>
@@ -318,6 +318,7 @@
 											</xsd:complexType>
 										</xsd:element>
 
+										<!-- TODO: Should we make other essential costs a custom type? -->
 										<xsd:element name="other-essential" maxOccurs="unbounded" type="income-expenditure-type"/>
 										<xsd:element name="total-other-essential" type="currency-value-type"/>
 
@@ -325,7 +326,7 @@
 								</xsd:complexType>
 							</xsd:element>
 
-							<xsd:element name="fixed-costs">
+							<xsd:element name="flexible-costs">
 								<xsd:complexType>
 									<xsd:sequence>
 
