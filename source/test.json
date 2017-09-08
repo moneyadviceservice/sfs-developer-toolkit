@@ -1,0 +1,161 @@
+		"]": {
+			"type": "array",
+			"title": "Client salary or wages",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"partner-salary-wages": {
+			"type": "array",
+			"title": "Partner salary or wages",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"other-earnings": {
+			"type": "array",
+			"title": "Other earnings",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"universal-credit": {
+			"type": "array",
+			"title": "Universal credit",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"jobseekers-allowance-income-based": {
+			"type": "array",
+			"title": "Jobseeker’s Allowance (income based)",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"jobseekers-allowance-contribution-based": {
+			"type": "array",
+			"title": "Jobseeker’s Allowance (contribution based)",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"income-support": {
+			"type": "array",
+			"title": "Income support",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"working-tax-credit": {
+			"type": "array",
+			"title": "Working Tax Credit",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"child-tax-credit": {
+			"type": "array",
+			"title": "Child Tax Credit",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"child-benefit": {  
+			"type": "array",
+			"title": "Child Benefit",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"employment-support-allowance-statutory-sick-pay": {  
+			"type": "array",
+			"title": "Employment and Support Allowance or Statutory Sick Pay",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"disability-benefits": {
+			"type": "array",
+			"title": "Disability benefits",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"carers-allowance": {
+			"type": "array",
+			"title": "Carer's Allowance",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"local-housing-allowance-housing-benefit": {  
+			"type": "array",
+			"title": "Local Housing Allowance / Housing Benefit",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"council-tax-support": {  
+			"type": "array",
+			"title": "Council Tax support",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"other-benefits-tax-credits": { 
+			"type": "array",
+			"title": "Other benefits/tax credits (e.g. maternity benefits)",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+
+		"state-pensions": {
+			"type": "array",
+			"title": "State pensions",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}
+		},
+		"private-work-pensions": {  
+			"type": "array",
+			"title": "Private or work pensions",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}   
+		},
+		"pension-credit": { 
+			"type": "array",
+			"title": "Pension credit",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}   
+		},
+		"other-pensions": { 
+			"type": "array",
+			"title": "Other pensions",
+			"description": "Property description to be completed",
+			"items": {
+				$ref: "#/definitions/income-expenditure-item"
+			}   
+		}

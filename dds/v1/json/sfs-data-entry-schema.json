@@ -4,8 +4,7 @@
 	"type": "object",
 	"definitions": {
 		"housing-tenure-type": {
-			"type": "array",
-			"minItems": 1,
+			"type": "string",
 			"enum": [
 				"Owner", 
 				"Mortgage", 
@@ -16,8 +15,7 @@
 			]
 		},
 		"employment-status-type": {
-			"type": "array",
-			"minItems": 1,
+			"type": "string",
 			"enum": [
 				"Full-time",
 				"Part-time",
@@ -61,6 +59,20 @@
 			}			
 		}
 	},
+	"required": [
+		"client-name",
+    "client-date-of-birth", 
+    "is-joint-application",
+    "client-address",
+    "dependent-children-under-16",
+    "dependent-children-16-18",
+    "other-dependents",
+    "non-dependents",
+    "total-number-in-household",
+    "vehicles",
+    "housing-tenure",
+    "client-employment-status"
+	],
 	"properties": {
 		"client-name": {
 			"type": "string",
@@ -116,41 +128,75 @@
 			"title": "Number of vehicles in household"
 		},
 		"housing-tenure": {
-			"$ref": "#/definitions/housing-tenure-type",
-			"title": "Housing tenure"
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "#/definitions/housing-tenure-type"
+			}
 		},
 		"housing-tenure-other": {
 			"type": "string",
 			"title": "Other housing tenure"
 		},
 		"client-employment-status": {
-			"$ref": "#/definitions/employment-status-type",
-			"title": "Client employment status"
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "#/definitions/employment-status-type"
+			}
 		},
 		"client-employment-status-other": {
 			"type": "string",
 			"title": "Client employment status (other)"
 		},
 		"partner-employment-status": {
-			"$ref": "#/definitions/employment-status-type",
-			"title": "Partner employment"
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "#/definitions/employment-status-type"
+			}
 		},
 		"partner-employment-status-other": {
 			"type": "string",
 			"title": "Partner employment status (other)"
 		},
+		"asset-use-considered": {
+			"type": "boolean"
+		},
 		"overview": {
 			"type": "object",
+			"description": "All these values appear if other places but they are grouped together here to maintain the consistency between the structure of the schema and the structure of the SFS document",
+			"required": [
+				"total-monthly-income", 
+				"total-monthly-outgoings", 
+				"savings-contribution", 
+				"debt-admin-fee", 
+				"total-available-for-priority-debts", 
+				"total-available-for-non-priority-debts"
+			],
 			"properties": {
-				"total-monthly-income": { "$ref": "#/properties/monthly-income/total-monthly-income" },
-				"total-monthly-outgoings": { "$ref": "#/properties/monthly-outgoings/total-monthly-outgoings" }
+				"total-monthly-income": { "$ref": "#/definitions/currency-value-type" },
+				"total-monthly-outgoings": { "$ref": "#/definitions/currency-value-type" },
+				"savings-contribution": { "$ref": "#/definitions/currency-value-type" },
+				"debt-admin-fee": { "$ref": "#/definitions/currency-value-type" },
+				"total-available-for-priority-debts": { "$ref": "#/definitions/currency-value-type" },
+				"total-available-for-non-priority-debts": { "$ref": "#/definitions/currency-value-type" }
 			}
 		},
 		"monthly-income": {
 			"type": "object",
+			"required": [
+				"total-monthly-income"
+			],
 			"properties": {
 				"earnings": {
 					"type": "object",
+					"required": [
+						"client-salary-or-wages",
+						"partner-salary-or-wages",
+						"other-earnings",
+						"total-earnings"
+					],					
 					"properties": {	
 						"client-salary-or-wages": {"$ref": "#/definitions/income-expenditure-type"},
 						"partner-salary-or-wages": {"$ref": "#/definitions/income-expenditure-type"},
@@ -160,6 +206,22 @@
 				},
 				"benefits": {
 					"type": "object",
+					"required": [
+						"tax-credits-universal-credit",
+						"jobseekers-allowance-income-based",
+						"jobseekers-allowance-contribution-based",
+						"income-support",
+						"working-tax-credit",
+						"child-tax-credit",
+						"child-benefit",
+						"employment-support-allowance",
+						"disability-benefits",
+						"carers-allowance",
+						"local-housing-allowance",
+						"council-tax-support",
+						"other-benefits",
+						"total-benefits"
+					],
 					"properties": {	
 						"tax-credits-universal-credit": {"$ref": "#/definitions/income-expenditure-type"},
 						"jobseekers-allowance-income-based": {"$ref": "#/definitions/income-expenditure-type"},
@@ -179,6 +241,13 @@
 				},
 				"pensions": {
 					"type": "object",
+					"required": [
+						"state-pensions",
+						"private-work-pensions",
+						"pension-credit",
+						"other-pensions",
+						"total-pensions"
+					],					
 					"properties": {	
 						"state-pensions": {"$ref": "#/definitions/income-expenditure-type"},
 						"private-work-pensions": {"$ref": "#/definitions/income-expenditure-type"},
@@ -189,6 +258,14 @@
 				},
 				"other-income": {
 					"type": "object",
+					"required": [
+						"maintenance-child-support",
+						"boarders-lodgers",
+						"non-dependants-contributions",
+						"student-loans-grants",
+						"other-other-income",
+						"total-other-income"
+					],					
 					"properties": {	
 						"maintenance-child-support": {"$ref": "#/definitions/income-expenditure-type"},
 						"boarders-lodgers": {"$ref": "#/definitions/income-expenditure-type"},
@@ -205,12 +282,27 @@
 		},
 		"monthly-outgoings": {
 			"type": "object",
+			"required": [
+				"total-monthly-outgoings"
+			],
 			"properties": {
 				"fixed-costs": {
 					"type": "object",
 					"properties": {
 						"home-contents": {
 							"type": "object",
+							"required": [
+								"rent",
+								"ground-rent-service-charges",
+								"mortgage",
+								"mortgage-endowment",
+								"secured-loans",
+								"council-tax-rates",
+								"appliance-furniture-rental",
+								"tv-licence",
+								"other-home-contents",
+								"total-home-contents"
+							],	
 							"properties": {
 								"rent": {"$ref": "#/definitions/income-expenditure-type"},
 								"ground-rent-service-charges": {"$ref": "#/definitions/income-expenditure-type"},
@@ -224,8 +316,15 @@
 								"total-home-contents": {"$ref": "#/definitions/currency-value-type"}
 							}
 						},
-						"utilities": {
+						"utilities": {	
 							"type": "object",
+							"required": [
+								"gas",
+								"electricity",
+								"other-utilities",
+								"other-utilities-expenditure",
+								"total-utilities"
+							],	
 							"properties": {
 								"gas": {"$ref": "#/definitions/income-expenditure-type"},
 								"electricity": {"$ref": "#/definitions/income-expenditure-type"},
@@ -236,6 +335,11 @@
 						},
 						"water": {
 							"type": "object",
+							"required": [
+								"water-supply",
+								"water-waste",
+								"total-water"
+							],
 							"properties": {
 								"water-supply": {"$ref": "#/definitions/income-expenditure-type"},
 								"water-waste": {"$ref": "#/definitions/income-expenditure-type"},
@@ -244,6 +348,15 @@
 						},
 						"care-health": {
 							"type": "object",
+							"required": [
+								"childcare-costs",
+								"adult-care-costs",
+								"child-maintenance-child-support",
+								"prescriptions-medicines",
+								"dentistry-opticians",
+								"other-care-health",
+								"total-care-health"
+							],
 							"properties": {
 								"childcare-costs": {"$ref": "#/definitions/income-expenditure-type"},
 								"adult-care-costs": {"$ref": "#/definitions/income-expenditure-type"},
@@ -256,6 +369,17 @@
 						},
 						"transport-travel": {
 							"type": "object",
+							"required": [
+								"public-transport",
+								"hire-purchase-conditional-sale-vehicle",
+								"car-insurance",
+								"road-tax",
+								"mot-ongoing-maintenance",
+								"breakdown-cover",
+								"fuel-parking-toll-road-charges",
+								"other-transport-travel",
+								"total-transport-travel"
+							],
 							"properties": {
 								"public-transport": {"$ref": "#/definitions/income-expenditure-type"},
 								"hire-purchase-conditional-sale-vehicle": {"$ref": "#/definitions/income-expenditure-type"},
@@ -270,6 +394,12 @@
 						},
 						"school": {
 							"type": "object",
+							"required": [
+								"school-uniform",
+								"after-school-clubs-school-trips",
+								"other-school",
+								"total-school"
+							],
 							"properties": {
 								"school-uniform": {"$ref": "#/definitions/income-expenditure-type"},
 								"after-school-clubs-school-trips": {"$ref": "#/definitions/income-expenditure-type"},
@@ -279,6 +409,15 @@
 						},
 						"pensions-insurance": {
 							"type": "object",
+							"required": [
+								"pension-payments",
+								"life-insurance",
+								"mortgage-payment-protection-insurance",
+								"buildings-contents-insurance",
+								"health-insurance",
+								"other-pensions-insurances",
+								"total-pensions-insurances"
+							],
 							"properties": {
 								"pension-payments": {"$ref": "#/definitions/income-expenditure-type"},
 								"life-insurance": {"$ref": "#/definitions/income-expenditure-type"},
@@ -291,6 +430,13 @@
 						},
 						"professional": {
 							"type": "object",
+							"required": [
+								"professional-courses",
+								"union-fees",
+								"professional-fees",
+								"other-professional",
+								"total-professional"
+							],
 							"properties": {
 								"professional-courses": {"$ref": "#/definitions/income-expenditure-type"},
 								"union-fees": {"$ref": "#/definitions/income-expenditure-type"},
@@ -300,13 +446,18 @@
 							}
 						},
 						"other-essential": {
-							"type": "array",
-							"items": {
-							  "$ref": "#/definitions/income-expenditure-type"
+							"type": "object",
+							"properties": {
+								"other-essential-costs": {
+									"type": "array",
+									"items": {
+									  "$ref": "#/definitions/income-expenditure-type"
+									}
+								},
+								"total-other-essential": {
+									"$ref": "#/definitions/currency-value-type"
+								}
 							}
-						},
-						"total-other-essential": {
-							"$ref": "#/definitions/currency-value-type"
 						}
 					}			
 				},
@@ -315,17 +466,71 @@
 					"properties": {	
 						"communications-leisure": {
 							"type": "object",
+							"required": [
+								"home-phone-internet-tv",
+								"mobile-phone",
+								"hobbies-leisure-sport",
+								"eating-out-outings-clubs-leisure-courses",
+								"gifts",
+								"pocket-money",
+								"newspapers-magazines-stationery-postage",
+								"other-communications-leisure",
+								"total-communications-leisure"
+							],
 							"properties": {
+								"home-phone-internet-tv": {"$ref": "#/definitions/income-expenditure-type"},
+								"mobile-phone": {"$ref": "#/definitions/income-expenditure-type"},
+								"hobbies-leisure-sport": {"$ref": "#/definitions/income-expenditure-type"},
+								"eating-out-outings-clubs-leisure-courses": {"$ref": "#/definitions/income-expenditure-type"},
+								"gifts": {"$ref": "#/definitions/income-expenditure-type"},
+								"pocket-money": {"$ref": "#/definitions/income-expenditure-type"},
+								"newspapers-magazines-stationery-postage": {"$ref": "#/definitions/income-expenditure-type"},
+								"other-communications-leisure": {"$ref": "#/definitions/income-expenditure-type"},
+								"total-communications-leisure": {"$ref": "#/definitions/currency-value-type"}
 							}
 						},
 						"food-housekeeping": {
 							"type": "object",
+							"required": [
+								"groceries",
+								"nappies-baby-items",
+								"school-work-meals",
+								"laundry-dry-cleaning",
+								"alcohol",
+								"smoking-products",
+								"vet-bills-pet-insurance",
+								"house-repairs-maintenance",
+								"other-food-housekeeping",
+								"total-food-housekeeping"
+							],
 							"properties": {
+								"groceries": {"$ref": "#/definitions/income-expenditure-type"},
+								"nappies-baby-items": {"$ref": "#/definitions/income-expenditure-type"},
+								"school-work-meals": {"$ref": "#/definitions/income-expenditure-type"},
+								"laundry-dry-cleaning": {"$ref": "#/definitions/income-expenditure-type"},
+								"alcohol": {"$ref": "#/definitions/income-expenditure-type"},
+								"smoking-products": {"$ref": "#/definitions/income-expenditure-type"},
+								"vet-bills-pet-insurance": {"$ref": "#/definitions/income-expenditure-type"},
+								"house-repairs-maintenance": {"$ref": "#/definitions/income-expenditure-type"},
+								"other-food-housekeeping": {"$ref": "#/definitions/income-expenditure-type"},
+								"total-food-housekeeping": {"$ref": "#/definitions/currency-value-type"}
 							}
 						},
 						"personal": {
 							"type": "object",
+							"required": [
+								"clothing-footwear",
+								"hairdressing",
+								"toiletries",
+								"other-personal",
+								"total-personal"
+							],
 							"properties": {
+								"clothing-footwear": {"$ref": "#/definitions/income-expenditure-type"},
+								"hairdressing": {"$ref": "#/definitions/income-expenditure-type"},
+								"toiletries": {"$ref": "#/definitions/income-expenditure-type"},
+								"other-personal": {"$ref": "#/definitions/income-expenditure-type"},
+								"total-personal": {"$ref": "#/definitions/currency-value-type"}
 							}
 						}
 					}
@@ -337,18 +542,57 @@
 		},
 		"savings": {
 			"type": "object",
+			"required": [
+				"savings-contribution",
+				"savings-contribution-considered"
+			],			
 			"properties": {
-
+				"savings-contribution": {"$ref": "#/definitions/income-expenditure-type"},
+				"savings-contribution-considered": {"type": "boolean"}
 			}
 		},
 		"debts": {
 			"type": "object",
+			"required": [
+				"debt-admin-fee",
+				"total-available-for-priority-debts",
+				"total-priority-debts",
+				"total-priority-debt-offers",
+				"total-available-for-non-priority-debts",
+				"total-non-priority-debts"
+			],
 			"properties": {
-
+				"debt-admin-fee": {"$ref": "#/definitions/income-expenditure-type"},
+				"total-available-for-priority-debts": {
+					"$ref": "#/definitions/currency-value-type",
+					"description": "total-monthly-income - total-monthly-outgoings - savings-contribution - debt-admin-fee"
+				},
+				"priority-debts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/priority-debt-type"
+					}
+				},
+				"total-priority-debts": {"$ref": "#/definitions/currency-value-type"},
+				"total-priority-debt-offers": {"$ref": "#/definitions/currency-value-type"},
+				"total-available-for-non-priority-debts": {
+					"$ref": "#/definitions/currency-value-type",
+					"description": "total-monthly-income - total-monthly-outgoings - savings-contribution - debt-admin-fee - total-priority-debt-offers"					
+				},
+				"non-priority-debts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/non-priority-debt-type"
+					}
+				}, 
+				"total-non-priority-debts": {"$ref": "#/definitions/currency-value-type"}
 			}
 		},
 		"additional-notes": {
-
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		}
 	}
 }
