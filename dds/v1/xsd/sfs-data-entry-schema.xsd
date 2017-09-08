@@ -327,7 +327,7 @@
 											<xsd:complexType>
 												<xsd:sequence>
 													<!-- TODO: Should we make other essential costs a custom type? -->
-													<xsd:element name="other-essential-cost" minOccurs="0" maxOccurs="unbounded" type="income-expenditure-type"/>
+													<xsd:element name="other-essential-costs" minOccurs="0" maxOccurs="unbounded" type="income-expenditure-type"/>
 													<xsd:element name="total-other-essential" type="currency-value-type"/>
 												</xsd:sequence>
 											</xsd:complexType>
