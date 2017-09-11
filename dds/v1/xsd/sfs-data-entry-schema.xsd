@@ -12,11 +12,6 @@
 
 	<!-- Definition of custom object types -->
 	<xsd:simpleType name="housing-tenure-type">
-		<xsd:annotation>
-			<xsd:documentation>
-				This is the description of a housing tenure
-			</xsd:documentation>
-		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Owner"/>
 			<xsd:enumeration value="Mortgage"/>
@@ -28,11 +23,6 @@
 	</xsd:simpleType>
 
 	<xsd:simpleType name="employment-status-type">
-		<xsd:annotation>
-			<xsd:documentation>
-				This is the description of a employment status
-			</xsd:documentation>
-		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Full-time"/> 
 			<xsd:enumeration value="Part-time"/>
@@ -56,11 +46,6 @@
 	</xsd:simpleType>
 
 	<xsd:complexType name="income-expenditure-type">
-		<xsd:annotation>
-			<xsd:documentation>
-				This is the description of an income and expenditure item
-			</xsd:documentation>
-		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="monthly-amount" type="currency-value-type"/>
 			<xsd:element name="notes" type="xsd:string"/>
@@ -68,11 +53,6 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="priority-debt-type">
-		<xsd:annotation>
-			<xsd:documentation>
-				This is the description of a priority debt
-			</xsd:documentation>
-		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="creditor" type="xsd:string"/>
 			<xsd:element name="amount-owed" type="currency-value-type"/>
@@ -82,11 +62,6 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="non-priority-debt-type">
-		<xsd:annotation>
-			<xsd:documentation>
-				This is the description of a non-priority debt
-			</xsd:documentation>
-		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="creditor" type="xsd:string"/>
 			<xsd:element name="amount-owed" type="currency-value-type"/>
@@ -131,6 +106,7 @@
 						<xsd:sequence>
 							<xsd:element name="total-monthly-income" type="currency-value-type"/>
 							<xsd:element name="total-monthly-outgoings" type="currency-value-type"/>
+							<xsd:element name="income-minus-outgoings" type="currency-value-type"/>
 							<xsd:element name="savings-contribution" type="currency-value-type"/>
 							<xsd:element name="debt-admin-fee" type="currency-value-type"/>
 							<xsd:element name="total-available-for-priority-debts" type="currency-value-type"/>
@@ -333,6 +309,7 @@
 											</xsd:complexType>
 										</xsd:element>
 
+										<xsd:element name="total-fixed-costs" type="currency-value-type"/>
 
 									</xsd:sequence>
 								</xsd:complexType>
@@ -348,7 +325,6 @@
 													<xsd:element name="home-phone-internet-tv" type="income-expenditure-type"/>
 													<xsd:element name="mobile-phone" type="income-expenditure-type"/>
 													<xsd:element name="hobbies-leisure-sport" type="income-expenditure-type"/>
-													<xsd:element name="eating-out-outings-clubs-leisure-courses" type="income-expenditure-type"/>
 													<xsd:element name="gifts" type="income-expenditure-type"/>
 													<xsd:element name="pocket-money" type="income-expenditure-type"/>
 													<xsd:element name="newspapers-magazines-stationery-postage" type="income-expenditure-type"/>
@@ -386,6 +362,8 @@
 												</xsd:sequence>
 											</xsd:complexType>
 										</xsd:element>
+
+										<xsd:element name="total-flexible-costs" type="currency-value-type"/>
 
 									</xsd:sequence>
 								</xsd:complexType>
@@ -436,6 +414,7 @@
 
 							<xsd:element name="non-priority-debts" type="non-priority-debt-type" minOccurs="0" maxOccurs="unbounded" />
 							<xsd:element name="total-non-priority-debts" type="currency-value-type"/>
+							<xsd:element name="token-payments" type="currency-value-type"/>
 
 						</xsd:sequence>
 					</xsd:complexType>

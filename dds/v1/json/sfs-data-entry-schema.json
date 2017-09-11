@@ -61,17 +61,17 @@
 	},
 	"required": [
 		"client-name",
-    "client-date-of-birth", 
-    "is-joint-application",
-    "client-address",
-    "dependent-children-under-16",
-    "dependent-children-16-18",
-    "other-dependents",
-    "non-dependents",
-    "total-number-in-household",
-    "vehicles",
-    "housing-tenure",
-    "client-employment-status"
+		"client-date-of-birth", 
+		"is-joint-application",
+		"client-address",
+		"dependent-children-under-16",
+		"dependent-children-16-18",
+		"other-dependents",
+		"non-dependents",
+		"total-number-in-household",
+		"vehicles",
+		"housing-tenure",
+		"client-employment-status"
 	],
 	"properties": {
 		"client-name": {
@@ -168,7 +168,8 @@
 			"description": "All these values appear if other places but they are grouped together here to maintain the consistency between the structure of the schema and the structure of the SFS document",
 			"required": [
 				"total-monthly-income", 
-				"total-monthly-outgoings", 
+				"total-monthly-outgoings",
+				"income-minus-outgoings",
 				"savings-contribution", 
 				"debt-admin-fee", 
 				"total-available-for-priority-debts", 
@@ -177,6 +178,7 @@
 			"properties": {
 				"total-monthly-income": { "$ref": "#/definitions/currency-value-type" },
 				"total-monthly-outgoings": { "$ref": "#/definitions/currency-value-type" },
+				"income-minus-outgoings": { "$ref": "#/definitions/currency-value-type" },
 				"savings-contribution": { "$ref": "#/definitions/currency-value-type" },
 				"debt-admin-fee": { "$ref": "#/definitions/currency-value-type" },
 				"total-available-for-priority-debts": { "$ref": "#/definitions/currency-value-type" },
@@ -288,6 +290,9 @@
 			"properties": {
 				"fixed-costs": {
 					"type": "object",
+					"required": [
+						"total-fixed-costs"
+					],
 					"properties": {
 						"home-contents": {
 							"type": "object",
@@ -458,11 +463,15 @@
 									"$ref": "#/definitions/currency-value-type"
 								}
 							}
-						}
+						},
+						"total-fixed-costs": {"$ref": "#/definitions/currency-value-type"}
 					}			
 				},
 				"flexible-costs": {
 					"type": "object",
+					"required": [
+						"total-flexible-costs"
+					],
 					"properties": {	
 						"communications-leisure": {
 							"type": "object",
@@ -470,7 +479,6 @@
 								"home-phone-internet-tv",
 								"mobile-phone",
 								"hobbies-leisure-sport",
-								"eating-out-outings-clubs-leisure-courses",
 								"gifts",
 								"pocket-money",
 								"newspapers-magazines-stationery-postage",
@@ -481,7 +489,6 @@
 								"home-phone-internet-tv": {"$ref": "#/definitions/income-expenditure-type"},
 								"mobile-phone": {"$ref": "#/definitions/income-expenditure-type"},
 								"hobbies-leisure-sport": {"$ref": "#/definitions/income-expenditure-type"},
-								"eating-out-outings-clubs-leisure-courses": {"$ref": "#/definitions/income-expenditure-type"},
 								"gifts": {"$ref": "#/definitions/income-expenditure-type"},
 								"pocket-money": {"$ref": "#/definitions/income-expenditure-type"},
 								"newspapers-magazines-stationery-postage": {"$ref": "#/definitions/income-expenditure-type"},
@@ -532,7 +539,8 @@
 								"other-personal": {"$ref": "#/definitions/income-expenditure-type"},
 								"total-personal": {"$ref": "#/definitions/currency-value-type"}
 							}
-						}
+						},
+						"total-flexible-costs": {"$ref": "#/definitions/currency-value-type"}
 					}
 				},
 				"total-monthly-outgoings": {
@@ -585,7 +593,8 @@
 						"$ref": "#/definitions/non-priority-debt-type"
 					}
 				}, 
-				"total-non-priority-debts": {"$ref": "#/definitions/currency-value-type"}
+				"total-non-priority-debts": {"$ref": "#/definitions/currency-value-type"},
+				"token-payments": {"$ref": "#/definitions/currency-value-type"}
 			}
 		},
 		"additional-notes": {
