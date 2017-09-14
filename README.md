@@ -47,8 +47,8 @@ The XSD Schemas are written in [XML Schema](https://www.w3.org/2001/XMLSchema), 
 
 The JSON schemas are written in [JSON Schema](http://json-schema.org/), and currently consists of the following files:
 
-- [sfs-data-entry-schema.json](/dds/v1/json/sfs-data-entry-schema.json) (Coming soon)
-- [sfs-summary-schema.json](/dds/v1/json/sfs-summary-schema.json) (In progress)
+- [sfs-data-entry-schema.json](/dds/v1/json/sfs-data-entry-schema.json)
+- [sfs-summary-schema.json](/dds/v1/json/sfs-summary-schema.json)
 
 
 ## HTML templates
