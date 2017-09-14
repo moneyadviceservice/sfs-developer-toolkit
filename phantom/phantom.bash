@@ -1,0 +1,1 @@
+/Users/malcolm/git/sfs-developer-toolkit/phantom/phantomjs-macOS /Users/malcolm/git/sfs-developer-toolkit/phantom/phantom-pdf-generator.js /Users/malcolm/git/sfs-developer-toolkit/html/sfs-summary-template.html /Users/malcolm/git/sfs-developer-toolkit/output/sts-summary-test.pdf 210 297 Portrait 1 100

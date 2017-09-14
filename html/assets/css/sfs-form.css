@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*====================================*
-    SITE CSS
-
+  SITE CSS
 \*====================================*/
-/*------------------------------------*    Reset
+/*------------------------------------*    
+  Reset
 \*------------------------------------*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -40,10 +40,8 @@ img {
 }
 
 /*====================================*
-    BASE - RESET
-
+  remove all margins from certain elements
 \*====================================*/
-/* remove all margins from certain elements */
 body,
 p,
 table,
@@ -55,8 +53,7 @@ td {
 
 
 /*====================================*
-    BASE - ROOT
-
+  BASE - ROOT
 \*====================================*/
 /**
  * High-, page-level styling.
@@ -89,7 +86,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
 
-/*------------------------------------*    box-sizing
+/*------------------------------------* 
+  box-sizing
 \*------------------------------------*/
 /**
  * Set the global `box-sizing` state to `border-box`.
@@ -107,7 +105,8 @@ html {
   box-sizing: inherit;
 }
 
-/*------------------------------------*    placeholder text
+/*------------------------------------* 
+  placeholder text
 \*------------------------------------*/
 ::input-placeholder {
   font-style: italic;
@@ -125,39 +124,9 @@ html {
   font-style: italic;
 }
 
-/*------------------------------------*    file upload
-\*------------------------------------*/
-::-webkit-file-upload-button {
-  color: #fff;
-  background: #089dc7;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 6px 12px;
-  -webkit-appearance: none;
-  font-weight: bold;
-  transition: background 0.25s ease-in-out;
-}
-
-::-webkit-file-upload-button:hover {
-  cursor: pointer;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 /*====================================*
-    Paper / Page sizes
+  Paper / Page sizes
 \*====================================*/
 
 .page {
@@ -167,7 +136,7 @@ html {
 }
 
 /*====================================*
-    For outout to PDF
+  For outout to PDF
 \*====================================*/
 
 body.a4 {
@@ -182,7 +151,7 @@ body.a4 .sfs-form {
 }
 
 /*====================================*
-    For outout to screen
+  For outout to screen
 \*====================================*/
 
 body.screen {
@@ -198,6 +167,9 @@ body.screen .sfs-form {
   font-size: 16px; 
 }
 
+/*====================================*
+  SFS Element styling
+\*====================================*/
 
 .sfs-form {
   position: relative;
@@ -369,9 +341,9 @@ body.screen .sfs-form {
   font-size: 0.9em;
 }
 
-  .sfs__output--strong {
-    font-weight: bold;
-  }
+.sfs__output--strong {
+  font-weight: bold;
+}
 
 .sfs__number_box {
   padding: 0 0.2em !important;
@@ -410,7 +382,7 @@ body.screen .sfs-form {
 }
 
 .sfs__checkbox.checked:before {
-  content: '✔';
+  content: '\2713 ';
   line-height: 0.6em;
   padding-left: 0.05em;
 }
@@ -430,7 +402,7 @@ body.screen .sfs-form {
 }
 
 .sfs__whitebox.checked:before {
-  content: '✔';
+  content: '\2713 ';
   line-height: 0.6em;
 }
 
@@ -587,4 +559,38 @@ body.screen .sfs-form {
   padding-top: 0.5em;
 }
 
-/*# sourceMappingURL=sfs-form.css.map */
+/*====================================*
+  Output to PDF overrides 
+\*====================================*/
+
+.a4 .sfs__row {
+  border-bottom: 0.15em solid #b7b9c2;
+}
+
+.a4 .sfs__whitebox:before {
+  border: 0.15em solid #231f20;
+}
+
+.a4 .sfs__table td.sfs__label,
+.a4 .sfs__table td.sfs__text{
+  border-bottom: 0.15em solid #b7b9c2;
+}
+
+.a4 .sfs__table-highlight {
+  border-bottom: 0.15em solid #fff;
+}
+
+.a4 .sfs__signature-box { 
+  border: 0.15em solid #6c7484;
+}
+
+.a4 .sfs__checkbox.checked:before,
+.a4 .sfs__whitebox.checked:before {
+  line-height: 1em;
+}
+
+/* Force text blocks used for notes to be full width */
+.a4 .sfs__note p {
+  width: 100%;
+  line-height: 1.2em;
+}
