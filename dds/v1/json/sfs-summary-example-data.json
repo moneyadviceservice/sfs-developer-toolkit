@@ -1,0 +1,94 @@
+{
+  "client-name":"John Smith",
+  "client-date-of-birth":"1972-04-15T12:27:33+00:00",
+  "is-joint-application":true,
+  "partner-name":"Betty Boo",
+  "partner-date-of-birth":"1972-04-10T12:27:33+00:00",
+  "client-address":"123 Station Road Brighton BN1",
+  "dependent-children-under-16":1,
+  "dependent-children-16-18":1,
+  "other-dependents":3,
+  "non-dependents":0,
+  "total-number-in-household":7,
+  "vehicles":1,
+  "housing-tenure":[
+    "Owner"
+  ],
+  "housing-tenure-other":"",
+  "client-employment-status":[
+    "Full-time",
+    "Self-employed",
+    "Other"
+  ],
+  "client-employment-status-other":"Director of own company",
+  "partner-employment-status":[
+    "Part-time",
+    "Self-employed",
+    "Other"
+  ],
+  "partner-employment-status-other":"This is the other employment status for the partner",
+  "asset-use-considered":true,
+  "overview": {
+    "total-monthly-income": 3157.67,
+    "total-monthly-outgoings":2972.08,
+    "income-minus-outgoings":185.59,
+    "savings-contribution":18,
+    "debt-admin-fee":0,
+    "total-available-for-priority-debts":167.59,
+    "total-available-for-non-priority-debts":157.59
+
+  },
+  "monthly-income": {
+    "total-earnings":3000,
+    "total-benefits":112.67,
+    "total-pensions":0,
+    "total-other-income":45.00,
+    "total-monthly-income": 3157.67
+  },
+  "monthly-outgoings": {
+    "fixed-costs": {
+      "total-home-contents":853.34,
+      "total-utilities":70.00,
+      "total-water":16.67,
+      "total-care-health":0,
+      "total-transport-travel":172.08,
+      "total-school":10.00,
+      "total-pensions-insurances":240.00,
+      "total-professional":0,
+      "total-other-essential":120,
+      "total-fixed-costs":2009.59
+    },
+    "flexible-costs": {
+      "total-communications-leisure":95.00,
+      "total-food-housekeeping":788.33,
+      "total-personal":79.16,
+      "total-flexible-costs":962.49
+    },
+    "total-monthly-outgoings":2972.08
+  },
+  "savings": {
+    "savings-contribution":18,
+    "savings-contribution-considered":true
+  },
+  "debts": {
+    "priority-debts":[
+      {"creditor":"HSBC","owed":500.00,"offer":10},
+      {"creditor":"RBS","owed":1250.00,"offer":12},
+      {"creditor":"Another creditor","owed":720,"offer":11}
+    ],
+    "total-priority-debts":2470.00,
+    "non-priority-debts":[
+      {"creditor":"New demo Credit Agency","owed":1250,"offer":0,"ccj":true}
+    ],
+    "total-non-priority-debts":1250.00,
+    "debt-admin-fee":0
+  },
+  "additional-notes": [
+    "Priority Debts: Court order? - This was my first offence",
+    "Other income: Other income - Income form DJing",
+    "Other essential costs: Other essential costs - This is for my kite surfing lessons"
+  ]
+}
+
+
+

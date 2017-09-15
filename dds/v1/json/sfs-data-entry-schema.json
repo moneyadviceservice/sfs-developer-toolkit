@@ -555,7 +555,7 @@
 				"savings-contribution-considered"
 			],			
 			"properties": {
-				"savings-contribution": {"$ref": "#/definitions/income-expenditure-type"},
+				"savings-contribution": {"$ref": "#/definitions/currency-value-type"},
 				"savings-contribution-considered": {"type": "boolean"}
 			}
 		},

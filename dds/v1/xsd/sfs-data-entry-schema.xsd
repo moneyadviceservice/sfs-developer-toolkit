@@ -380,7 +380,7 @@
 				<xsd:element name="savings">
 					<xsd:complexType>
 						<xsd:sequence>
-							<xsd:element name="savings-contribution" type="income-expenditure-type"/>
+							<xsd:element name="savings-contribution" type="currency-value-type"/>
 							<xsd:element name="savings-contribution-considered" type="xsd:boolean"/>
 						</xsd:sequence>
 					</xsd:complexType>
