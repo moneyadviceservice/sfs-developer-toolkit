@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<client-name>John Smith</client-name>
+	<client-date-of-birth>1972-04-15</client-date-of-birth>
+	<is-joint-application>true</is-joint-application>
+	<partner-name>Betty Boo</partner-name>
+	<partner-date-of-birth>1972-04-10</partner-date-of-birth>
+	<client-address>123 Station Road Brighton BN1</client-address>
+	<dependent-children-under-16>1</dependent-children-under-16>
+	<dependent-children-16-18>1</dependent-children-16-18>
+	<other-dependents>3</other-dependents>
+	<non-dependents>0</non-dependents>
+	<total-number-in-household>7</total-number-in-household>
+	<vehicles>1</vehicles>
+	<housing-tenure>Owner</housing-tenure>
+	<housing-tenure-other></housing-tenure-other>
+	<client-employment-status>Full-time</client-employment-status>
+	<client-employment-status>Self-employed</client-employment-status>
+	<client-employment-status>Other</client-employment-status>
+	
+	<client-employment-status-other>Director of own company</client-employment-status-other>
+	<partner-employment-status>Part-time</partner-employment-status>
+	<partner-employment-status>Self-employed</partner-employment-status>
+	<partner-employment-status>Other</partner-employment-status>
+	<partner-employment-status-other>This is the other employment status for the partner</partner-employment-status-other>
+	<asset-use-considered>true</asset-use-considered>
+	<overview>
+		<total-monthly-income>3157.67</total-monthly-income>
+		<total-monthly-outgoings>2972.08</total-monthly-outgoings>
+		<income-minus-outgoings>185.59</income-minus-outgoings>
+		<savings-contribution>18.00</savings-contribution>
+		<debt-admin-fee>0.00</debt-admin-fee>
+		<total-available-for-priority-debts>167.59</total-available-for-priority-debts>
+		<total-available-for-non-priority-debts>157.59</total-available-for-non-priority-debts>
+	</overview>
+	<monthly-income>
+		<total-earnings>3000.00</total-earnings>
+		<total-benefits>112.67</total-benefits>
+		<total-pensions>0.00</total-pensions>
+		<total-other-income>45.00</total-other-income>
+		<total-monthly-income>3157.67</total-monthly-income>
+	</monthly-income>
+	<monthly-outgoings>
+		<fixed-costs>
+			<total-home-contents>853.34</total-home-contents>
+			<total-utilities>70.00</total-utilities>
+			<total-water>16.67</total-water>
+			<total-care-health>0.00</total-care-health>
+			<total-transport-travel>172.08</total-transport-travel>
+			<total-school>10.00</total-school>
+			<total-pensions-insurances>240.00</total-pensions-insurances>
+			<total-professional>0.00</total-professional>
+			<total-other-essential>120.00</total-other-essential>
+			<total-fixed-costs>2009.59</total-fixed-costs>
+		</fixed-costs>
+		<flexible-costs>
+			<total-communications-leisure>95.00</total-communications-leisure>
+			<total-food-housekeeping>788.33</total-food-housekeeping>
+			<total-personal>79.16</total-personal>
+			<total-flexible-costs>962.49</total-flexible-costs>
+		</flexible-costs>
+		<total-monthly-outgoings>2972.08</total-monthly-outgoings>
+	</monthly-outgoings>
+	<savings>
+		<savings-contribution>18.00</savings-contribution>
+		<savings-contribution-considered>true</savings-contribution-considered>
+	</savings>
+	<debts>
+		<priority-debts>
+			<creditor>HSBC</creditor>
+			<amount-owed>500.00</amount-owed>
+			<repayment-offer>10.00</repayment-offer>
+		</priority-debts>
+		<priority-debts>
+			<creditor>RBS</creditor>
+			<amount-owed>1250.00</amount-owed>
+			<repayment-offer>12.00</repayment-offer>
+		</priority-debts>
+		<priority-debts>
+			<creditor>Another creditor</creditor>
+			<amount-owed>720.00</amount-owed>
+			<repayment-offer>11.00</repayment-offer>
+		</priority-debts>
+		<total-priority-debts>2470.00</total-priority-debts>
+		<non-priority-debts>
+			<creditor>New demo Credit Agency</creditor>
+			<amount-owed>1250.00</amount-owed>
+			<repayment-offer>0.00</repayment-offer>
+			<ccj>true</ccj>
+		</non-priority-debts>
+		<total-non-priority-debts>1250.00</total-non-priority-debts>
+	</debts>
+	<notes>Priority Debts: Court order? - This was my first offence</notes>
+	<notes>Other income: Other income - Income form DJing</notes>
+	<notes>Other essential costs: Other essential costs - This is for my kite surfing lessons</notes>
+</root>

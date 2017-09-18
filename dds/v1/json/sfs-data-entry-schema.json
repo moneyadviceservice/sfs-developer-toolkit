@@ -128,11 +128,7 @@
 			"title": "Number of vehicles in household"
 		},
 		"housing-tenure": {
-			"type": "array",
-			"minItems": 1,
-			"items": {
-				"$ref": "#/definitions/housing-tenure-type"
-			}
+			"$ref": "#/definitions/housing-tenure-type"
 		},
 		"housing-tenure-other": {
 			"type": "string",

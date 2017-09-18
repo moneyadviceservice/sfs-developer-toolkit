@@ -40,7 +40,6 @@
 	<xsd:simpleType name="currency-value-type">
 		<xsd:restriction base="xsd:decimal">
 			<xsd:fractionDigits value="2" />
-			<xsd:minExclusive value="0" />
 			<xsd:pattern value="\d+\.\d{2}" />
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -90,9 +89,9 @@
 				<xsd:element name="vehicles" type="xsd:integer"/>
 				<xsd:element name="housing-tenure" type="housing-tenure-type"/>
 				<xsd:element name="housing-tenure-other" type="xsd:string"/>
-				<xsd:element name="client-employment-status" type="employment-status-type"/>
+				<xsd:element name="client-employment-status" type="employment-status-type" maxOccurs="unbounded"/>
 				<xsd:element name="client-employment-status-other" type="xsd:string" minOccurs="0"/>
-				<xsd:element name="partner-employment-status" type="employment-status-type" minOccurs="0"/>
+				<xsd:element name="partner-employment-status" type="employment-status-type" minOccurs="0" maxOccurs="unbounded"/>
 				<xsd:element name="partner-employment-status-other" type="xsd:string" minOccurs="0"/>
 				<xsd:element name="asset-use-considered" type="xsd:boolean"/>
 

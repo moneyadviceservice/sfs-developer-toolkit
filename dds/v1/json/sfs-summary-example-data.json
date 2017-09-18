@@ -11,9 +11,7 @@
   "non-dependents":0,
   "total-number-in-household":7,
   "vehicles":1,
-  "housing-tenure":[
-    "Owner"
-  ],
+  "housing-tenure": "Owner",
   "housing-tenure-other":"",
   "client-employment-status":[
     "Full-time",
@@ -72,18 +70,17 @@
   },
   "debts": {
     "priority-debts":[
-      {"creditor":"HSBC","owed":500.00,"offer":10},
-      {"creditor":"RBS","owed":1250.00,"offer":12},
-      {"creditor":"Another creditor","owed":720,"offer":11}
+      {"creditor":"HSBC","amount-owed":500.00,"repayment-offer":10},
+      {"creditor":"RBS","amount-owed":1250.00,"repayment-offer":12},
+      {"creditor":"Another creditor","amount-owed":720,"repayment-offer":11}
     ],
     "total-priority-debts":2470.00,
     "non-priority-debts":[
-      {"creditor":"New demo Credit Agency","owed":1250,"offer":0,"ccj":true}
+      {"creditor":"New demo Credit Agency","amount-owed":1250,"repayment-offer":0,"ccj":true}
     ],
-    "total-non-priority-debts":1250.00,
-    "debt-admin-fee":0
+    "total-non-priority-debts":1250.00
   },
-  "additional-notes": [
+  "notes": [
     "Priority Debts: Court order? - This was my first offence",
     "Other income: Other income - Income form DJing",
     "Other essential costs: Other essential costs - This is for my kite surfing lessons"
