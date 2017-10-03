@@ -169,7 +169,7 @@
 							<tr>
 								<td class="sfs__label">Total income</td>
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-income">
-									&pound;{{ number_format($sfs['total-monthly-income'], 2) }}
+									&pound;{{ number_format($sfs['overview']['total-monthly-income'], 2) }}
 								</td>
 							</tr>
 							<tr>
@@ -242,7 +242,7 @@
 							<tr class="sfs__total">
 								<td class="sfs__label">Total income</td>
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-income">
-									&pound;{{ number_format($sfs['monthly-income']['total-monthly-incomes'], 2) }}
+									&pound;{{ number_format($sfs['monthly-income']['total-monthly-income'], 2) }}
 								</td>
 							</tr>
 						</table>
