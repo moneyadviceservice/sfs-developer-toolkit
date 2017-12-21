@@ -26,7 +26,7 @@ Whilst this tool kit aims to assist in generating presentationally consistent st
 
 There are two CSS font stacks defined:
 
-####Labels and instructions are rendered using: 
+#### Labels and instructions are rendered using: 
 
 - **Roboto** (recommended)
 - **Helvetica** 
@@ -39,7 +39,7 @@ If you want to use **Roboto** and don't have it installed on your server you can
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
 ```
 
-####User generated content is rendered using: 
+#### User generated content is rendered using: 
 
 - **Courier New** (recommended)
 - **Courier**
