@@ -70,7 +70,7 @@ td {
  *    render text using sub-pixel anti-aliasing.
  */
 html {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
 /*  font-size: 1.1875em;*/
   line-height: 1.5;
   color: #33333f;
@@ -83,7 +83,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
 /*------------------------------------* 
@@ -212,6 +212,10 @@ body.screen .sfs-form {
   margin-bottom: 0.5em;
 }
 
+.sfs-form__section--data-entry {
+  margin-top: 1.5em;
+}
+
 .sfs-col {
   float: left;
 }
@@ -302,7 +306,7 @@ body.screen .sfs-form {
 }
 
 .sfs__label {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-align: left;
 }
@@ -313,6 +317,12 @@ body.screen .sfs-form {
   color: #00293e;
   border-bottom: 0.1em solid #00293e;
 }
+
+.sfs__label--heading strong {
+  font-size: 1.8em;
+  line-height: 1.2em;
+}
+
 
 .sfs__text-block {
   background-color: #fff;
@@ -506,6 +516,13 @@ body.screen .sfs-form {
   border-bottom: 0.1em solid #fff;
 }
 
+.sfs__table-notes {
+  width: 31.5em;
+  height: 1.47em;
+  border-left: 0.4em solid #fff;
+}
+
+
 .sfs__total .sfs__label {
   text-align: right;
 }
@@ -543,7 +560,7 @@ body.screen .sfs-form {
   font-size: 2em;
   line-height: 2.4em;
   color: #00293e;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 

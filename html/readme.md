@@ -21,6 +21,34 @@ To render as a PDF using PhantomJS apply the 'a4' class to the body element. e.g
 	<body class="a4">
 ```
 
+## Fonts
+Whilst this tool kit aims to assist in generating presentationally consistent statements, for licensing reasons there is not absolute requirement to use a specific font.
+
+There are two CSS font stacks defined:
+
+####Labels and instructions are rendered using: 
+
+- **Roboto** (recommended)
+- **Helvetica** 
+- **Arial** 
+- **sans-serif**
+
+If you want to use **Roboto** and don't have it installed on your server you can link to the free Google version of this by adding this line to the head of your HTML, before the link to the sfs-form.css:
+
+```
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+```
+
+####User generated content is rendered using: 
+
+- **Courier New** (recommended)
+- **Courier**
+- **Lucida Sans Typewriter**
+- **Lucida Typewriter**
+- **monospace**
+
+**Courier New** and **Courier** are commonly installed so these should be available however the important feature is to use a mono-spaced font.
+
 ## Populating with data
 **Please note:** There is no data processing logic in these templates - they provide presentational instructions only. You will need to convert this HTML into a package-specific templates which can process the SFS data and populate the HTML.
 
@@ -42,6 +70,8 @@ Where a 'tick' is required a class of 'checked' needs to be applied to the eleme
 	<p class="sfs__checkbox" id="client-employment-status__unemployed">Unemployed</p>
 
 ```
+
+
 
  
 

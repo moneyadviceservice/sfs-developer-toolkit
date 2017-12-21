@@ -1,1 +1,233 @@
-sfs-data-entry-template.html
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="ie8 no-js" lang="en-GB"><![endif]-->
+<!--[if gt IE 9]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SFS Summary</title>
+	<link rel="stylesheet" href="assets/css/sfs-form.css">
+</head>
+
+<!-- 
+	If rendering to screen use class 'screen' 
+	If rendering as PDF use class 'a4'
+-->
+<body class="a4">
+
+	<div id="container">
+		<div class="sfs-form">
+			
+			<!--  Page 1 -->
+			<div class="sfs-page page">
+
+				<div class="sfs-form__section">
+					<div class="sfs-col sfs-col--half">
+						<div class="sfs__row sfs__row--special-padding">
+							<p class="sfs__label">Name:</p>
+							<p class="sfs__text sfs__output" id="client-name"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">D.O.B.:</p>
+							<p class="sfs__text sfs__output" id="client-date-of-birth"></p>
+						</div>
+						<!-- Add the class 'checked' to applicable option below -->
+						<div class="sfs__row">
+							<p class="sfs__label">Application:</p>
+							<p class="sfs__checkbox" id="is-joint-application__yes">Single</p>
+							<p class="sfs__checkbox" id="is-joint-application__no">Joint</p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Partner:</p>
+							<p class="sfs__text">(if applicable):</p>
+							<p class="sfs__text sfs__output" id="partner-name"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Partner D.O.B.:</p>
+							<p class="sfs__text">(if applicable):</p>
+							<p class="sfs__text sfs__output" id="partner-date-of-birth"></p>
+						</div>
+						<div class="sfs__row sfs__row--address">
+							<p class="sfs__label">Address:</p>
+							<p class="sfs__text sfs__output" id="client-address"></p>
+						</div>
+						<div class="sfs__row sfs__row--dependents">
+							<p class="sfs__label">Dependent children:</p>
+							<p class="sfs__text">Under 16:</p>
+							<p class="sfs__text sfs__output" id="dependent-children-under-16"></p>
+							<p class="sfs__text">16-18:</p>
+							<p class="sfs__text sfs__output" id="dependent-children-16-18"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Other dependants:</p>
+							<p class="sfs__text sfs__output" id="other-dependents"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Number in household:</p>
+							<p class="sfs__text sfs__output" id="total-number-in-household"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Number of vehicles in household:</p>
+							<p class="sfs__text sfs__output" id="vehicles"></p>
+						</div>
+						<!-- Add the class 'checked' to all applicable options -->
+						<div class="sfs__row">
+							<p class="sfs__label">Housing tenure:</p>
+							<p class="sfs__checkbox" id="housing-tenure__owner">Owner</p>
+							<p class="sfs__checkbox" id="housing-tenure__mortgage">Mortgage</p>
+							<p class="sfs__checkbox" id="housing-tenure__private-tenant">Tenant – private</p>
+							<p class="sfs__checkbox" id="housing-tenure__social-tenant">Tenant – social</p>
+							<p class="sfs__checkbox" id="housing-tenure__living-with-parents">Living with parents</p>
+							<p class="sfs__checkbox" id="housing-tenure__other">Other</p>
+						</div>
+						<div class="sfs__row">
+							<div class="sfs-col sfs-col--main">
+								<p class="sfs__label">Please confirm you have considered<br>
+								(or discussed with an adviser) the use of<br>
+								any assets to make lump sum payments</p>
+							</div>
+							<!-- Add the class 'checked' to the field below -->
+							<div class="sfs-col sfs-col--side">
+								<p class="sfs__label">Tick to confirm ✔<br>
+									<span class="sfs__whitebox" id="asset-use-considered"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="sfs-col sfs-col--half">
+						<div class="sfs__logo-wrap">
+							<img class="sfs__logo" src="assets/images/sfs-logo.png" />
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Contact/team name:</p>
+							<p class="sfs__text sfs__output"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Agency:</p>
+							<p class="sfs__text sfs__output"></p>
+						</div>
+						<div class="sfs__row sfs__row--address">
+							<p class="sfs__label">Agency address:</p>
+							<p class="sfs__text sfs__output"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Membership code number:</p>
+							<p class="sfs__text sfs__output"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Case reference number:</p>
+							<p class="sfs__text sfs__output"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Date of statement:</p>
+							<p class="sfs__text sfs__output"></p>
+						</div>
+						<div class="sfs__row">
+							<p class="sfs__label">Date of review:</p>
+							<p class="sfs__text">(if applicable):</p>
+							<p class="sfs__text sfs__output"></p>
+						</div>
+
+						<!-- Add the class 'checked to all applicable options' -->
+						<div class="sfs__row">
+							<p class="sfs__label">Employment:</p>
+							<p class="sfs__checkbox" id="client-employment-status__full-time">Full-time</p>
+							<p class="sfs__checkbox" id="client-employment-status__part-time">Part-time</p><br>
+							<p class="sfs__checkbox" id="client-employment-status__unemployed">Unemployed</p>
+							<p class="sfs__checkbox" id="client-employment-status__not-working-due-to-illness">Not working due to illness / disability</p><br>
+							<p class="sfs__checkbox" id="client-employment-status__self-employed">Self-employed</p>
+							<p class="sfs__checkbox" id="client-employment-status__retired">Retired</p>
+							<p class="sfs__checkbox" id="client-employment-status__Carer">Carer</p>
+							<p class="sfs__checkbox" id="client-employment-status__student">Student</p>
+							<p class="sfs__checkbox" id="client-employment-status__other">Other</p>
+						</div>
+						<!-- Add the class 'checked to all applicable options' -->
+						<div class="sfs__row">
+							<p class="sfs__label">Partner's employment:</p>
+							<p class="sfs__checkbox" id="partner-employment-status__full-time">Full-time</p>
+							<p class="sfs__checkbox" id="partner-employment-status__part-time">Part-time</p><br>
+							<p class="sfs__checkbox" id="partner-employment-status__unemployed">Unemployed</p>
+							<p class="sfs__checkbox" id="partner-employment-status__not-working-due-to-illness">Not working due to illness / disability</p><br>
+							<p class="sfs__checkbox" id="partner-employment-status__self-employed">Self-employed</p>
+							<p class="sfs__checkbox" id="partner-employment-status__retired">Retired</p>
+							<p class="sfs__checkbox" id="partner-employment-status__Carer">Carer</p>
+							<p class="sfs__checkbox" id="partner-employment-status__student">Student</p>
+							<p class="sfs__checkbox" id="partner-employment-status__other">Other</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="sfs-form__section sfs-form__section--data-entry">
+					<div class="sfs-col sfs-col--full">
+						<table class="sfs__table">
+							<tr>
+								<th class="sfs__label sfs__label--heading"><strong>Overview</strong></th>
+								<th class="sfs__label sfs__output">Amount (£)</th>
+								<th class="sfs__label sfs__label--heading">Notes</th>
+							</tr>
+							<tr>
+								<td class="sfs__label">Total income</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-income">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__label">Total outgoings</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-outgoings">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text">(Income – outgoings)</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="income-minus-outgoings">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text">(Savings contribution)</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text no-border">Debt admin fee (if applicable):</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="debt-admin-fee">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+							<tr class="sfs__total first">
+								<td class="sfs__label">Total available for priority creditors</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-priority-debts">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+							<tr class="sfs__total last">
+								<td class="sfs__label">Total available for non-priority creditors</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div class="sfs-form__section sfs-form__section--data-entry">
+					<div class="sfs-col sfs-col--full">
+						<table class="sfs__table">
+							<tr>
+								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Monthly Income</strong></th>
+							</tr>
+							<tr>
+								<th class="sfs__label sfs__label--heading">Earnings</td>
+								<th class="sfs__label sfs__output">Amount (£)</th>
+								<th class="sfs__label sfs__label--heading">Notes</th>
+							</tr>
+							<tr>
+								<td class="sfs__text">Salary or wages (take home)</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+
+
+						</table>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>				
