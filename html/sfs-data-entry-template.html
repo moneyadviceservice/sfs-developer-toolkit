@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!--[if lte IE 8]><html class="ie8 no-js" lang="en-GB"><![endif]-->
-<!--[if gt IE 9]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" class="no-js"><!--<![endif]-->
+<!--[if gt IE 9]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" class="no-js">
+<!--<![endif]-->
+
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,12 +15,13 @@
 	If rendering to screen use class 'screen'
 	If rendering as PDF use class 'a4'
 -->
+
 <body class="screen">
 
 	<div id="container">
 		<div class="sfs-form">
 
-			<!--  Page 1 -->
+			<!-- Page 1 -->
 			<div class="sfs-page page">
 
 				<div class="sfs-form__section">
@@ -81,13 +85,14 @@
 						</div>
 						<div class="sfs__row">
 							<div class="sfs-col sfs-col--main">
-								<p class="sfs__label">Please confirm you have considered<br>
-								(or discussed with an adviser) the use of<br>
-								any assets to make lump sum payments</p>
+								<p class="sfs__label">Please confirm you have considered
+									<br> (or discussed with an adviser) the use of
+									<br> any assets to make lump sum payments</p>
 							</div>
 							<!-- Add the class 'checked' to the field below -->
 							<div class="sfs-col sfs-col--side">
-								<p class="sfs__label">Tick to confirm ✔<br>
+								<p class="sfs__label">Tick to confirm ✔
+									<br>
 									<span class="sfs__whitebox" id="asset-use-considered"></span>
 								</p>
 							</div>
@@ -131,9 +136,11 @@
 						<div class="sfs__row">
 							<p class="sfs__label">Employment:</p>
 							<p class="sfs__checkbox" id="client-employment-status__full-time">Full-time</p>
-							<p class="sfs__checkbox" id="client-employment-status__part-time">Part-time</p><br>
+							<p class="sfs__checkbox" id="client-employment-status__part-time">Part-time</p>
+							<br>
 							<p class="sfs__checkbox" id="client-employment-status__unemployed">Unemployed</p>
-							<p class="sfs__checkbox" id="client-employment-status__not-working-due-to-illness">Not working due to illness / disability</p><br>
+							<p class="sfs__checkbox" id="client-employment-status__not-working-due-to-illness">Not working due to illness / disability</p>
+							<br>
 							<p class="sfs__checkbox" id="client-employment-status__self-employed">Self-employed</p>
 							<p class="sfs__checkbox" id="client-employment-status__retired">Retired</p>
 							<p class="sfs__checkbox" id="client-employment-status__Carer">Carer</p>
@@ -144,9 +151,11 @@
 						<div class="sfs__row">
 							<p class="sfs__label">Partner's employment:</p>
 							<p class="sfs__checkbox" id="partner-employment-status__full-time">Full-time</p>
-							<p class="sfs__checkbox" id="partner-employment-status__part-time">Part-time</p><br>
+							<p class="sfs__checkbox" id="partner-employment-status__part-time">Part-time</p>
+							<br>
 							<p class="sfs__checkbox" id="partner-employment-status__unemployed">Unemployed</p>
-							<p class="sfs__checkbox" id="partner-employment-status__not-working-due-to-illness">Not working due to illness / disability</p><br>
+							<p class="sfs__checkbox" id="partner-employment-status__not-working-due-to-illness">Not working due to illness / disability</p>
+							<br>
 							<p class="sfs__checkbox" id="partner-employment-status__self-employed">Self-employed</p>
 							<p class="sfs__checkbox" id="partner-employment-status__retired">Retired</p>
 							<p class="sfs__checkbox" id="partner-employment-status__Carer">Carer</p>
@@ -160,44 +169,46 @@
 					<div class="sfs-col sfs-col--full">
 						<table class="sfs__table">
 							<tr>
-								<th class="sfs__label sfs__label--heading"><strong>Overview</strong></th>
-								<th class="sfs__label sfs__output">Amount (£)</th>
+								<th class="sfs__label sfs__label--heading">
+									<strong>Overview</strong>
+								</th>
+								<th class="sfs__label sfs__output">Amount(£)</th>
 								<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__label">Total income</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-income">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-income"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__label">Total outgoings</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-outgoings">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-outgoings"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">(Income – outgoings)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="income-minus-outgoings">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="income-minus-outgoings"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">(Savings contribution)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Debt admin fee (if applicable):</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">&pound;</td>
-								<td class="sfs__table-notes sfs__text sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text no-border">Other income</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="debt-admin-fee"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total">
-								<td class="sfs__label">Total income</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
-								<td class="sfs__table-notes sfs__text sfs__output"></td>>
+								<td class="sfs__label">Total available for priority creditors</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-priority-debts"></td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
+							</tr>
+							<tr class="sfs__total">
+								<td class="sfs__label">Total available for non-priority creditors</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts"></td>
+								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
 					</div>
@@ -207,31 +218,33 @@
 					<div class="sfs-col sfs-col--full">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Monthly Income</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Monthly Income</strong>
+								</th>
 							</tr>
 							<tr>
 								<th class="sfs__label sfs__label--heading">Earnings</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Salary or wages (take home)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Partner salary or wages (take home)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="partner-salary-or-wages"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other earnings (including self employment)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-earnings"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label">Total salary and wages per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-earnings"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -243,122 +256,128 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Benefits and tax credits</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Universal Credit</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="tax-credits-universal-credit"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Jobseeker’s Allowance (income based)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="jobseekers-allowance-income-based"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Jobseeker’s Allowance (contribution based)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="jobseekers-allowance-contribution-based"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Income Support</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="income-support"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Working Tax Credit</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="working-tax-credit"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Child Tax Credit</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="child-tax-credit"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Child Benefit</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="child-benefit"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
-								<td class="sfs__text">Employment and Support Allowance or
-								Statutory Sick Pay</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__text">Employment and Support Allowance or Statutory Sick Pay</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="employment-support-allowance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Disability benefits</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="disability-benefits"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Carer’s Allowance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="carers-allowance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Local Housing Allowance / Housing Benefit</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="local-housing-allowance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Council Tax support</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="council-tax-support"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other benefits/tax credits (e.g. maternity benefits)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-benefits"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total benefits and tax credits per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
-								<td class="sfs__table-notes sfs__text sfs__output sfs__text--italic sfs__text--right sfs__text--right-pad">continued overleaf</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-benefits"></td>
+							</tr>
+							<tr class="sfs__total">
+								<td></td>
+								<td></td>
+								<td class="sfs__text--italic sfs__text--right sfs__text--right-pad">(continued overleaf)</td>
 							</tr>
 						</table>
 					</div>
 				</div>
 
 			</div>
-			<!--  Page 2 -->
+			<!-- Page 2 -->
 			<div class="sfs-page page">
-					<div class="sfs-form__section sfs-form__section--data-entry">
+				<div class="sfs-form__section sfs-form__section--data-entry">
 					<div class="sfs-col sfs-col--full">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Monthly Income</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Monthly Income</strong>
+									<span class="sfs__text--italic">(continued)</span>
+								</th>
 							</tr>
 							<tr>
 								<th class="sfs__label sfs__label--heading">Pensions</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">State pensions</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="state-pensions"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Private or work pensions</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="private-work-pensions"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Pension credit</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="pension-credit"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other pensions</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-pensions"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 								<tr class="sfs__total last">
-								<td class="sfs__label">Total pensions per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
-								<td class="sfs__table-notes sfs__text sfs__output"></td>
-							</tr>
+									<td class="sfs__label">Total pensions per month</td>
+									<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-pensions"></td>
+									<td class="sfs__table-notes sfs__text sfs__output"></td>
+								</tr>
 							</tr>
 						</table>
 					</div>
@@ -369,37 +388,37 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Other income</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Maintenance or child support</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="maintenance-child-support"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Boarders or lodgers</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="boarders-lodgers"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Non-dependants’ contributions</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="non-dependants-contributions"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Student loans and grants</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="student-loans-grants"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other income</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-other-income"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total other income per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-other-income"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -410,61 +429,63 @@
 					<div class="sfs-col sfs-col--full">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Monthly Outgoings: Fixed Costs</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Monthly Outgoings: Fixed Costs</strong>
+								</th>
 							</tr>
 							<tr>
 								<th class="sfs__label sfs__label--heading">Home and contents</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Rent</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="rent"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
-								<td class="sfs__text">Ground rent & service charges (factor fees if you live in Scotland)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__text">Ground rent &amp; service charges (factor fees if you live in Scotland)</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="ground-rent-service-charges"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Mortgage</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="mortgage"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Mortgage endowment</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="mortgage-endowment"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Secured loans</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="secured-loans"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Council tax/rates (including water charge if you live in Scotland and rates in NI)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="council-tax-rates"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
-								<td class="sfs__text">Appliance & furniture rental (including appliance and furniture HP, conditional sale and so on)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__text">Appliance &amp; furniture rental (including appliance and furniture HP, conditional sale and so on)</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="appliance-furniture-rental"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">TV licence</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="tv-licence"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-home-contents"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total">
-								<td class="sfs__label">Total home & contents costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__label">Total home &amp; contents costs per month</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-home-contents"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -476,32 +497,32 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Utilities</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Gas</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="gas"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Electricity</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="electricity"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs (including coal, oil, calor gas and so on)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-utilities"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other expenditure</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-utilities-expenditure"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total utilities costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-utilities"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -513,77 +534,81 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Water</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Water supply</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="water-supply"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Water waste</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="water-waste"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total water costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
-								<td class="sfs__table-notes sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-water"></td>
+							</tr>
+							<tr class="sfs__total">
+								<td></td>
+								<td></td>
+								<td class="sfs__text--italic sfs__text--right sfs__text--right-pad">(continued overleaf)</td>
 							</tr>
 						</table>
 					</div>
 				</div>
 			</div>
-
-
-
-			<!--  Page 3 -->
+			<!-- Page 3 -->
 			<div class="sfs-page page">
-					<div class="sfs-form__section sfs-form__section--data-entry">
+				<div class="sfs-form__section">
 					<div class="sfs-col sfs-col--full">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Monthly Outgoings: Fixed Costs</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Monthly Outgoings: Fixed Costs</strong>
+									<span class="sfs__text--italic"> (continued)</span>
+								</th>
 							</tr>
 							<tr>
 								<th class="sfs__label sfs__label--heading">Care and health costs</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Childcare costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="childcare-costs"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Adult-care costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="adult-care-costs"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Child maintenance or child support</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="child-maintenance-child-support"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Prescriptions and medicines</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="prescriptions-medicines"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Dentistry and opticians</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="dentistry-opticians"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-care-health"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total care and health costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-care-health"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -595,52 +620,52 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Transport and travel</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Public transport (e.g. work, school, shopping)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="public-transport"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Hire Purchase or conditional sale vehicle</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="hire-purchase-conditional-sale-vehicle"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Car insurance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="car-insurance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Road tax</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="road-tax"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">MOT and ongoing maintenance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="mot-ongoing-maintenance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Breakdown cover</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="breakdown-cover"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Fuel, parking and toll road charges</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="fuel-parking-toll-road-charges"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs (including taxis)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-transport-travel"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total transport and travel costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-transport-travel"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -652,27 +677,27 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">School costs</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">School uniform</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="school-uniform"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">After-school clubs and school trips</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="after-school-clubs-school-trips"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-school"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total school costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-school"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -684,42 +709,42 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Pensions and insurances</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Pension payments</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="pension-payments"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Life insurance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="life-insurance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Mortgage payment protection insurance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="mortgage-payment-protection-insurance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Buildings and contents insurance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="buildings-contents-insurance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Health insurance (medical or accident or dental)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="health-insurance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-pensions-insurances"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total pensions and insurance costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-pensions-insurances"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -731,32 +756,32 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Professional costs</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Professional courses</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="professional-courses"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Union fees</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="union-fees"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Professional fees</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="professional-fees"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-professional"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total professional costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-professional"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -768,90 +793,91 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Other essential costs</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other essential costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-essential-costs"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total other essential costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-other-essential"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
 					</div>
 				</div>
 			</div>
-			<!--  Page 4 -->
+			<!-- Page 4 -->
 			<div class="sfs-page page">
-
-				<div class="sfs-form__section sfs-form__section--data-entry">
+				<div class="sfs-form__section">
 					<div class="sfs-col sfs-col--full">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Monthly Outgoings: Flexible Costs</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Monthly Outgoings: Flexible Costs</strong>
+								</th>
 							</tr>
 							<tr>
 								<th class="sfs__label sfs__label--heading">Communications and leisure</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Home phone, internet, TV package (including film subscriptions)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="home-phone-internet-tv"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Mobile phone</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="mobile-phone"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Hobbies, leisure or sport (e.g. socialising, eating out, outings, clubs, leisure courses)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="hobbies-leisure-sport"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Gifts (e.g. birthdays, festivals, charity donations)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="gifts"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Pocket money</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="pocket-money"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Newspapers, magazines, stationery and postage</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="newspapers-magazines-stationery-postage"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-communications-leisure"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label">Total communications and leisure costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-communications-leisure"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -863,57 +889,57 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Food and housekeeping</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Groceries (e.g. food, pet food, non-alcoholic drinks, cleaning)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="groceries"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Nappies and baby items</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="nappies-baby-items"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">School meals and meals at work</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="school-work-meals"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Laundry and dry cleaning</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="laundry-dry-cleaning"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Alcohol</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="alcohol"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Smoking products</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="smoking-products"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
-								<td class="sfs__text">Vet bills & pet insurance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__text">Vet bills &amp; pet insurance</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="vet-bills-pet-insurance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">House repairs and maintenance</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="house-repairs-maintenance"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-food-housekeeping"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
 								<td class="sfs__label">Total food and housekeeping costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-food-housekeeping"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -925,32 +951,32 @@
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Personal costs</td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr>
 								<td class="sfs__text">Clothing and footwear</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="clothing-footwear"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Hairdressing</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="hairdressing"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Toiletries</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="toiletries"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Other costs</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages">&pound;</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-personal"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 							<tr class="sfs__total last">
-								<td class="sfs__label">Total food and housekeeping costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts">&pound;</td>
+								<td class="sfs__label">Total personal costs per month</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-personal"></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -961,15 +987,17 @@
 					<div class="sfs-col sfs-col--half">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Total Monthly Outgoings: (fixed and flexible)</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Total Monthly Outgoings: (fixed and flexible)</strong>
+								</th>
 							</tr>
 							<tr>
 								<td class="sfs__text"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages"></td>
+								<td class="sfs__label sfs__output">Amount(£)</td>
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label">Total costs per month</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
 							</tr>
 						</table>
 					</div>
@@ -979,21 +1007,28 @@
 					<div class="sfs-col sfs-col--half">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Savings</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Savings</strong>
+								</th>
 							</tr>
 							<tr>
 								<td class="sfs__text"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">&pound;</td>
+								<td class="sfs__label sfs__output" id="savings-contribution">Amount(£)</td>
+							</tr>
+							<tr class="sfs__total">
+								<td class="sfs__text"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution-considered"></td>
 							</tr>
 
 							<!-- Add the class 'checked' to the field below -->
 							<tr class="sfs__label">
-								<td>Please confirm that a monthly contribution<br>
-									to savings has been considered<br>
-									(or discussed with an adviser)
+								<td>Please confirm that a monthly contribution
+									<br> to savings has been considered
+									<br> (or discussed with an adviser)
 								</td>
 								<!-- Add the class 'checked' to the field below -->
-								<td>Tick to confirm ✔<br>
+								<td>Tick to confirm ✔
+									<br>
 									<span class="sfs__whitebox" id="savings-contribution-considered"></span>
 								</td>
 							</tr>
@@ -1005,26 +1040,19 @@
 					<div class="sfs-col sfs-col--full">
 						<table class="sfs__table">
 							<tr>
-								<th colspan="3" class="sfs__label sfs__label--heading"><strong>Debt Admin Fee (if applicable)</strong></th>
+								<th colspan="3" class="sfs__label sfs__label--heading">
+									<strong>Debt Admin Fee (if applicable)</strong>
+								</th>
 							</tr>
-								<tr>
-								<th class="sfs__label sfs__label--heading"></td>
-								<th class="sfs__label sfs__output">Amount (£)</th>
-								<th class="sfs__label sfs__label--heading">Notes</th>
+							<tr>
+								<th class="sfs__label sfs__label--heading">
+									</td>
+									<th class="sfs__label sfs__output">Amount(£)</th>
+									<th class="sfs__label sfs__label--heading">Notes</th>
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label">Total fee per month</td>
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts"></td>
-								<td class="sfs__table-notes sfs__text sfs__output"></td>
-							</tr>
-							<tr class="sfs__total">
-								<td></td>
-								<td></td>
-								<td class="sfs__table-notes sfs__text sfs__output"></td>
-							</tr>
-							<tr class="sfs__total">
-								<td></td>
-								<td></td>
 								<td class="sfs__table-notes sfs__text sfs__output"></td>
 							</tr>
 						</table>
@@ -1032,9 +1060,7 @@
 				</div>
 
 			</div>
-		</div>
-
-		<!-- Page 5 -->
+			<!-- Page 5 -->
 			<div class="sfs-page page">
 				<div class="sfs-form__section">
 					<div class="sfs-col sfs-col--full">
@@ -1050,7 +1076,7 @@
 								<th class="sfs__label sfs__text--col-3">Offer</th>
 							</tr>
 							<tr>
-								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__text sfs__output">e.g. Haringey Council</td>
 								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
 								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
 							</tr>
@@ -1260,12 +1286,32 @@
 								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
 							</tr>
 							<tr>
-								<td class="sfs__text--italic sfs__text--right sfs__text--right-pad" colspan="3">
-								(tick if you have continued on next page)
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text--italic" colspan="3">
+									(tick if you have continued on next page)
 
-								<!-- Add the class 'checked' here if required -->
-								<span class="sfs__whitebox sfs__whitebox--inline"></span>
-							</td>
+									<!-- Add the class 'checked' here if required -->
+									<span class="sfs__whitebox sfs__whitebox--inline"></span>
+								</td>
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label sfs__text--right">Total priority debts</td>
@@ -1535,13 +1581,43 @@
 								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
 							</tr>
 							<tr>
-								<td class="sfs__text--italic sfs__text--right sfs__text--right-pad" colspan="4">(tick if you have continued on next page) <span class="sfs__whitebox sfs__whitebox--inline"></span></td>
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
+								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
+								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
+								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text sfs__output"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
+								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
+								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
+							</tr>
+							<tr>
+								<td class="sfs__text--italic" colspan="4">(tick if you have continued on next page)
+									<span class="sfs__whitebox sfs__whitebox--inline"></span>
+								</td>
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label sfs__text--right">Total non-priority debts</td>
 								<td class="sfs__table-highlight"></td>
 							</tr>
 							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="sfs__total">
 								<td class="sfs__text" colspan="3">Token Payments</td>
 								<td class="sfs__table-highlight sfs__text--col-4"></td>
 							</tr>
@@ -1550,19 +1626,24 @@
 
 				</div>
 			</div>
-
 			<!-- Page 6 -->
 			<div class="sfs-page page">
 				<div class="sfs-form__section">
 					<div class="sfs-col sfs-col--full">
-						<div class="sfs__row sfs__row--special-padding-2">
-							<p class="sfs__label">Additional notes (e.g. reasons for debt, circumstances, temporary situations)</p>
+						<div class="sfs-col sfs-col--full">
+							<p class="sfs__label sfs__label--heading">Additional notes (e.g. reasons for debt, circumstances, temporary situations)</p>
 						</div>
 
-						<div class="sfs__row sfs__output sfs__note">
-							<p class="sfs__text">e.g <strong>Communications and leisure:</strong> Mobile phone - client has multiple and more words here Mobile phone - client has multiple and more words here Mobile phone - client has multiple and more words here Mobile phone - client has multiple and more words here.</p>
+						<div class="sfs__row">
+							<p class="sfs__output sfs__text--italic">
+								<strong>e.g.</strong> Made redundant in June 2014 and was out of work for 6 months</p>
 						</div>
-
+						<div class="sfs__row">
+							<p class="sfs__output sfs__text--italic">
+								<strong>e.g. Communications and leisure:</strong> mobile phone – client has multiple family members abroad</p>
+						</div>
+						<div class="sfs__note">
+						</div>
 						<div class="sfs__text-block sfs__text-block--full-page">
 							<p class="sfs__text"></p>
 						</div>
@@ -1576,7 +1657,8 @@
 				</div>
 			</div>
 
-
+		</div>
 	</div>
 </body>
+
 </html>

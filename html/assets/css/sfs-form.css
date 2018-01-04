@@ -2,7 +2,7 @@
 /*====================================*
   SITE CSS
 \*====================================*/
-/*------------------------------------*    
+/*------------------------------------*
   Reset
 \*------------------------------------*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -86,7 +86,7 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
-/*------------------------------------* 
+/*------------------------------------*
   box-sizing
 \*------------------------------------*/
 /**
@@ -105,7 +105,7 @@ html {
   box-sizing: inherit;
 }
 
-/*------------------------------------* 
+/*------------------------------------*
   placeholder text
 \*------------------------------------*/
 ::input-placeholder {
@@ -140,7 +140,7 @@ html {
 \*====================================*/
 
 body.a4 {
-  width: 595px;   
+  width: 595px;
 }
 body.a4 .page {
   width: 595px;
@@ -164,7 +164,7 @@ body.screen .page {
   margin: 1em;
 }
 body.screen .sfs-form {
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 /*====================================*
@@ -577,7 +577,7 @@ body.screen .sfs-form {
 }
 
 /*====================================*
-  Output to PDF overrides 
+  Output to PDF overrides
 \*====================================*/
 
 .a4 .sfs__row {
@@ -597,7 +597,7 @@ body.screen .sfs-form {
   border-bottom: 0.15em solid #fff;
 }
 
-.a4 .sfs__signature-box { 
+.a4 .sfs__signature-box {
   border: 0.15em solid #6c7484;
 }
 
