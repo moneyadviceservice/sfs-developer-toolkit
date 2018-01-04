@@ -406,19 +406,13 @@ body.screen .sfs-form {
   width: 0.9388em;
   height: 0.9388em;
   border: 0.036em solid #231f20;
-  position: absolute;
-  top: 0;
-  left: 1.75em;
+  margin-left: 1.75em;
+  display: block;
 }
 
 .sfs__whitebox.checked:before {
-  content: '\2713 ';
-  line-height: 0.6em;
-}
-
-.sfs__table .sfs__whitebox:before {
-  left: 2.14em;
-  top: 3em;
+  content: '\2713';
+  line-height: 0.7em;
 }
 
 .sfs__whitebox--inline:before,
