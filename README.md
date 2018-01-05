@@ -68,7 +68,7 @@ proprietary software product is developed in.
 Current templates include:
 
 - [sfs-summary-template.html](/html/sfs-summary-template.html)
-- [sfs-data-entry-template.html](/html/sfs-data-entry-template.html) (Coming soon)
+- [sfs-data-entry-template.html](/html/sfs-data-entry-template.html)
 
 
 
