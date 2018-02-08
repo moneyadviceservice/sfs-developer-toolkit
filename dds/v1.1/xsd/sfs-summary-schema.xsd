@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Standard Financial Statement: Data Entry XSD Schema  -->
+<!-- Version 1.0 Draft -->
+<!-- Developed for the Money Advice Service by Electric Putty Ltd. (electricputty.co.uk) -->
+<!-- 
+	Unless explicitly stated all elements are required (in XSD minOccurs defaults to 1)
+	All monthly-amount values are validated against a 2 decimal place regex
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definition of custom object types -->
+	<xsd:simpleType name="housing-tenure-type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Owner"/>
+			<xsd:enumeration value="Mortgage"/>
+			<xsd:enumeration value="Living with parents"/>
+			<xsd:enumeration value="Tenant - private sector"/>
+			<xsd:enumeration value="Tenant - social"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="employment-status-type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Full-time"/> 
+			<xsd:enumeration value="Part-time"/>
+			<xsd:enumeration value="Unemployed"/>
+			<xsd:enumeration value="Not working due to illness / disability"/>
+			<xsd:enumeration value="Self-employed"/>
+			<xsd:enumeration value="Retired"/>
+			<xsd:enumeration value="Carer"/>
+			<xsd:enumeration value="Student"/>
+			<xsd:enumeration value="Other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- All currency values should be defined to two decimal places e.g. 107.00 -->
+	<xsd:simpleType name="currency-value-type">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:fractionDigits value="2" />
+			<xsd:pattern value="\d+\.\d{2}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="income-expenditure-type">
+		<xsd:sequence>
+			<xsd:element name="monthly-amount" type="currency-value-type"/>
+			<xsd:element name="notes" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="priority-debt-type">
+		<xsd:sequence>
+			<xsd:element name="creditor" type="xsd:string"/>
+			<xsd:element name="amount-owed" type="currency-value-type"/>
+			<xsd:element name="repayment-offer" type="currency-value-type"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="non-priority-debt-type">
+		<xsd:sequence>
+			<xsd:element name="creditor" type="xsd:string"/>
+			<xsd:element name="amount-owed" type="currency-value-type"/>
+			<xsd:element name="repayment-offer" type="currency-value-type"/>
+			<xsd:element name="ccj" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Definition of SFS Data Entry -->
+	<xsd:element name="root">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="client-name" type="xsd:string"/>
+				<xsd:element name="client-date-of-birth" type="xsd:date"/>
+				<xsd:element name="is-joint-application" type="xsd:boolean"/>
+				<xsd:element name="partner-name" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="partner-date-of-birth" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="client-address" type="xsd:string"/>
+				<xsd:element name="dependent-children-under-16" type="xsd:integer"/>
+				<xsd:element name="dependent-children-16-18" type="xsd:integer"/>
+				<xsd:element name="other-dependents" type="xsd:integer"/>
+				<xsd:element name="non-dependents" type="xsd:integer"/>
+				<xsd:element name="total-number-in-household" type="xsd:integer"/>
+				<xsd:element name="vehicles" type="xsd:integer"/>
+				<xsd:element name="housing-tenure" type="housing-tenure-type"/>
+				<xsd:element name="housing-tenure-other" type="xsd:string"/>
+				<xsd:element name="client-employment-status" type="employment-status-type" maxOccurs="unbounded"/>
+				<xsd:element name="client-employment-status-other" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="partner-employment-status" type="employment-status-type" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="partner-employment-status-other" type="xsd:string" minOccurs="0"/>
+
+				<xsd:element name="overview">
+					<xsd:annotation>
+						<xsd:documentation>
+							All these values appear if other places but they are grouped together here to maintain the consistency between the structure of the schema and the structure of the SFS document
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="total-monthly-income" type="currency-value-type"/>
+							<xsd:element name="total-monthly-outgoings" type="currency-value-type"/>
+							<xsd:element name="savings-contribution" type="currency-value-type"/>
+							<xsd:element name="debt-admin-fee" type="currency-value-type"/>
+							<xsd:element name="total-available-for-priority-debts" type="currency-value-type"/>
+							<xsd:element name="total-available-for-non-priority-debts" type="currency-value-type"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="monthly-income">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="total-earnings" type="currency-value-type"/>
+							<xsd:element name="total-benefits" type="currency-value-type"/>
+							<xsd:element name="total-pensions" type="currency-value-type"/>	
+							<xsd:element name="total-other-income" type="currency-value-type"/>
+							<xsd:element name="total-monthly-income" type="currency-value-type"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+
+				<xsd:element name="monthly-outgoings">
+					<xsd:complexType>
+						<xsd:sequence>
+
+							<xsd:element name="fixed-costs">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="rent" type="currency-value-type"/>
+										<xsd:element name="mortgage" type="currency-value-type"/>
+										<xsd:element name="secured-loans" type="currency-value-type"/>
+										<xsd:element name="council-tax-rates" type="currency-value-type"/>
+										<xsd:element name="other-home-contents" type="currency-value-type">
+											<xsd:annotation>
+												<xsd:documentation>
+													This is the total of ground-rent-service-charges, mortgage-endowment, appliance-furniture-rental, tv-licence and other-home-contents from the Data Entry schema
+												</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="gas" type="currency-value-type"/>
+										<xsd:element name="electricity" type="currency-value-type"/>
+										<xsd:element name="other-utilities" type="currency-value-type">
+											<xsd:annotation>
+												<xsd:documentation>
+													This is the total of other-utilities and other-utilities-expenditure from the Data Entry schema
+												</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="total-water" type="currency-value-type"/>
+										<xsd:element name="total-care-health" type="currency-value-type"/>
+										<xsd:element name="total-transport-travel" type="currency-value-type"/>
+										<xsd:element name="total-school" type="currency-value-type"/>
+										<xsd:element name="total-pensions-insurances" type="currency-value-type"/>
+										<xsd:element name="total-professional" type="currency-value-type"/>
+										<xsd:element name="total-other-essential" type="currency-value-type"/>
+										<xsd:element name="total-fixed-costs" type="currency-value-type"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<xsd:element name="flexible-costs">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="total-communications-leisure" type="currency-value-type"/>
+										<xsd:element name="total-food-housekeeping" type="currency-value-type"/>
+										<xsd:element name="total-personal" type="currency-value-type"/>
+										<xsd:element name="total-flexible-costs" type="currency-value-type"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+
+							<!-- Fixed + flexible outgoings -->
+							<xsd:element name="total-monthly-outgoings" type="currency-value-type"/>
+
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<!-- end of monthly-outgoings -->
+
+				<xsd:element name="confirmations">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="asset-use-considered" type="xsd:boolean"/>
+							<xsd:element name="savings-contribution-considered" type="xsd:boolean"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="debts">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="priority-debts" type="priority-debt-type" minOccurs="0" maxOccurs="unbounded" />
+							<xsd:element name="total-priority-debts" type="currency-value-type"/>
+							<xsd:element name="non-priority-debts" type="non-priority-debt-type" minOccurs="0" maxOccurs="unbounded" />
+							<xsd:element name="total-non-priority-debts" type="currency-value-type"/>
+							<xsd:element name="token-payments" type="currency-value-type" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="notes" type="xsd:string" maxOccurs="unbounded" />
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>
