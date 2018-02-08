@@ -39,14 +39,14 @@
 	</monthly-income>
 	<monthly-outgoings>
 		<fixed-costs>
-			<rent>0<rent>
-			<mortgage>650.50<mortgage>
-			<secured-loans>120.52<secured-loans>
-			<council-tax-rates>75.90<council-tax-rates>
-			<other-home-contents>147.00<other-home-contents>
-			<gas>37.50<gas>
-			<electricity>22.00<electricity>
-			<other-utilities>42.68<other-utilities>
+			<rent>0.00</rent>
+			<mortgage>650.50</mortgage>
+			<secured-loans>120.52</secured-loans>
+			<council-tax-rates>75.90</council-tax-rates>
+			<other-home-contents>147.00</other-home-contents>
+			<gas>37.50</gas>
+			<electricity>22.00</electricity>
+			<other-utilities>42.68</other-utilities>
 			<total-water>16.67</total-water>
 			<total-care-health>0.00</total-care-health>
 			<total-transport-travel>172.08</total-transport-travel>
