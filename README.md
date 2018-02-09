@@ -41,7 +41,7 @@ There are plans to update the SFS Data Entry Excel file to include an export fea
 The XSD Schemas are written in [XML Schema](https://www.w3.org/2001/XMLSchema), and currently consist of the following files
 
 - [sfs-data-entry-schema.xsd](/dds/v1.1/xsd/sfs-data-entry-schema.xsd)
-- [sfs-summary-schema.xsd](/dds/v1.1/xsd/sfs-summary-schema.xsd) (Coming soon)
+- [sfs-summary-schema.xsd](/dds/v1.1/xsd/sfs-summary-schema.xsd)
 
 ### JSON Schemas
 
