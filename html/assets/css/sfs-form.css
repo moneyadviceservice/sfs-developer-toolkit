@@ -413,6 +413,7 @@ body.screen .sfs-form .small-text {
 
 .sfs__whitebox {
   position: relative;
+  margin-top: 0.2em;
 }
 
 .sfs__whitebox:before {
@@ -434,6 +435,10 @@ body.screen .sfs-form .small-text {
   top: 0.05em;
   left: 0;
   margin-left: 0.5em;
+}
+
+.sfs__whitebox--inline {
+  float: right;
 }
 
 .sfs__table {
