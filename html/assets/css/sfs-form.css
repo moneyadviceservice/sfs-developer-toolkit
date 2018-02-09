@@ -283,6 +283,10 @@ body.screen .sfs-form {
   margin-right: 3em;
 }
 
+.sfs__row--no-border {
+  border-bottom: none;
+}
+
 .sfs__logo-wrap {
   /* hasLayout fix for < IE8 */
 }
