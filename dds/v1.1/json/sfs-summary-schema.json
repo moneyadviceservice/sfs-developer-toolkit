@@ -6,11 +6,11 @@
 		"housing-tenure-type": {
 			"type": "string",
 			"enum": [
-				"Owner", 
-				"Mortgage", 
-				"Living with parents", 
-				"Tenant - private sector", 
-				"Tenant - social", 
+				"Owner",
+				"Mortgage",
+				"Living with parents",
+				"Tenant - private sector",
+				"Tenant - social",
 				"other"
 			]
 		},
@@ -29,7 +29,7 @@
 			]
 		},
 		"currency-value-type": {
-			"type": "number", 
+			"type": "number",
 			"multipleOf": 0.01
 		},
 		"income-expenditure-type": {
@@ -45,7 +45,7 @@
 				"creditor": { "type": "string" },
 				"amount-owed": { "$ref": "#/definitions/currency-value-type" },
 				"repayment-offer": { "$ref": "#/definitions/currency-value-type" }
-			}			
+			}
 		},
 		"non-priority-debt-type": {
 			"type": "object",
@@ -54,12 +54,12 @@
 				"amount-owed": { "$ref": "#/definitions/currency-value-type" },
 				"repayment-offer": { "$ref": "#/definitions/currency-value-type" },
 				"ccj": { "type": "boolean" }
-			}			
+			}
 		}
 	},
 	"required": [
 		"client-name",
-		"client-date-of-birth", 
+		"client-date-of-birth",
 		"is-joint-application",
 		"client-address",
 		"dependent-children-under-16",
@@ -156,13 +156,13 @@
 		},
 		"overview": {
 			"type": "object",
-			"description": "Some of these values appear if other places but they are grouped together here to maintain the consistency between the structure of the schema and the structure of the SFS document",
+			"description": "Some of these values appear in other places but they are grouped together here to maintain the consistency between the structure of the schema and the structure of the SFS document",
 			"required": [
-				"total-monthly-income", 
-				"total-monthly-outgoings", 
-				"savings-contribution", 
-				"debt-admin-fee", 
-				"total-available-for-priority-debts", 
+				"total-monthly-income",
+				"total-monthly-outgoings",
+				"savings-contribution",
+				"debt-admin-fee",
+				"total-available-for-priority-debts",
 				"total-available-for-non-priority-debts"
 			],
 			"properties": {
@@ -189,7 +189,7 @@
 				"total-pensions": {"$ref": "#/definitions/currency-value-type"},
 				"total-other-income": {"$ref": "#/definitions/currency-value-type"},
 				"total-monthly-income": {"$ref": "#/definitions/currency-value-type"}
-			}		
+			}
 		},
 		"monthly-outgoings": {
 			"type": "object",
@@ -267,7 +267,7 @@
 			"required": [
 				"asset-use-considered",
 				"savings-contribution-considered"
-			],			
+			],
 			"properties": {
 				"asset-use-considered": {"type": "boolean"},
 				"savings-contribution-considered": {"type": "boolean"}
@@ -292,7 +292,7 @@
 					"items": {
 						"$ref": "#/definitions/non-priority-debt-type"
 					}
-				}, 
+				},
 				"total-non-priority-debts": {"$ref": "#/definitions/currency-value-type"},
 				"token-payments": {"$ref": "#/definitions/currency-value-type"}
 			}

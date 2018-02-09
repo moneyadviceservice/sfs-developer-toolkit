@@ -8,20 +8,21 @@
 	<link rel="stylesheet" href="assets/css/sfs-form.css">
 </head>
 
-<!-- 
-	If rendering to screen use class 'screen' 
+<!--
+	If rendering to screen use class 'screen'
 	If rendering as PDF use class 'a4'
 -->
 <body class="a4">
 
 	<div id="container">
 		<div class="sfs-form">
-			
+
 			<!--  Page 1 -->
 			<div class="sfs-page page">
-					
+
 				<div class="sfs-form__section sfs-form__section--underline">
 					<div class="sfs-col sfs-col--half">
+						<div class="sfs__row sfs__row--special-padding sfs__row no-border"></div>
 						<div class="sfs__row sfs__row--special-padding">
 							<p class="sfs__label">Name:</p>
 							<p class="sfs__text sfs__output" id="client-name"></p>
@@ -70,27 +71,16 @@
 							<p class="sfs__text sfs__output" id="vehicles"></p>
 						</div>
 						<!-- Add the class 'checked' to all applicable options -->
-						<div class="sfs__row">
+						<div class="sfs__row no-border">
 							<p class="sfs__label">Housing tenure:</p>
+						</div>
+						<div class="sfs__row">
 							<p class="sfs__checkbox" id="housing-tenure__owner">Owner</p>
 							<p class="sfs__checkbox" id="housing-tenure__mortgage">Mortgage</p>
 							<p class="sfs__checkbox" id="housing-tenure__private-tenant">Tenant – private</p>
 							<p class="sfs__checkbox" id="housing-tenure__social-tenant">Tenant – social</p>
 							<p class="sfs__checkbox" id="housing-tenure__living-with-parents">Living with parents</p>
 							<p class="sfs__checkbox" id="housing-tenure__other">Other</p>
-						</div>
-						<div class="sfs__row">
-							<div class="sfs-col sfs-col--main">
-								<p class="sfs__label">Please confirm you have considered<br>
-								(or discussed with an adviser) the use of<br>
-								any assets to make lump sum payments</p>
-							</div>
-							<!-- Add the class 'checked' to the field below -->
-							<div class="sfs-col sfs-col--side">
-								<p class="sfs__label">Tick to confirm ✔<br>
-									<span class="sfs__whitebox" id="asset-use-considered"></span>
-								</p>
-							</div>
 						</div>
 					</div>
 					<div class="sfs-col sfs-col--half">
@@ -171,11 +161,7 @@
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-outgoings">&pound;</td>
 							</tr>
 							<tr>
-								<td class="sfs__text">(Income – outgoings)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="income-minus-outgoings">&pound;</td>
-							</tr>
-							<tr>
-								<td class="sfs__text">(Savings contribution)</td>
+								<td class="sfs__text">Savings contribution</td>
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">&pound;</td>
 							</tr>
 							<tr>
@@ -225,12 +211,36 @@
 								<th class="sfs__label"></th>
 							</tr>
 							<tr>
-								<td class="sfs__text">Home and contents</td>
-							 <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-home-contents">&pound;</td>
+								<td class="sfs__text">Rent</td>
+							 <td class="sfs__table-highlight sfs__output sfs__number_box" id="rent">&pound;</td>
 							</tr>
 							<tr>
-								<td class="sfs__text">Utilities</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-utilities">&pound;</td>
+								<td class="sfs__text">Mortgage</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="mortgage">&pound;</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Other secured loans</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="secured-loans">&pound;</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Council tax / rates</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="council-tax-rates">&pound;</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Other home and contents</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-home-contents">&pound;</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Gas</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="gas">&pound;</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Electric</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="electricity">&pound;</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Other utility costs (e.g. coal, oil, calor gas)</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-utilities">&pound;</td>
 							</tr>
 							<tr>
 								<td class="sfs__text">Water</td>
@@ -265,7 +275,7 @@
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-fixed-costs">&pound;</td>
 							</tr>
 						</table>
-						
+
 						<table class="sfs__table">
 							<tr>
 								<th class="sfs__label sfs__label--heading">Monthly Outgoings: Flexible Costs</th>
@@ -296,43 +306,59 @@
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-outgoings">&pound;</td>
 							</tr>
 						</table>
-						
-						<table class="sfs__table">
-							<tr>
-								<th class="sfs__label sfs__label--heading">Savings</th>
-								<th class="sfs__label"></th>
-							</tr>
-							<tr>
-								<td class="sfs__text"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">&pound;</td>
-							</tr>
-
-							<!-- Add the class 'checked' to the field below -->
-							<tr class="sfs__label">
-								<td>Please confirm that a monthly contribution<br>
-									to savings has been considered<br>
-									(or discussed with an adviser)
-								</td>
-								<!-- Add the class 'checked' to the field below -->
-								<td>Tick to confirm ✔<br>
-									<span class="sfs__whitebox" id="savings-contribution-considered"></span>
-								</td>
-							</tr>
-						</table>
 
 					</div>
 					<div class="sfs-col sfs-col--half">
+
+						<table class="sfs__table">
+								<tr class="sfs__label">
+									<td class="small-text">Please confirm you have considered (or <br>
+										discussed with an adviser) the use of any<br>
+										assets to make lump sum payments
+									</td>
+									<td class="small-text">&nbsp;Tick to<br>confirm ✔<br>
+									<!-- Add the class 'checked' to the field below -->
+										<span class="sfs__whitebox" id="asset-use-considered"></span>
+									</td>
+								</tr>
+						</table>
+
+						<table class="sfs__table">
+							<div class="sfs__row">
+								<tr class="sfs__label">
+									<td class="small-text">Please confirm that a monthly contribution<br>
+										to savings has been considered<br>
+										(or discussed with an adviser)
+									</td>
+									<td class="small-text">&nbsp;Tick to<br>confirm ✔<br>
+									<!-- Add the class 'checked' to the field below -->
+										<span class="sfs__whitebox" id="savings-contribution-considered"></span>
+									</td>
+								</tr>
+							</div>
+						</table>
+
 						<div class="sfs__row extra-padding--top">
 							<p class="sfs__label">Additional notes (e.g. reasons for debt, circumstances,<br>temporary situations)</p>
 						</div>
 
 						<!--  Each note should be wrapped in this HTML -->
 						<div class="sfs__row sfs__output sfs__note">
-							<p class="sfs__text"><strong>Employment: </strong> Made redundant in June 2014 and was out of work for 6 months.</p>
+							<p class="sfs__text sfs__output">e.g. Made redundant in June 2014 and was out of work
+							for 6 months</p>
 						</div>
 
-						<div class="sfs__text-block">
-							<p class="sfs__text"></p>
+						<div class="sfs__row sfs__output sfs__note">
+							<p class="sfs__text sfs__output">e.g. Communications and leisure: Mobile phone –
+							client has multiple family members abroad</p>
+						</div>
+
+						<div class="sfs__note">
+						</div>
+
+						<div class="sfs__text-block sfs__text-block--short">
+							<p class="sfs__text">
+							</p>
 						</div>
 					</div>
 				</div>
@@ -565,15 +591,15 @@
 							</tr>
 							<tr>
 								<td class="sfs__text--italic sfs__text--right sfs__text--right-pad" colspan="3">
-								(tick if you have continued on next page) 
-								
+								(tick if you have continued on next page)
+
 								<!-- Add the class 'checked' here if required -->
 								<span class="sfs__whitebox sfs__whitebox--inline"></span>
 							</td>
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label sfs__text--right">Total priority debts</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box">&pound;0.00</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-priority-debts"></td>
 							</tr>
 						</table>
 					</div>
@@ -837,7 +863,7 @@
 							</tr>
 							<tr class="sfs__total">
 								<td class="sfs__label sfs__text--right">Total non-priority debts</td>
-								<td class="sfs__table-highlight"></td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-non-priority-debts"></td>
 							</tr>
 							<tr>
 								<td class="sfs__text" colspan="3">Token Payments</td>
@@ -856,557 +882,6 @@
 
 				</div>
 			</div>
-
-			<!-- Page 3 -->
-			<div class="sfs-page page">
-				<div class="sfs-form__section sfs-form__section--summary">
-					<div class="sfs-col sfs-col--half">
-						<p class="heading--large">Summary version</p>
-					</div>
-					<div class="sfs-col sfs-col--half">
-						<div class="sfs__logo-wrap">
-							<img class="sfs__logo" src="assets/images/sfs-logo.png" />
-						</div>
-					</div>
-					<div class="sfs-col sfs-col--full">
-						<p class="sfs__label sfs__label--heading">Debts <span class="sfs__text sfs__text--italic">(continued)</span></p>
-					</div>
-					<div class="sfs-col sfs-col--full"></div>
-					<div class="sfs-col sfs-col--half">
-						<p class="sfs__label sfs__label--heading">Priority Debts</p>
-						<table class="sfs__table sfs__table--priority">
-							<tr>
-								<th class="sfs__label">Creditor</th>
-								<th class="sfs__label sfs__text--col-2">Owed (£)</th>
-								<th class="sfs__label sfs__text--col-3">Offer</th>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output">Example credit organisation</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box">&pound;0.00</td>
-								<td class="sfs__text sfs__text--col-3 sfs__output">&pound;0.00</td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output"></td>
-							</tr>
-							<tr class="sfs__total first">
-								<td class="sfs__label sfs__text--right">Total priority debts</td>
-								<td class="sfs__table-highlight"></td>
-								<td class="sfs__text--col-3"></td>
-							</tr>
-						</table>
-					</div>
-					<div class="sfs-col sfs-col--half">
-						<p class="sfs__label sfs__label--heading">Non-Priority Debts</p>
-						<table class="sfs__table sfs__table--non-priority">
-							<tr>
-								<th class="sfs__label">Creditor</th>
-								<th class="sfs__label sfs__text--col-2">Owed (£)</th>
-								<th class="sfs__label sfs__text--col-3">CCJ</th>
-								<th class="sfs__label sfs__text--col-4">Offer</th>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output">Example credit organisation</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box">&pound;0.00</td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong">Y</td>
-								<td class="sfs__text sfs__text--col-4 sfs__output">&pound;0.00</td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-							<tr>
-								<td class="sfs__text sfs__output"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-								<td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong"></td>
-								<td class="sfs__text sfs__text--col-4 sfs__output"></td>
-							</tr>
-
-							<tr class="sfs__total first">
-								<td class="sfs__label sfs__text--right">Total non-priority debts</td>
-								<td class="sfs__table-highlight"></td>
-								<td class="sfs__text--col-3"></td>
-								<td class="sfs__text--col-4"></td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Page 4 -->
-			<div class="sfs-page page">
-				<div class="sfs-form__section">
-					<div class="sfs-col sfs-col--full">
-						<div class="sfs__row sfs__row--special-padding-2">
-							<p class="sfs__label">Additional notes (e.g. reasons for debt, circumstances, temporary situations)</p>
-						</div>
-
-						<div class="sfs__row sfs__output sfs__note">
-							<p class="sfs__text">e.g <strong>Communications and leisure:</strong> Mobile phone - client has multiple and more words here Mobile phone - client has multiple and more words here Mobile phone - client has multiple and more words here Mobile phone - client has multiple and more words here.</p>
-						</div>
-
-						<div class="sfs__text-block sfs__text-block--full-page">
-							<p class="sfs__text"></p>
-						</div>
-
-						<div class="sfs__signature-box">
-							<p>This financial statement is an accurate record of the information provided.</p>
-							<p class="sfs__label sfs__sign">Signed:</p>
-							<p class="sfs__label sfs__date">Date:</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</div>
 </body>

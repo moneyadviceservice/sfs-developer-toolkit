@@ -150,6 +150,11 @@ body.a4 .sfs-form {
   font-size: 9.5px;
 }
 
+/* For small text */
+body.a4 .sfs-form .small-text {
+  font-size: 7.5px;
+}
+
 /*====================================*
   For outout to screen
 \*====================================*/
@@ -165,6 +170,11 @@ body.screen .page {
 }
 body.screen .sfs-form {
   font-size: 16px;
+}
+
+/* For small text */
+body.screen .sfs-form .small-text {
+  font-size: 14px;
 }
 
 /*====================================*
@@ -283,10 +293,6 @@ body.screen .sfs-form {
   margin-right: 3em;
 }
 
-.sfs__row--no-border {
-  border-bottom: none;
-}
-
 .sfs__logo-wrap {
   /* hasLayout fix for < IE8 */
 }
@@ -333,6 +339,10 @@ body.screen .sfs-form {
   background-image: linear-gradient(transparent 95%, #b7b9c2 5%);
   background-size: 1.4em 1.4em;
   height: 43em;
+}
+
+.sfs__text-block--short {
+  height: 38em;
 }
 
 .sfs__text-block--full-page {
