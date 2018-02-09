@@ -22,6 +22,7 @@
 					
 				<div class="sfs-form__section sfs-form__section--underline">
 					<div class="sfs-col sfs-col--half">
+						<div class="sfs__row sfs__row--special-padding sfs__row no-border"></div>
 						<div class="sfs__row sfs__row--special-padding">
 							<p class="sfs__label">Name:</p>
 							<p class="sfs__text sfs__output" id="client-name">{{ $sfs['client-name'] }}</p>
@@ -82,19 +83,6 @@
 							<p class="sfs__checkbox{{ $sfs['housing-tenure'] == 'Tenant - social' ? ' checked' : '' }}" id="housing-tenure__social-tenant">Tenant – social</p>
 							<p class="sfs__checkbox{{ $sfs['housing-tenure'] == 'Living with parents' ? ' checked' : '' }}" id="housing-tenure__living-with-parents">Living with parents</p>
 							<p class="sfs__checkbox{{ $sfs['housing-tenure'] == 'Other' ? ' checked' : '' }}" id="housing-tenure__other">Other</p>
-						</div>
-						<div class="sfs__row">
-							<div class="sfs-col sfs-col--main">
-								<p class="sfs__label">Please confirm you have considered<br>
-								(or discussed with an adviser) the use of<br>
-								any assets to make lump sum payments</p>
-							</div>
-							<!-- Add the class 'checked' to the field below -->
-							<div class="sfs-col sfs-col--side">
-								<p class="sfs__label">Tick to confirm ✔<br>
-									<span class="sfs__whitebox{{ $sfs['asset-use-considered'] ? ' checked' : '' }}" id="asset-use-considered"></span>
-								</p>
-							</div>
 						</div>
 					</div>
 					<div class="sfs-col sfs-col--half">
@@ -179,13 +167,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td class="sfs__text">(Income – outgoings)</td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="income-minus-outgoings">
-									&pound;{{ number_format($sfs['overview']['income-minus-outgoings'], 2) }}
-								</td>
-							</tr>
-							<tr>
-								<td class="sfs__text">(Savings contribution)</td>
+								<td class="sfs__text">Savings contribution</td>
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">
 									&pound;{{ number_format($sfs['overview']['savings-contribution'], 2) }}
 								</td>
@@ -264,6 +246,56 @@
 									&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['total-utilities'], 2) }}
 								</td>
 							</tr>
+
+							<tr>
+								<td class="sfs__text">Rent</td>
+							 	<td class="sfs__table-highlight sfs__output sfs__number_box" id="rent">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['rent'], 2) }}
+							 	</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Mortgage</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="mortgage">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['mortgage'], 2) }}	
+								</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Other secured loans</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="secured-loans">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['secured-loans'], 2) }}		
+								</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Council tax / rates</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="council-tax-rates">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['council-tax-rates'], 2) }}	
+								</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Other home and contents</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-home-contents">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['other-home-contents'], 2) }}					
+								</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Gas</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="gas">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['gas'], 2) }}								
+								</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Electric</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="electricity">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['electricity'], 2) }}	
+								</td>
+							</tr>
+							<tr>
+								<td class="sfs__text">Other utility costs (e.g. coal, oil, calor gas)</td>
+								<td class="sfs__table-highlight sfs__output sfs__number_box" id="other-utilities">
+							 		&pound;{{ number_format($sfs['monthly-outgoings']['fixed-costs']['other-utilities'], 2) }}
+								</td>
+							</tr>
+
 							<tr>
 								<td class="sfs__text">Water</td>
 								<td class="sfs__table-highlight sfs__output sfs__number_box" id="total-water">
@@ -355,33 +387,39 @@
 							</tr>
 						</table>
 						
-						<table class="sfs__table">
-							<tr>
-								<th class="sfs__label sfs__label--heading">Savings</th>
-								<th class="sfs__label"></th>
-							</tr>
-							<tr>
-								<td class="sfs__text"></td>
-								<td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution">
-									&pound;{{ number_format($sfs['savings']['savings-contribution'], 2) }}
-								</td>
-							</tr>
-
-							<!-- Add the class 'checked' to the field below -->
-							<tr class="sfs__label">
-								<td>Please confirm that a monthly contribution<br>
-									to savings has been considered<br>
-									(or discussed with an adviser)
-								</td>
-								<!-- Add the class 'checked' to the field below -->
-								<td>Tick to confirm ✔<br>
-									<span class="sfs__whitebox{{ $sfs['savings']['savings-contribution-considered'] ? ' checked' : '' }}" id="savings-contribution-considered"></span>
-								</td>
-							</tr>
-						</table>
-
 					</div>
 					<div class="sfs-col sfs-col--half">
+
+						<table class="sfs__table">
+								<tr class="sfs__label">
+									<td class="small-text">Please confirm you have considered (or <br>
+										discussed with an adviser) the use of any<br>
+										assets to make lump sum payments
+									</td>
+									<td class="small-text">&nbsp;Tick to<br>confirm ✔<br>
+										<!-- Add the class 'checked' to the field below -->
+										<span class="sfs__whitebox{{ $sfs['confirmations']['asset-use-considered'] ? ' checked' : '' }}" id="asset-use-considered"></span>
+									</td>
+								</tr>
+						</table>
+
+						<table class="sfs__table">
+							<div class="sfs__row">
+								<tr class="sfs__label">
+									<td class="small-text">Please confirm that a monthly contribution<br>
+										to savings has been considered<br>
+										(or discussed with an adviser)
+									</td>
+									<td class="small-text">&nbsp;Tick to<br>confirm ✔<br>
+									<!-- Add the class 'checked' to the field below -->
+										<span class="sfs__whitebox" id="savings-contribution-considered"></span>
+										<span class="sfs__whitebox{{ $sfs['confirmations']['savings-contribution-considered'] ? ' checked' : '' }}" id="savings-contribution-considered"></span>
+									</td>
+								</tr>
+							</div>
+						</table>
+
+
 						<div class="sfs__row extra-padding--top">
 							<p class="sfs__label">Additional notes (e.g. reasons for debt, circumstances,<br>temporary situations)</p>
 						</div>
@@ -389,7 +427,7 @@
 						<?php
 							// Define the available space
 							$charsPerLine = 50;
-							$availableLines = 50;
+							$availableLines = 35;
 							$otherValueAnswers = array();
 							$moreNotes = false;
 
