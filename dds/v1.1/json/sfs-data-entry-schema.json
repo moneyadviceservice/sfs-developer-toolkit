@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Standard Financial Statement: Data Entry Schema",
+	"title": "Standard Financial Statement: Data Entry Schema: Version 1.1",
 	"type": "object",
 	"definitions": {
 		"housing-tenure-type": {
