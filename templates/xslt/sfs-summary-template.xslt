@@ -7,7 +7,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>SFS Summary</title>
-        <link rel="stylesheet" href="assets/css/sfs-form.css" />
+        <link rel="stylesheet" href="http://sfs-developer-toolkit.test/html/assets/css/sfs-form.css" />
     </head>
     <!--
         If rendering to screen use class 'screen'
@@ -142,7 +142,7 @@
                 </div>
                 <div class="sfs-col sfs-col--half">
                     <div class="sfs__logo-wrap">
-                        <img class="sfs__logo" src="assets/images/sfs-logo.png" />
+                        <img class="sfs__logo" src="http://sfs-developer-toolkit.test/html/assets/images/sfs-logo.png" />
                     </div>
                     <div class="sfs__row">
                         <p class="sfs__label">Contact/team name:</p>
