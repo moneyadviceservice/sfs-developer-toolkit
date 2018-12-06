@@ -483,17 +483,10 @@
                             </p>
 
                         </div>
-
-                        <!--  Each note should be wrapped in this HTML -->
-                        <div class="sfs__row sfs__output sfs__note">
-                            <p class="sfs__text sfs__output">e.g. Made redundant in June 2014 and was out of work
-                            for 6 months</p>
-                        </div>
-
-                        <div class="sfs__row sfs__output sfs__note">
-                            <p class="sfs__text sfs__output">e.g. Communications and leisure: Mobile phone –
-                            client has multiple family members abroad</p>
-                        </div>
+                            <xsl:call-template name="additional-notes">
+                                <xsl:with-param name="notesSelector" select="client-employment-status-other|partner-employment-status-other|housing-tenure-other|notes"></xsl:with-param>
+                                <xsl:with-param name="index" select="1" />
+                            </xsl:call-template>
 
                         <div class="sfs__note">
                         </div>

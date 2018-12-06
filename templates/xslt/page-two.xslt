@@ -17,7 +17,8 @@
                             <th class="sfs__label sfs__text--col-3">Offer</th>
                         </tr>
                             <xsl:call-template name="debts">
-                                <xsl:with-param name="total">41</xsl:with-param>
+                                <xsl:with-param name="index">1</xsl:with-param>
+                                <xsl:with-param name="total">43</xsl:with-param>
                                 <xsl:with-param name="debtType" select="debts/priority-debts"></xsl:with-param>
                             </xsl:call-template>
                         <tr>
@@ -50,7 +51,8 @@
                             <th class="sfs__label sfs__text--col-4">Offer</th>
                         </tr>
                             <xsl:call-template name="debts">
-                                <xsl:with-param name="total">41</xsl:with-param>
+                                <xsl:with-param name="index">1</xsl:with-param>
+                                <xsl:with-param name="total">42</xsl:with-param>
                                 <xsl:with-param name="debtType" select="debts/non-priority-debts"></xsl:with-param>
                             </xsl:call-template>
                         <tr>
