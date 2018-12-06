@@ -481,29 +481,22 @@
                             Additional notes (e.g. reasons for debt, circumstances,&lt;br/&gt;temporary situations)
                             </xsl:text>
                             </p>
-
-                        </div>
-                            <xsl:call-template name="additional-notes">
-                                <xsl:with-param name="notesSelector" select="client-employment-status-other|partner-employment-status-other|housing-tenure-other|notes"></xsl:with-param>
-                                <xsl:with-param name="index" select="1" />
-                            </xsl:call-template>
-
-                        <div class="sfs__note">
                         </div>
 
-                        <div class="sfs__text-block sfs__text-block--short">
-                            <p class="sfs__text">
-                            </p>
-                        </div>
+                        <!-- Note: Comment this -->
+                        <xsl:call-template name="additional-notes">
+                            <xsl:with-param name="notesSelector" select="client-employment-status-other|partner-employment-status-other|housing-tenure-other|notes"></xsl:with-param>
+                            <xsl:with-param name="index" select="1" />
+                        </xsl:call-template>
+
+						<!-- This is running off the bottom of the page -->
+                        <div class="sfs__text-block">
+							<p class="sfs__text"></p>
+						</div>
 
                     </div> <!-- End of Page 1 bottom section column 2 -->
             </div> <!-- End of Page 1 Bottom Section -->
         </div> <!-- End of Page 1-->
     </xsl:template>
-
-
-
-
-
 
 </xsl:stylesheet>
