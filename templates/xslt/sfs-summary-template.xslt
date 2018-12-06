@@ -1,25 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" encoding="utf-8" indent="yes" />
+
     <xsl:include href="helpers/checkboxes.xslt"/>
     <xsl:include href="helpers/debts.xslt"/>
+    <xsl:include href="helpers/notes.xslt"/>
     <xsl:include href="page-one.xslt"/>
     <xsl:include href="page-two.xslt"/>
     <xsl:include href="page-three.xslt"/>
     <xsl:include href="page-four.xslt"/>
 
-    <!-- <xsl:variable name="notes-row-index" />
-    <xsl:variable name="extra-notes-page" />
-    <xsl:variable name="extra-debts-page" /> -->
+    <!-- Define space available for displaying debts -->
+    <xsl:variable name="priority-debts-on-page-2" select="42" />
+    <xsl:variable name="non-priority-debts-on-page-2" select="43" />
+
+    <!-- Define the number of debts in the current statement -->
+    <xsl:variable name="total-priority-debts">
+        <xsl:value-of select="count(/root/debts/priority-debts)" />
+    </xsl:variable>
+    <xsl:variable name="total-non-priority-debts">
+        <xsl:value-of select="count(/root/debts/non-priority-debts)" />
+    </xsl:variable>
+
+    <!-- Deine whether or not page 3 is required for displaying further debts-->
+    <xsl:variable name="page-3-required">
+        <xsl:choose>
+            <xsl:when test="$total-priority-debts &gt; $priority-debts-on-page-2 or $total-non-priority-debts &gt; $non-priority-debts-on-page-2">y</xsl:when>
+            <xsl:otherwise>n</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+
+    <!-- Define the xPath to fetch everything we will consider a 'note' -->
+    <xsl:variable name="notes-xpath" select="/root/client-employment-status-other|/root/notes" />
+
+    <!-- Define the number of rows available for displaying notes on page one -->
+    <xsl:variable name="available-rows-page-1" select="32" />
+
+    <!-- Define the note row length on page one -->
+    <xsl:variable name="note-row-length-page-1" select="50" />
+
+    <!-- Define the number of notes -->
+    <xsl:variable name="total-note-count">
+        <xsl:value-of select="count($notes-xpath)" />
+    </xsl:variable>
+
+    <!-- Define how many rows will be used up outputting the notes on page one -->
+    <xsl:variable name="rows-needed-for-all-notes">
+        <xsl:call-template name="count-note-rows">
+            <xsl:with-param name="index" select="1" />
+            <xsl:with-param name="total-rows" select="0" />
+        </xsl:call-template>
+    </xsl:variable>
+
+    <!-- Deine whether or not page 4 is required for displaying further notes-->
+    <xsl:variable name="page-4-required">
+        <xsl:choose>
+            <xsl:when test="$rows-needed-for-all-notes &gt; $available-rows-page-1">y</xsl:when>
+            <xsl:otherwise>n</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+
+    <!--
+        If page 4 is required we need to know how many notes we're going to put
+        on page one so we know where to start when we output the rest to page 4
+     -->
+    <xsl:variable name="page-1-note-count">
+        <xsl:choose>
+            <xsl:when test="$page-4-required = 'y'">
+                <xsl:call-template name="count-page-1-notes">
+                    <xsl:with-param name="index" select="1" />
+                    <xsl:with-param name="available-rows" select="$available-rows-page-1" />
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$total-note-count" />
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+
+    <!-- Define the loop end for page 4 (if needed) -->
+    <xsl:variable name="page-4-note-count">
+        <xsl:value-of select="$total-note-count" />
+    </xsl:variable>
 
 
-    <!-- Set the running total for the notes -->
-    <xsl:template name="set-notes-index">
-        <xsl:param name="index" />
-        <xsl:param name="total" />
-        <xsl:variable name="notes-index" select="$index" />
-        <xsl:variable name="notes-total" select="$total" />
-    </xsl:template>
+
 
 
     <xsl:template name="sfs-summary" match="/root">
@@ -32,119 +97,36 @@
             <link rel="stylesheet" href="http://sfs-developer-toolkit.test/html/assets/css/sfs-form.css" />
         </head>
         <!--
-            If rendering to screen use class 'screen'
-            If rendering as PDF use class 'a4'
+            If rendering to screen use class 'screen' on body element
+            If rendering as PDF use class 'a4' on body element
         -->
         <body class="screen">
             <div id="container">
                 <div class="sfs-form">
+
+                    note-row-length-page-1: <xsl:value-of select="$note-row-length-page-1" /><br />
+                    total-note-count: <xsl:value-of select="$total-note-count" /><br />
+                    rows-needed-for-all-notes: <xsl:value-of select="$rows-needed-for-all-notes" /><br />
+                    page-4-required: <xsl:value-of select="$page-4-required" /><br />
+                    page-1-note-count: <xsl:value-of select="$page-1-note-count" /><br />
+                    page-4-note-count: <xsl:value-of select="$page-4-note-count" /><br />
+
                     <xsl:call-template name="page-one" />
                     <xsl:call-template name="page-two" />
 
-                    <!-- Need to know if we need to include page 3 -->
-                    <xsl:call-template name="page-three" />
+                    <!-- If we have more debts than can fit on to page two include page three -->
+                    <xsl:if test="$page-3-required = 'y'">
+                        <xsl:call-template name="page-three" />
+                    </xsl:if>
 
-                    <xsl:call-template name="additional-notes-extra-page">
-                        <xsl:with-param name="notesSelector" select="client-employment-status-other|partner-employment-status-other|housing-tenure-other|notes"></xsl:with-param>
-                    </xsl:call-template>
+                    <!-- If we have more nores than can fit on page one include page four -->
+                    <xsl:if test="$page-4-required = 'y'">
+                        <xsl:call-template name="page-four" />
+                    </xsl:if>
                 </div>
             </div>
         </body>
         </html>
     </xsl:template>
-
-
-
-
-    <!--  Note: Watch the indentation below - need to keet this as readable as possible -->
-
-
-<xsl:template name="additional-notes">
-    <xsl:param name="index" />
-    <xsl:param name="notesSelector" />
-    <xsl:param name="available-rows" select ="35"/>
-    <xsl:param name="charsPerLine" select ="50"/>
-    <xsl:param name="total-number-of-notes" select="count($notesSelector)"/>
-
-    <!-- get string length -->
-    <xsl:variable name="note-rows" select="ceiling(string-length($notesSelector[$index]) div $charsPerLine)" />
-
-    <!-- Check for sufficient space for this note -->
-    <xsl:choose>
-        <xsl:when test="($available-rows - $note-rows) &gt; 0 ">
-
-            <!-- Ignore empty nodes -->
-            <xsl:if test="$notesSelector[$index] != ''">
-
-                <div class="sfs__row sfs__output sfs__note">
-                    <p class="sfs__text sfs__output">
-                    <!-- <xsl:value-of select="$index" />) -->
-                    <xsl:choose>
-                        <xsl:when test="$notesSelector[$index][local-name()= 'client-employment-status-other']">
-                            Employment other:
-                        </xsl:when>
-                        <xsl:when test="$notesSelector[$index][local-name()= 'partner-employment-status-other']">
-                            Partner's employment other:
-                        </xsl:when>
-                        <xsl:when test="$notesSelector[$index][local-name()= 'housing-tenure-other']">
-                            Housing tenure other:
-                        </xsl:when>
-                    </xsl:choose>
-                    <xsl:value-of select="$notesSelector[$index]"/></p>
-                </div>
-            </xsl:if>
-
-            <xsl:if test="not($index = $total-number-of-notes)">
-                <xsl:call-template name="additional-notes">
-                    <xsl:with-param name="index" select="$index + 1" />
-                    <xsl:with-param name="available-rows" select="$available-rows - $note-rows" />
-                    <xsl:with-param name="notesSelector" select="$notesSelector" />
-                </xsl:call-template>
-            </xsl:if>
-        </xsl:when>
-
-        <!-- If we have no more room -->
-        <xsl:otherwise>
-
-            Store this: <xsl:value-of select="$index"/>
-
-            <!-- <xsl:call-template name="set-notes-index">
-                <xsl:with-param name="index" select="$index" />
-                <xsl:with-param name="total" select="$total-number-of-notes" />
-            </xsl:call-template> -->
-
-        </xsl:otherwise>
-    </xsl:choose>
-</xsl:template>
-
-    <xsl:template name="additional-notes-extra-page">
-        <xsl:param name="index" select="1" />
-        <xsl:param name="notesSelector" />
-        <xsl:param name="available-rows" select ="43"/>
-        <xsl:param name="charsPerLine" select ="50"/>
-        <xsl:param name="remaining-rows"/>
-        <xsl:param name="total-number-of-notes" select="count($notesSelector)"/>
-
-         <!-- get string length -->
-        <xsl:variable name="note-rows" select="ceiling(string-length($notesSelector[$index]) div $charsPerLine)" />
-        <xsl:choose>
-        <xsl:when test="($available-rows - $note-rows) &lt;= 0 ">
-            <xsl:call-template name="page-four">
-                <xsl:with-param name="notes-row-index" select="$index" />
-            </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:if test="not($index = $total-number-of-notes)">
-                    <xsl:call-template name="additional-notes-extra-page">
-                        <xsl:with-param name="index" select="$index + 1" />
-                        <xsl:with-param name="available-rows" select="$available-rows - $note-rows" />
-                        <xsl:with-param name="notesSelector" select="$notesSelector" />
-                    </xsl:call-template>
-            </xsl:if>
-        </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-
 
 </xsl:stylesheet>

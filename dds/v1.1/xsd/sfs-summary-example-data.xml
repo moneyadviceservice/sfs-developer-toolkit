@@ -17,7 +17,7 @@
 	<client-employment-status>Full-time</client-employment-status>
 	<client-employment-status>Self-employed</client-employment-status>
 	<client-employment-status>Other</client-employment-status>
-	<client-employment-status-other>Director of own company</client-employment-status-other>
+	<client-employment-status-other>Director of own company and this is some more text to make this run over two lines</client-employment-status-other>
 	<partner-employment-status>Part-time</partner-employment-status>
 	<partner-employment-status>Self-employed</partner-employment-status>
 	<partner-employment-status>Other</partner-employment-status>
