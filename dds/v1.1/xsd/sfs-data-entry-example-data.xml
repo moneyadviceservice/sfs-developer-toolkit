@@ -21,7 +21,7 @@
   <asset-use-considered>true</asset-use-considered>
   <overview>
     <total-monthly-income>123.45</total-monthly-income>
-    <total-monthly-outgoings>123.45</total-monthly-outgoings>
+    <total-monthly-outgoings>1123.45</total-monthly-outgoings>
     <income-minus-outgoings>123.45</income-minus-outgoings>
     <savings-contribution>123.45</savings-contribution>
     <debt-admin-fee>123.45</debt-admin-fee>
@@ -31,185 +31,185 @@
   <monthly-income>
     <earnings>
       <client-salary-or-wages>
-        <monthly-amount>123.45</monthly-amount>
-        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        <monthly-amount>1123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit vhjfbv djhfvdj vbfhjvb fhjvbjfhbvfhj</notes>
       </client-salary-or-wages>
       <partner-salary-or-wages>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1223.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </partner-salary-or-wages>
       <other-earnings>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1233.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </other-earnings>
-      <total-earnings>123.45</total-earnings>
+      <total-earnings>1253.45</total-earnings>
     </earnings>
     <benefits>
       <tax-credits-universal-credit>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1253.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </tax-credits-universal-credit>
       <jobseekers-allowance-income-based>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1263.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </jobseekers-allowance-income-based>
       <jobseekers-allowance-contribution-based>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1273.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </jobseekers-allowance-contribution-based>
       <income-support>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1283.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </income-support>
       <working-tax-credit>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1293.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </working-tax-credit>
       <child-tax-credit>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1231.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </child-tax-credit>
       <child-benefit>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1232.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </child-benefit>
       <employment-support-allowance>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1233.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </employment-support-allowance>
       <disability-benefits>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1234.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </disability-benefits>
       <carers-allowance>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1235.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </carers-allowance>
       <local-housing-allowance>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1236.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </local-housing-allowance>
       <council-tax-support>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1237.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </council-tax-support>
       <other-benefits>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1288.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </other-benefits>
-      <total-benefits>123.45</total-benefits>
+      <total-benefits>1239.45</total-benefits>
     </benefits>
     <pensions>
       <state-pensions>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>1123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </state-pensions>
       <private-work-pensions>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>2123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </private-work-pensions>
       <pension-credit>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>3123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </pension-credit>
       <other-pensions>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>423.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </other-pensions>
-      <total-pensions>123.45</total-pensions>
+      <total-pensions>5123.45</total-pensions>
     </pensions>
     <other-income>
       <maintenance-child-support>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>6123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </maintenance-child-support>
       <boarders-lodgers>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>7123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </boarders-lodgers>
       <non-dependants-contributions>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>8123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </non-dependants-contributions>
       <student-loans-grants>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>9123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </student-loans-grants>
       <other-other-income>
-        <monthly-amount>123.45</monthly-amount>
+        <monthly-amount>10123.45</monthly-amount>
         <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
       </other-other-income>
-      <total-other-income>123.45</total-other-income>
+      <total-other-income>1213.45</total-other-income>
     </other-income>
-    <total-monthly-income>123.45</total-monthly-income>
+    <total-monthly-income>1223.45</total-monthly-income>
   </monthly-income>
   <monthly-outgoings>
     <fixed-costs>
       <home-contents>
         <rent>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1233.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </rent>
         <ground-rent-service-charges>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1243.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </ground-rent-service-charges>
         <mortgage>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1253.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </mortgage>
         <mortgage-endowment>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1263.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </mortgage-endowment>
         <secured-loans>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1273.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </secured-loans>
         <council-tax-rates>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1283.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </council-tax-rates>
         <appliance-furniture-rental>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1293.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </appliance-furniture-rental>
         <tv-licence>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>121.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </tv-licence>
         <other-home-contents>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>12.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </other-home-contents>
-        <total-home-contents>123.45</total-home-contents>
+        <total-home-contents>13.45</total-home-contents>
       </home-contents>
       <utilities>
         <gas>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>12.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </gas>
         <electricity>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>13.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </electricity>
         <other-utilities>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>13.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </other-utilities>
         <other-utilities-expenditure>
           <monthly-amount>123.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </other-utilities-expenditure>
-        <total-utilities>123.45</total-utilities>
+        <total-utilities>1.45</total-utilities>
       </utilities>
       <water>
         <water-supply>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>2.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </water-supply>
         <water-waste>
-          <monthly-amount>123.45</monthly-amount>
+          <monthly-amount>1.45</monthly-amount>
           <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
         </water-waste>
         <total-water>123.45</total-water>
@@ -438,7 +438,7 @@
       </personal>
       <total-flexible-costs>123.45</total-flexible-costs>
     </flexible-costs>
-    <total-monthly-outgoings>123.45</total-monthly-outgoings>
+    <total-monthly-outgoings>13.45</total-monthly-outgoings>
   </monthly-outgoings>
   <savings>
     <savings-contribution>123.45</savings-contribution>
@@ -451,7 +451,283 @@
     </debt-admin-fee>
     <total-available-for-priority-debts>123.45</total-available-for-priority-debts>
     <priority-debts>
-      <creditor>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </creditor>
+      <creditor>RSB</creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+    <priority-debts>
+      <creditor>Satander </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+    <priority-debts>
+      <creditor>A bank </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+    <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+    <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+        <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+            <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+            <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+            <priority-debts>
+      <creditor>HSBC </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+            <priority-debts>
+      <creditor>last one </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+              <priority-debts>
+      <creditor>last last one </creditor>
       <amount-owed>123.45</amount-owed>
       <repayment-offer>123.45</repayment-offer>
       <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
@@ -460,7 +736,7 @@
     <total-priority-debt-offers>123.45</total-priority-debt-offers>
     <total-available-for-non-priority-debts>123.45</total-available-for-non-priority-debts>
     <non-priority-debts>
-      <creditor>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </creditor>
+      <creditor>A bank </creditor>
       <amount-owed>123.45</amount-owed>
       <repayment-offer>123.45</repayment-offer>
       <ccj>true</ccj>

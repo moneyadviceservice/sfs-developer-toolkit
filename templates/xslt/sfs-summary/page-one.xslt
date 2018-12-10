@@ -207,7 +207,7 @@
                     <!-- Add the class 'checked to all applicable options' -->
                     <div class="sfs__row">
                         <p class="sfs__label">Partner's employment:</p>
-                                                <xsl:call-template name="check-box">
+                        <xsl:call-template name="check-box">
                             <xsl:with-param name="field-id">partner-employment-status__full-time</xsl:with-param>
                             <xsl:with-param name="field-label">Full-time</xsl:with-param>
                             <xsl:with-param name="field-value" select="client-employment-status" />
@@ -303,12 +303,13 @@
                                 <th class="sfs__label"></th>
                             </tr>
                             <tr>
+                              <monthly-income>
                                 <td class="sfs__text">Earnings</td>
-                                <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-earnings">£<xsl:value-of select="monthly-income/total-earnings" /></td>
+                                <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-earnings">£</td>
                             </tr>
                             <tr>
                                 <td class="sfs__text">Benefits and tax credits</td>
-                                <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-benefits">£<xsl:value-of select="monthly-income/total-benefits" /></td>
+                                <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-benefits">£</td>
                             </tr>
                             <tr>
                                 <td class="sfs__text">Pensions</td>
@@ -441,7 +442,7 @@
                                         Tick to&lt;br/&gt;confirm ✔&lt;br/&gt;
                                     </xsl:text>
                                     <!-- Add the class 'checked' to the field below -->
-                                        <span class="sfs__whitebox " id="asset-use-considered">
+                                        <span class="sfs__whitebox" id="asset-use-considered">
                                             <xsl:if test="confirmations/asset-use-considered">
                                             <xsl:attribute name="class">sfs__whitebox checked</xsl:attribute>
                                             </xsl:if>

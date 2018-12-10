@@ -25,7 +25,14 @@
                 </xsl:choose>
                 </td>
             </xsl:if>
-            <td class="sfs__text sfs__text--col-4 sfs__output"><xsl:value-of select="$debtType[number($index)]/repayment-offer"/></td>
+
+            <!-- Offer column width changes for non-priority debts -->
+            <td class="sfs__text sfs__text--col-3 sfs__output">
+                <xsl:if test="$debtType = debts/non-priority-debts">
+                    <xsl:attribute name="class">sfs__text sfs__text--col-4 sfs__output</xsl:attribute>
+                </xsl:if>
+                <xsl:value-of select="$debtType[number($index)]/repayment-offer"/>
+            </td>
         </tr>
 
         <xsl:if test="not($index = $total)">
