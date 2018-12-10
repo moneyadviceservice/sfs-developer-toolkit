@@ -2,14 +2,24 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" encoding="utf-8" indent="yes" />
 
-    <xsl:include href="helpers/checkboxes.xslt"/>
-    <xsl:include href="helpers/debts.xslt"/>
-    <xsl:include href="helpers/notes.xslt"/>
+    <!--
+        Process Includes
+    -->
+    <!-- Include the helpers -->
+    <xsl:include href="../helpers/checkboxes.xslt"/>
+    <xsl:include href="../helpers/debts.xslt"/>
+    <xsl:include href="../helpers/notes.xslt"/>
+
+    <!-- Include the pages -->
     <xsl:include href="page-one.xslt"/>
     <xsl:include href="page-two.xslt"/>
     <xsl:include href="page-three.xslt"/>
     <xsl:include href="page-four.xslt"/>
 
+
+    <!--
+        Process Variables
+    -->
     <!-- Define space available for displaying debts -->
     <xsl:variable name="priority-debts-on-page-2" select="42" />
     <xsl:variable name="non-priority-debts-on-page-2" select="43" />
@@ -84,9 +94,9 @@
     </xsl:variable>
 
 
-
-
-
+    <!--
+        Render HTML
+    -->
     <xsl:template name="sfs-summary" match="/root">
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html lang="en-GB" class="no-js">
@@ -104,12 +114,15 @@
             <div id="container">
                 <div class="sfs-form">
 
+                    <!-- Degubbing information / uncomment if required -->
+                    <!--
                     note-row-length-page-1: <xsl:value-of select="$note-row-length-page-1" /><br />
                     total-note-count: <xsl:value-of select="$total-note-count" /><br />
                     rows-needed-for-all-notes: <xsl:value-of select="$rows-needed-for-all-notes" /><br />
                     page-4-required: <xsl:value-of select="$page-4-required" /><br />
                     page-1-note-count: <xsl:value-of select="$page-1-note-count" /><br />
                     page-4-note-count: <xsl:value-of select="$page-4-note-count" /><br />
+                    -->
 
                     <xsl:call-template name="page-one" />
                     <xsl:call-template name="page-two" />

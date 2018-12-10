@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <client-name>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </client-name>
+  <client-date-of-birth>2012-12-13</client-date-of-birth>
+  <is-joint-application>true</is-joint-application>
+  <partner-name>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </partner-name>
+  <partner-date-of-birth>2012-12-13</partner-date-of-birth>
+  <client-address>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </client-address>
+  <dependent-children-under-16>1234</dependent-children-under-16>
+  <dependent-children-16-18>1234</dependent-children-16-18>
+  <other-dependents>1234</other-dependents>
+  <non-dependents>1234</non-dependents>
+  <total-number-in-household>1234</total-number-in-household>
+  <vehicles>1234</vehicles>
+  <housing-tenure>Owner</housing-tenure>
+  <housing-tenure-other>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </housing-tenure-other>
+  <client-employment-status>Full-time</client-employment-status>
+  <client-employment-status-other>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </client-employment-status-other>
+  <partner-employment-status>Full-time</partner-employment-status>
+  <partner-employment-status-other>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </partner-employment-status-other>
+  <asset-use-considered>true</asset-use-considered>
+  <overview>
+    <total-monthly-income>123.45</total-monthly-income>
+    <total-monthly-outgoings>123.45</total-monthly-outgoings>
+    <income-minus-outgoings>123.45</income-minus-outgoings>
+    <savings-contribution>123.45</savings-contribution>
+    <debt-admin-fee>123.45</debt-admin-fee>
+    <total-available-for-priority-debts>123.45</total-available-for-priority-debts>
+    <total-available-for-non-priority-debts>123.45</total-available-for-non-priority-debts>
+  </overview>
+  <monthly-income>
+    <earnings>
+      <client-salary-or-wages>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </client-salary-or-wages>
+      <partner-salary-or-wages>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </partner-salary-or-wages>
+      <other-earnings>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </other-earnings>
+      <total-earnings>123.45</total-earnings>
+    </earnings>
+    <benefits>
+      <tax-credits-universal-credit>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </tax-credits-universal-credit>
+      <jobseekers-allowance-income-based>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </jobseekers-allowance-income-based>
+      <jobseekers-allowance-contribution-based>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </jobseekers-allowance-contribution-based>
+      <income-support>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </income-support>
+      <working-tax-credit>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </working-tax-credit>
+      <child-tax-credit>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </child-tax-credit>
+      <child-benefit>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </child-benefit>
+      <employment-support-allowance>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </employment-support-allowance>
+      <disability-benefits>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </disability-benefits>
+      <carers-allowance>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </carers-allowance>
+      <local-housing-allowance>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </local-housing-allowance>
+      <council-tax-support>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </council-tax-support>
+      <other-benefits>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </other-benefits>
+      <total-benefits>123.45</total-benefits>
+    </benefits>
+    <pensions>
+      <state-pensions>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </state-pensions>
+      <private-work-pensions>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </private-work-pensions>
+      <pension-credit>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </pension-credit>
+      <other-pensions>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </other-pensions>
+      <total-pensions>123.45</total-pensions>
+    </pensions>
+    <other-income>
+      <maintenance-child-support>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </maintenance-child-support>
+      <boarders-lodgers>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </boarders-lodgers>
+      <non-dependants-contributions>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </non-dependants-contributions>
+      <student-loans-grants>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </student-loans-grants>
+      <other-other-income>
+        <monthly-amount>123.45</monthly-amount>
+        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+      </other-other-income>
+      <total-other-income>123.45</total-other-income>
+    </other-income>
+    <total-monthly-income>123.45</total-monthly-income>
+  </monthly-income>
+  <monthly-outgoings>
+    <fixed-costs>
+      <home-contents>
+        <rent>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </rent>
+        <ground-rent-service-charges>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </ground-rent-service-charges>
+        <mortgage>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </mortgage>
+        <mortgage-endowment>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </mortgage-endowment>
+        <secured-loans>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </secured-loans>
+        <council-tax-rates>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </council-tax-rates>
+        <appliance-furniture-rental>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </appliance-furniture-rental>
+        <tv-licence>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </tv-licence>
+        <other-home-contents>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-home-contents>
+        <total-home-contents>123.45</total-home-contents>
+      </home-contents>
+      <utilities>
+        <gas>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </gas>
+        <electricity>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </electricity>
+        <other-utilities>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-utilities>
+        <other-utilities-expenditure>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-utilities-expenditure>
+        <total-utilities>123.45</total-utilities>
+      </utilities>
+      <water>
+        <water-supply>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </water-supply>
+        <water-waste>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </water-waste>
+        <total-water>123.45</total-water>
+      </water>
+      <care-health>
+        <childcare-costs>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </childcare-costs>
+        <adult-care-costs>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </adult-care-costs>
+        <child-maintenance-child-support>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </child-maintenance-child-support>
+        <prescriptions-medicines>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </prescriptions-medicines>
+        <dentistry-opticians>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </dentistry-opticians>
+        <other-care-health>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-care-health>
+        <total-care-health>123.45</total-care-health>
+      </care-health>
+      <transport-travel>
+        <public-transport>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </public-transport>
+        <hire-purchase-conditional-sale-vehicle>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </hire-purchase-conditional-sale-vehicle>
+        <car-insurance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </car-insurance>
+        <road-tax>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </road-tax>
+        <mot-ongoing-maintenance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </mot-ongoing-maintenance>
+        <breakdown-cover>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </breakdown-cover>
+        <fuel-parking-toll-road-charges>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </fuel-parking-toll-road-charges>
+        <other-transport-travel>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-transport-travel>
+        <total-transport-travel>123.45</total-transport-travel>
+      </transport-travel>
+      <school>
+        <school-uniform>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </school-uniform>
+        <after-school-clubs-school-trips>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </after-school-clubs-school-trips>
+        <other-school>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-school>
+        <total-school>123.45</total-school>
+      </school>
+      <pensions-insurances>
+        <pension-payments>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </pension-payments>
+        <life-insurance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </life-insurance>
+        <mortgage-payment-protection-insurance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </mortgage-payment-protection-insurance>
+        <buildings-contents-insurance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </buildings-contents-insurance>
+        <health-insurance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </health-insurance>
+        <other-pensions-insurances>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-pensions-insurances>
+        <total-pensions-insurances>123.45</total-pensions-insurances>
+      </pensions-insurances>
+      <professional>
+        <professional-courses>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </professional-courses>
+        <union-fees>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </union-fees>
+        <professional-fees>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </professional-fees>
+        <other-professional>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-professional>
+        <total-professional>123.45</total-professional>
+      </professional>
+      <other-essential>
+        <other-essential-costs>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-essential-costs>
+        <total-other-essential>123.45</total-other-essential>
+      </other-essential>
+      <total-fixed-costs>123.45</total-fixed-costs>
+    </fixed-costs>
+    <flexible-costs>
+      <communications-leisure>
+        <home-phone-internet-tv>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </home-phone-internet-tv>
+        <mobile-phone>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </mobile-phone>
+        <hobbies-leisure-sport>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </hobbies-leisure-sport>
+        <gifts>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </gifts>
+        <pocket-money>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </pocket-money>
+        <newspapers-magazines-stationery-postage>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </newspapers-magazines-stationery-postage>
+        <other-communications-leisure>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-communications-leisure>
+        <total-communications-leisure>123.45</total-communications-leisure>
+      </communications-leisure>
+      <food-housekeeping>
+        <groceries>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </groceries>
+        <nappies-baby-items>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </nappies-baby-items>
+        <school-work-meals>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </school-work-meals>
+        <laundry-dry-cleaning>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </laundry-dry-cleaning>
+        <alcohol>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </alcohol>
+        <smoking-products>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </smoking-products>
+        <vet-bills-pet-insurance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </vet-bills-pet-insurance>
+        <house-repairs-maintenance>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </house-repairs-maintenance>
+        <other-food-housekeeping>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-food-housekeeping>
+        <total-food-housekeeping>123.45</total-food-housekeeping>
+      </food-housekeeping>
+      <personal>
+        <clothing-footwear>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </clothing-footwear>
+        <hairdressing>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </hairdressing>
+        <toiletries>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </toiletries>
+        <other-personal>
+          <monthly-amount>123.45</monthly-amount>
+          <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        </other-personal>
+        <total-personal>123.45</total-personal>
+      </personal>
+      <total-flexible-costs>123.45</total-flexible-costs>
+    </flexible-costs>
+    <total-monthly-outgoings>123.45</total-monthly-outgoings>
+  </monthly-outgoings>
+  <savings>
+    <savings-contribution>123.45</savings-contribution>
+    <savings-contribution-considered>true</savings-contribution-considered>
+  </savings>
+  <debts>
+    <debt-admin-fee>
+      <monthly-amount>123.45</monthly-amount>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </debt-admin-fee>
+    <total-available-for-priority-debts>123.45</total-available-for-priority-debts>
+    <priority-debts>
+      <creditor>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </priority-debts>
+    <total-priority-debts>123.45</total-priority-debts>
+    <total-priority-debt-offers>123.45</total-priority-debt-offers>
+    <total-available-for-non-priority-debts>123.45</total-available-for-non-priority-debts>
+    <non-priority-debts>
+      <creditor>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </creditor>
+      <amount-owed>123.45</amount-owed>
+      <repayment-offer>123.45</repayment-offer>
+      <ccj>true</ccj>
+      <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+    </non-priority-debts>
+    <total-non-priority-debts>123.45</total-non-priority-debts>
+    <token-payments>123.45</token-payments>
+  </debts>
+  <additional-notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </additional-notes>
+</root>

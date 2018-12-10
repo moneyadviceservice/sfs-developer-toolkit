@@ -5,7 +5,7 @@ $xml = new DOMDocument;
 $xml->load('dds/v1.1/xsd/sfs-summary-example-data.xml');
 
 $xsl = new DOMDocument;
-$xsl->load('templates/xslt/sfs-summary-template.xslt');
+$xsl->load('templates/xslt/sfs-summary/sfs-summary.xslt');
 
 // Configure the transformer
 $proc = new XSLTProcessor;

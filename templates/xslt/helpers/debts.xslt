@@ -5,7 +5,6 @@
     Helper template to return all
     priority and non priority debts
     -->
-
     <xsl:template name="debts">
         <xsl:param name="index"/>
         <xsl:param name="total" />
