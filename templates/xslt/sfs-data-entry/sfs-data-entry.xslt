@@ -8,7 +8,7 @@
     <!-- Include the helpers -->
     <xsl:include href="../helpers/checkboxes.xslt"/>
     <xsl:include href="../helpers/debts.xslt"/>
-    <xsl:include href="../helpers/data-entry-template-notes.xslt"/>
+    <xsl:include href="../helpers/income-expenditure.xslt"/>
 
     <!-- Include the pages -->
     <xsl:include href="page-one.xslt"/>

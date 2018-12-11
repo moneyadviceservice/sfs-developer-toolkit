@@ -19,36 +19,43 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Childcare costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="childcare-costs"><xsl:value-of select="monthly-outgoings/fixed-costs/care-health/childcare-costs/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Adult-care costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="adult-care-costs"><xsl:value-of select="monthly-outgoings/fixed-costs/care-health/adult-care-costs/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Child maintenance or child support</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="child-maintenance-child-support"><xsl:value-of select="monthly-outgoings/fixed-costs/care-health/child-maintenance-child-support/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Prescriptions and medicines</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="prescriptions-medicines"><xsl:value-of select="monthly-outgoings/fixed-costs/care-health/prescriptions-medicines/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Dentistry and opticians</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="dentistry-opticians"><xsl:value-of select="monthly-outgoings/fixed-costs/care-health/dentistry-opticians/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-care-health"><xsl:value-of select="monthly-outgoings/fixed-costs/care-health/other-care-health/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">childcare-costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Childcare costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/care-health/childcare-costs" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">adult-care-costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Adult-care costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/care-health/adult-care-costs" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">child-maintenance-child-support</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Child maintenance or child support</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/care-health/child-maintenance-child-support" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">prescriptions-medicines</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Prescriptions and medicines</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/care-health/prescriptions-medicines" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">dentistry-opticians</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Dentistry and opticians</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/care-health/dentistry-opticians" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-care-health</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/care-health/other-care-health" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total care and health costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-care-health"><xsl:value-of select="monthly-outgoings/fixed-costs/care-health/total-care-health" /></td>
@@ -66,46 +73,55 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Public transport (e.g. work, school, shopping)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="public-transport"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/public-transport/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Hire Purchase or conditional sale vehicle</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="hire-purchase-conditional-sale-vehicle"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/hire-purchase-conditional-sale-vehicle/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Car insurance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="car-insurance"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/car-insurance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Road tax</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="road-tax"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/road-tax/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">MOT and ongoing maintenance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="mot-ongoing-maintenance"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/mot-ongoing-maintenance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Breakdown cover</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="breakdown-cover"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/breakdown-cover/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Fuel, parking and toll road charges</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="fuel-parking-toll-road-charges"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/fuel-parking-toll-road-charges/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other costs (including taxis)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-transport-travel"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/other-transport-travel/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">public-transport</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Public transport (e.g. work, school, shopping)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/public-transport" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">hire-purchase-conditional-sale-vehicle</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Hire Purchase or conditional sale vehicle</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/hire-purchase-conditional-sale-vehicle" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">car-insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Car insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/car-insurance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">road-tax</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Road tax</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/road-tax" />
+                    </xsl:call-template>
+
+                     <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">mot-ongoing-maintenance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">MOT and ongoing maintenance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/mot-ongoing-maintenance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">breakdown-cover</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Breakdown cover</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/breakdown-cover" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">fuel-parking-toll-road-charges</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Fuel, parking and toll road charges</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/fuel-parking-toll-road-charges" />
+                    </xsl:call-template>
+
+                     <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-transport-travel</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other costs (including taxis)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/transport-travel/other-transport-travel" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total transport and travel costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-transport-travel"><xsl:value-of select="monthly-outgoings/fixed-costs/transport-travel/total-transport-travel" /></td>
@@ -123,21 +139,26 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">School uniform</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="school-uniform"><xsl:value-of select="monthly-outgoings/fixed-costs/school/school-uniform/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">After-school clubs and school trips</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="after-school-clubs-school-trips"><xsl:value-of select="monthly-outgoings/fixed-costs/school/after-school-clubs-school-trips/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-school"><xsl:value-of select="monthly-outgoings/fixed-costs/school/other-school/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">school-uniform</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">School uniform</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/school/school-uniform" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">after-school-clubs-school-trips</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">After-school clubs and school trips</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/school/after-school-clubs-school-trips" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-school</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/school/other-school" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total school costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-school"><xsl:value-of select="monthly-outgoings/fixed-costs/school/total-school" /></td>
@@ -155,36 +176,43 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Pension payments</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="pension-payments"><xsl:value-of select="monthly-outgoings/fixed-costs/pensions-insurances/pension-payments/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Life insurance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="life-insurance"><xsl:value-of select="monthly-outgoings/fixed-costs/pensions-insurances/life-insurance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Mortgage payment protection insurance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="mortgage-payment-protection-insurance"><xsl:value-of select="monthly-outgoings/fixed-costs/pensions-insurances/mortgage-payment-protection-insurance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Buildings and contents insurance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="buildings-contents-insurance"><xsl:value-of select="monthly-outgoings/fixed-costs/pensions-insurances/buildings-contents-insurance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Health insurance (medical or accident or dental)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="health-insurance"><xsl:value-of select="monthly-outgoings/fixed-costs/pensions-insurances/health-insurance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-pensions-insurances"><xsl:value-of select="monthly-outgoings/fixed-costs/pensions-insurances/other-pensions-insurances/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                     <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">pension-payments</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Pension payments</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/pensions-insurances/pension-payments" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">life-insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Life insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/pensions-insurances/life-insurance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">mortgage-payment-protection-insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Mortgage payment protection insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/pensions-insurances/mortgage-payment-protection-insurance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">buildings-contents-insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Buildings and contents insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/pensions-insurances/buildings-contents-insurance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">health-insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Health insurance (medical or accident or dental)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/pensions-insurances/buildings-contents-insurance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-pensions-insurances</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/pensions-insurances/other-pensions-insurances" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total pensions and insurance costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-pensions-insurances"><xsl:value-of select="monthly-outgoings/fixed-costs/pensions-insurances/total-pensions-insurances" /></td>
@@ -202,26 +230,33 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Professional courses</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="professional-courses"><xsl:value-of select="monthly-outgoings/fixed-costs/professional/professional-courses/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Union fees</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="union-fees"><xsl:value-of select="monthly-outgoings/fixed-costs/professional/union-fees/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Professional fees</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="professional-fees"><xsl:value-of select="monthly-outgoings/fixed-costs/professional/professional-fees/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-professional"><xsl:value-of select="monthly-outgoings/fixed-costs/professional/other-professional/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">professional-courses</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Professional courses</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/professional/professional-courses" />
+                    </xsl:call-template>
+
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">union-fees</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Union fees</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/professional/union-fees" />
+                    </xsl:call-template>
+
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">professional-fees</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Professional fees</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/professional/professional-fees" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-professional</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/professional/other-professional" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total professional costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-professional"><xsl:value-of select="monthly-outgoings/fixed-costs/professional/total-professional" /></td>
@@ -239,11 +274,14 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Other essential costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-essential-costs"><xsl:value-of select="monthly-outgoings/fixed-costs/other-essential/other-essential-costs/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                    <!-- TODO add all other essential costs here -->
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-essential-costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other essential costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/other-essential/other-essential-costs" />
+                    </xsl:call-template>
+
                     <tr>
                         <td class="sfs__text"></td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box"></td>

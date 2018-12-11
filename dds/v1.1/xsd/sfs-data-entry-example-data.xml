@@ -51,7 +51,7 @@
       </tax-credits-universal-credit>
       <jobseekers-allowance-income-based>
         <monthly-amount>1263.45</monthly-amount>
-        <notes>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </notes>
+        <notes>Short note </notes>
       </jobseekers-allowance-income-based>
       <jobseekers-allowance-contribution-based>
         <monthly-amount>1273.45</monthly-amount>

@@ -362,30 +362,26 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Salary or wages (take home)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="client-salary-or-wages"><xsl:value-of select="monthly-income/earnings/client-salary-or-wages/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output">
-                        <xsl:call-template name="write-finance-note">
-                                <xsl:with-param name="note" select="monthly-income/earnings/client-salary-or-wages/notes"></xsl:with-param>
+                        <xsl:call-template name="income-expenditure-row">
+                            <xsl:with-param name="income-expenditure-id">client-salary-or-wages</xsl:with-param>
+                            <xsl:with-param name="income-expenditure-title">Salary or wages (take home)</xsl:with-param>
+                            <xsl:with-param name="income-expenditure-selector" select="monthly-income/earnings/client-salary-or-wages" />
                         </xsl:call-template>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Partner salary or wages (take home)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="partner-salary-or-wages"><xsl:value-of select="monthly-income/earnings/partner-salary-or-wages/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other earnings (including self employment)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-earnings"><xsl:value-of select="monthly-income/earnings/other-earnings/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr class="sfs__total">
-                        <td class="sfs__label">Total salary and wages per month</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-earnings"><xsl:value-of select="monthly-income/earnings/total-earnings/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+                        <xsl:call-template name="income-expenditure-row">
+                            <xsl:with-param name="income-expenditure-id">partner-salary-or-wages</xsl:with-param>
+                            <xsl:with-param name="income-expenditure-title">Partner salary or wages (take home)</xsl:with-param>
+                            <xsl:with-param name="income-expenditure-selector" select="monthly-income/earnings/partner-salary-or-wages" />
+                        </xsl:call-template>
+                        <xsl:call-template name="income-expenditure-row">
+                            <xsl:with-param name="income-expenditure-id">other-earnings</xsl:with-param>
+                            <xsl:with-param name="income-expenditure-title">Other earnings (including self employment)</xsl:with-param>
+                            <xsl:with-param name="income-expenditure-selector" select="monthly-income/earnings/other-earnings" />
+                        </xsl:call-template>
+                        <tr class="sfs__total">
+                            <td class="sfs__label">Total salary and wages per month</td>
+                            <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-earnings"><xsl:value-of select="monthly-income/earnings/total-earnings" /></td>
+                            <td class="sfs__table-notes sfs__text sfs__output"></td>
+                        </tr>
                 </table>
             </div>
         </div>
@@ -398,71 +394,84 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Universal Credit</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="tax-credits-universal-credit"><xsl:value-of select="monthly-income/benefits/tax-credits-universal-credit/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Jobseeker’s Allowance (income based)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="jobseekers-allowance-income-based"><xsl:value-of select="monthly-income/benefits/jobseekers-allowance-income-based/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Jobseeker’s Allowance (contribution based)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="jobseekers-allowance-contribution-based"><xsl:value-of select="monthly-income/benefits/jobseekers-allowance-contribution-based/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Income Support</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="income-support"><xsl:value-of select="monthly-income/benefits/income-support/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Working Tax Credit</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="working-tax-credit"><xsl:value-of select="monthly-income/benefits/working-tax-credit/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Child Tax Credit</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="child-tax-credit"><xsl:value-of select="monthly-income/benefits/child-tax-credit/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Child Benefit</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="child-benefit"><xsl:value-of select="monthly-income/benefits/child-benefit/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Employment and Support Allowance or Statutory Sick Pay</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="employment-support-allowance"><xsl:value-of select="monthly-income/benefits/employment-support-allowance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Disability benefits</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="disability-benefits"><xsl:value-of select="monthly-income/benefits/disability-benefits/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Carer’s Allowance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="carers-allowance"><xsl:value-of select="monthly-income/benefits/tax-credits-universal-credit/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Local Housing Allowance / Housing Benefit</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="local-housing-allowance"><xsl:value-of select="monthly-income/benefits/carers-allowance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Council Tax support</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="council-tax-support"><xsl:value-of select="monthly-income/benefits/council-tax-support/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other benefits/tax credits (e.g. maternity benefits)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-benefits"><xsl:value-of select="monthly-income/benefits/other-benefits/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+                     <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-earnings</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Universal Credit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/tax-credits-universal-credit" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">jobseekers-allowance-income-based</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Jobseeker’s Allowance (income based)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/jobseekers-allowance-income-based" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">jobseekers-allowance-contribution-based</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Jobseeker’s Allowance (contribution based)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/jobseekers-allowance-contribution-based" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">income-support</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Income Support</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/income-support" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">working-tax-credit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Working Tax Credit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/working-tax-credit" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">child-tax-credit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Child Tax Credit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/child-tax-credit" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">child-benefit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Child Benefit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/child-benefit" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">employment-support-allowance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Employment and Support Allowance or Statutory Sick Pay</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/employment-support-allowance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">disability-benefits</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Disability benefits</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/disability-benefits" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">carers-allowance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Carer’s Allowance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/carers-allowance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">local-housing-allowance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Local Housing Allowance / Housing Benefit</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/local-housing-allowance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">council-tax-support</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Council Tax support</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/council-tax-support" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-benefits</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other benefits/tax credits (e.g. maternity benefits)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-income/benefits/other-benefits" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total benefits and tax credits per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-benefits"><xsl:value-of select="monthly-income/benefits/total-benefits" /></td>

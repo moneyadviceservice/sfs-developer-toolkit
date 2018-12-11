@@ -29,7 +29,7 @@
                 </xsl:call-template>
             </xsl:when>
 
-            <!-- No more nodes - outout the total -->
+            <!-- No more nodes - output the total -->
             <xsl:otherwise>
                 <xsl:value-of select="$running-total" />
             </xsl:otherwise>

@@ -18,46 +18,55 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Home phone, internet, TV package (including film subscriptions)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="home-phone-internet-tv"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/home-phone-internet-tv/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Mobile phone</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="mobile-phone"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/mobile-phone/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Hobbies, leisure or sport (e.g. socialising, eating out, outings, clubs, leisure courses)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="hobbies-leisure-sport"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/hobbies-leisure-sport/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Gifts (e.g. birthdays, festivals, charity donations)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="gifts"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/gifts/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Pocket money</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="pocket-money"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/pocket-money/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Newspapers, magazines, stationery and postage</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="newspapers-magazines-stationery-postage"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/newspapers-magazines-stationery-postage/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-communications-leisure"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/other-communications-leisure/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr class="sfs__total">
-                        <td class="sfs__label">Total communications and leisure costs per month</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-communications-leisure"><xsl:value-of select="monthly-outgoings/flexible-costs/communications-leisure/total-communications-leisure" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">home-phone-internet-tv</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Home phone, internet, TV package (including film subscriptions)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/home-phone-internet-tv" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">mobile-phone</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Mobile phone</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/mobile-phone" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">hobbies-leisure-sport</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Hobbies, leisure or sport (e.g. socialising, eating out, outings, clubs, leisure courses)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/hobbies-leisure-sport" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">gifts</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Gifts (e.g. birthdays, festivals, charity donations)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/gifts" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">pocket-money</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Pocket money</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/pocket-money" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">newspapers-magazines-stationery-postage</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Newspapers, magazines, stationery and postage</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/newspapers-magazines-stationery-postage" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-communications-leisure</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/other-communications-leisure" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">total-communications-leisure</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Total communications and leisure costs per month</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/communications-leisure/total-communications-leisure" />
+                    </xsl:call-template>
+
                 </table>
             </div>
         </div>
@@ -70,51 +79,61 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Groceries (e.g. food, pet food, non-alcoholic drinks, cleaning)</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="groceries"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/groceries/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Nappies and baby items</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="nappies-baby-items"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/nappies-baby-items/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">School meals and meals at work</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="school-work-meals"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/school-work-meals/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Laundry and dry cleaning</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="laundry-dry-cleaning"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/laundry-dry-cleaning/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Alcohol</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="alcohol"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/alcohol/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Smoking products</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="smoking-products"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/smoking-products/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Vet bills &amp; pet insurance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="vet-bills-pet-insurance"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/vet-bills-pet-insurance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">House repairs and maintenance</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="house-repairs-maintenance"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/house-repairs-maintenance/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-food-housekeeping"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/other-food-housekeeping/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">groceries</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Groceries (e.g. food, pet food, non-alcoholic drinks, cleaning)</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/groceries" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">nappies-baby-items</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Nappies and baby items</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/nappies-baby-items" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">school-work-meals</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">School meals and meals at work</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/school-work-meals" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">laundry-dry-cleaning</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Laundry and dry cleaning</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/laundry-dry-cleaning" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">alcohol</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Alcohol</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/alcohol" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">smoking-products</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Smoking products</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/smoking-products" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">vet-bills-pet-insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Vet bills &amp; pet insurance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/vet-bills-pet-insurance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">house-repairs-maintenance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">House repairs and maintenance</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/house-repairs-maintenance" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-food-housekeeping</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/food-housekeeping/other-food-housekeeping" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total food and housekeeping costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-food-housekeeping"><xsl:value-of select="monthly-outgoings/flexible-costs/food-housekeeping/total-food-housekeeping" /></td>
@@ -132,26 +151,31 @@
                             <th class="sfs__label">Amount(£)</th>
                             <th class="sfs__label sfs__label--heading">Notes</th>
                     </tr>
-                    <tr>
-                        <td class="sfs__text">Clothing and footwear</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="clothing-footwear"><xsl:value-of select="monthly-outgoings/flexible-costs/personal/clothing-footwear/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Hairdressing</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="hairdressing"><xsl:value-of select="monthly-outgoings/flexible-costs/personal/hairdressing/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Toiletries</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="toiletries"><xsl:value-of select="monthly-outgoings/flexible-costs/personal/toiletries/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text">Other costs</td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box" id="other-personal"><xsl:value-of select="monthly-outgoings/flexible-costs/personal/other-personal/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">clothing-footwear</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Clothing and footwear</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/personal/clothing-footwear" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">hairdressing</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Hairdressing</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/personal/hairdressing" />
+                    </xsl:call-template>
+
+                    <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">toiletries</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Toiletries</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/personal/toiletries" />
+                    </xsl:call-template>
+
+                     <xsl:call-template name="income-expenditure-row">
+                        <xsl:with-param name="income-expenditure-id">other-personal</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-title">Other costs</xsl:with-param>
+                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/flexible-costs/personal/other-personal" />
+                    </xsl:call-template>
+
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total personal costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-personal"><xsl:value-of select="monthly-outgoings/flexible-costs/personal/total-personal" /></td>
@@ -238,6 +262,7 @@
                     <tr class="sfs__total">
                         <td class="sfs__label">Total fee per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="debt-admin-fee"><xsl:value-of select="debts/debt-admin-fee/monthly-amount" /></td>
+                        <!-- TODO debt admin fee notes -->
                         <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                 </table>

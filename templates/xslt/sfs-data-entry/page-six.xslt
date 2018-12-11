@@ -18,11 +18,13 @@
                         <p class="sfs__output sfs__text--italic">
                             <strong>e.g. Communications and leisure:</strong> mobile phone – client has multiple family members abroad</p>
                     </div>
+
+                    <xsl:call-template name="income-expenditure-additional-notes">
+                    </xsl:call-template>
                     <div class="sfs__note">
                     </div>
-                    <div class="sfs__text-block sfs__text-block--full-page">
-                        <p class="sfs__text"></p>
-                    </div>
+
+
 
                     <div class="sfs__signature-box">
                         <p>This financial statement is an accurate record of the information provided.</p>
