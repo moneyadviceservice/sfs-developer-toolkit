@@ -2,9 +2,11 @@
 
 // Load the XML source
 $xml = new DOMDocument;
+// $xml->load('dds/v1.1/xsd/sfs-summary-example-data.xml');
 $xml->load('dds/v1.1/xsd/sfs-data-entry-example-data.xml');
 
 $xsl = new DOMDocument;
+// $xsl->load('templates/xslt/sfs-summary/sfs-summary.xslt');
 $xsl->load('templates/xslt/sfs-data-entry/sfs-data-entry.xslt');
 
 // Configure the transformer

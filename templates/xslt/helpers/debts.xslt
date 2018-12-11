@@ -8,16 +8,16 @@
     <xsl:template name="debts">
         <xsl:param name="index"/>
         <xsl:param name="total" />
-        <xsl:param name="debtType"/> <!--  Note: Note sure this is the best name for this property -->
+        <xsl:param name="debt-xpath"/> <!--  Note: Note sure this is the best name for this property -->
         <tr>
             <td class="sfs__text sfs__output">
-                <xsl:value-of select="$debtType[number($index)]/creditor"/> <!-- Case the index as a number -->
+                <xsl:value-of select="$debt-xpath[number($index)]/creditor"/> <!-- Case the index as a number -->
             </td>
-            <td class="sfs__table-highlight sfs__output sfs__number_box"><xsl:value-of select="$debtType[number($index)]/amount-owed"/></td>
+            <td class="sfs__table-highlight sfs__output sfs__number_box"><xsl:value-of select="$debt-xpath[number($index)]/amount-owed"/></td>
 
-            <!-- Only appear if debtType = non-priority -->
-            <xsl:if test="$debtType = debts/non-priority-debts">
-                <xsl:variable name="CCJ" select="$debtType[number($index)]/ccj"/>
+            <!-- Only appear if debt-type = non-priority -->
+            <xsl:if test="$debt-xpath = debts/non-priority-debts">
+                <xsl:variable name="CCJ" select="$debt-xpath[number($index)]/ccj"/>
                 <td class="sfs__text sfs__text--col-3 sfs__output sfs__output--strong">
                 <xsl:choose>
                     <xsl:when test="$CCJ = 'true'">Y</xsl:when>
@@ -28,10 +28,10 @@
 
             <!-- Offer column width changes for non-priority debts -->
             <td class="sfs__text sfs__text--col-3 sfs__output">
-                <xsl:if test="$debtType = debts/non-priority-debts">
+                <xsl:if test="$debt-xpath = debts/non-priority-debts">
                     <xsl:attribute name="class">sfs__text sfs__text--col-4 sfs__output</xsl:attribute>
                 </xsl:if>
-                <xsl:value-of select="$debtType[number($index)]/repayment-offer"/>
+                <xsl:value-of select="$debt-xpath[number($index)]/repayment-offer"/>
             </td>
         </tr>
 
@@ -39,7 +39,7 @@
             <xsl:call-template name="debts">
                 <xsl:with-param name="index" select="$index + 1" />
                 <xsl:with-param name="total" select="$total" />
-                <xsl:with-param name="debtType" select="$debtType" />
+                <xsl:with-param name="debt-xpath" select="$debt-xpath" />
             </xsl:call-template>
         </xsl:if>
 

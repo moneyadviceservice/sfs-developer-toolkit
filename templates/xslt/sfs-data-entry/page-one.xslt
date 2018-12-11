@@ -313,37 +313,37 @@
                     <tr>
                         <td class="sfs__label">Total income</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-income"><xsl:value-of select="overview/total-monthly-income/monthly-amount" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"> No notes defined in schema </td>
+                        <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                     <tr>
                         <td class="sfs__label">Total outgoings</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-monthly-outgoings"><xsl:value-of select="overview/total-monthly-outgoings" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output">No notes defined in schema</td>
+                        <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                     <tr>
                         <td class="sfs__text">(Income – outgoings)</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="income-minus-outgoings"><xsl:value-of select="overview/income-minus-outgoings" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output">No notes defined in schema</td>
+                        <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                     <tr>
                         <td class="sfs__text">(Savings contribution)</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="savings-contribution"><xsl:value-of select="overview/savings-contribution" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output">No notes defined in schema</td>
+                        <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                     <tr>
                         <td class="sfs__text">Debt admin fee (if applicable):</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="debt-admin-fee"><xsl:value-of select="overview/debt-admin-fee" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output">No notes defined in schema</td>
+                        <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                     <tr class="sfs__total">
                         <td class="sfs__label">Total available for priority creditors</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-priority-debts"><xsl:value-of select="overview/total-available-for-priority-debts" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output">No notes defined in schema</td>
+                        <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                     <tr class="sfs__total">
                         <td class="sfs__label">Total available for non-priority creditors</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-available-for-non-priority-debts"><xsl:value-of select="overview/total-available-for-non-priority-debts" /></td>
-                        <td class="sfs__table-notes sfs__text sfs__output">No notes defined in schema</td>
+                        <td class="sfs__table-notes sfs__text sfs__output"></td>
                     </tr>
                 </table>
             </div>

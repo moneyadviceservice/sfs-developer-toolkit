@@ -276,31 +276,25 @@
                     </tr>
 
                     <!-- TODO add all other essential costs here -->
-                    <xsl:call-template name="income-expenditure-row">
-                        <xsl:with-param name="income-expenditure-id">other-essential-costs</xsl:with-param>
-                        <xsl:with-param name="income-expenditure-title">Other essential costs</xsl:with-param>
-                        <xsl:with-param name="income-expenditure-selector" select="monthly-outgoings/fixed-costs/other-essential/other-essential-costs" />
-                    </xsl:call-template>
+                    <xsl:for-each select="$other-essential-costs-xpath[position()&lt;=$maximum-other-essential-costs]">
+                        <xsl:call-template name="income-expenditure-row">
+                            <xsl:with-param name="income-expenditure-id">other-essential-costs</xsl:with-param>
+                            <xsl:with-param name="income-expenditure-title"></xsl:with-param>
+                            <xsl:with-param name="income-expenditure-selector" select="." />
+                        </xsl:call-template>
+                    </xsl:for-each>
 
-                    <tr>
-                        <td class="sfs__text"></td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text"></td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
-                    <tr>
-                        <td class="sfs__text"></td>
-                        <td class="sfs__table-highlight sfs__output sfs__number_box"></td>
-                        <td class="sfs__table-notes sfs__text sfs__output"></td>
-                    </tr>
                     <tr class="sfs__total last">
                         <td class="sfs__label">Total other essential costs per month</td>
                         <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-other-essential"><xsl:value-of select="monthly-outgoings/fixed-costs/other-essential/total-other-essential" /></td>
                         <td class="sfs__table-notes sfs__text sfs__output"></td>
+                    </tr>
+                    <tr>
+                        <xsl:if test="$display-other-essential-costs-on-page-six = 'y'">
+                            <td></td>
+                            <td></td>
+                            <td class="sfs__text--italic sfs__text--right sfs__text--right-pad">Other essential costs are continued on page 6</td>
+                        </xsl:if>
                     </tr>
                 </table>
             </div>

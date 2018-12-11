@@ -303,7 +303,6 @@
                                 <th class="sfs__label"></th>
                             </tr>
                             <tr>
-                              <monthly-income>
                                 <td class="sfs__text">Earnings</td>
                                 <td class="sfs__table-highlight sfs__output sfs__number_box" id="total-earnings">£</td>
                             </tr>

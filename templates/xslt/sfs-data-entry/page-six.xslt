@@ -10,21 +10,15 @@
                         <p class="sfs__label sfs__label--heading">Additional notes (e.g. reasons for debt, circumstances, temporary situations)</p>
                     </div>
 
-                    <div class="sfs__row">
-                        <p class="sfs__output sfs__text--italic">
-                            <strong>e.g.</strong> Made redundant in June 2014 and was out of work for 6 months</p>
-                    </div>
-                    <div class="sfs__row">
-                        <p class="sfs__output sfs__text--italic">
-                            <strong>e.g. Communications and leisure:</strong> mobile phone – client has multiple family members abroad</p>
-                    </div>
-
+                    <!-- Display any notes from income and and expenditure which didnt fully fit in the initial note field -->
                     <xsl:call-template name="income-expenditure-additional-notes">
+                    </xsl:call-template>
+
+                    <!-- Display any other-essential-costs which didnt fully fit in the initial set of other costs rows -->
+                    <xsl:call-template name="additional-other-essential-costs">
                     </xsl:call-template>
                     <div class="sfs__note">
                     </div>
-
-
 
                     <div class="sfs__signature-box">
                         <p>This financial statement is an accurate record of the information provided.</p>

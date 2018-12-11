@@ -19,7 +19,7 @@
                             <xsl:call-template name="debts">
                                 <xsl:with-param name="index">1</xsl:with-param>
                                 <xsl:with-param name="total">43</xsl:with-param>
-                                <xsl:with-param name="debtType" select="debts/priority-debts"></xsl:with-param>
+                                <xsl:with-param name="debt-xpath" select="debts/priority-debts"></xsl:with-param>
                             </xsl:call-template>
                         <tr>
                             <td class="sfs__text--italic sfs__text--right" colspan="3">
@@ -53,7 +53,7 @@
                             <xsl:call-template name="debts">
                                 <xsl:with-param name="index">1</xsl:with-param>
                                 <xsl:with-param name="total">42</xsl:with-param>
-                                <xsl:with-param name="debtType" select="debts/non-priority-debts"></xsl:with-param>
+                                <xsl:with-param name="debt-xpath" select="debts/non-priority-debts"></xsl:with-param>
                             </xsl:call-template>
                         <tr>
                             <td class="sfs__text--italic sfs__text--right" colspan="4">

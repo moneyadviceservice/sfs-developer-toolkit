@@ -32,8 +32,33 @@
     </xsl:variable>
 
 
-    <!-- Define the note row length for each row -->
-    <xsl:variable name="note-row-length" select="55" />
+    <!-- Income and expenditures -->
+
+        <!-- Define the note row length for each row -->
+        <xsl:variable name="note-row-length" select="55" />
+
+
+    <!-- Other essential costs -->
+
+        <!-- Define the xpath for other-essential-costs -->
+        <xsl:variable name="other-essential-costs-xpath" select="root/monthly-outgoings/fixed-costs/other-essential/other-essential-costs" />
+
+        <!-- Define the number of other-costs -->
+        <xsl:variable name="other-essential-costs-count">
+            <xsl:value-of select="count($other-essential-costs-xpath)" />
+        </xsl:variable>
+
+        <!-- Deine the total number of other-essetial-costs allowed on the page -->
+        <xsl:variable name="maximum-other-essential-costs" select="6" />
+
+        <!-- Deine whether or any essential costs need to be output on the additional notes page -->
+        <xsl:variable name="display-other-essential-costs-on-page-six">
+            <xsl:choose>
+                <xsl:when test="$maximum-other-essential-costs &lt; $other-essential-costs-count">y</xsl:when>
+                <xsl:otherwise>n</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+
 
     <!--
         Render HTML
