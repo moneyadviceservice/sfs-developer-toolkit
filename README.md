@@ -70,7 +70,11 @@ Current templates include:
 - [sfs-summary-template.html](/html/sfs-summary-template.html)
 - [sfs-data-entry-template.html](/html/sfs-data-entry-template.html)
 
+## Transformation templates
+Two examples of transformation templates have been provided. 
 
+- [Laravel Blade](/templates/blade/readme.md)
+- [XSLT](/templates/xslt/readme.md)
 
  
 

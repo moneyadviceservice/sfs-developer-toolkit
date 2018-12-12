@@ -40,7 +40,7 @@
     </xsl:variable>
 
     <!-- Define the xPath to fetch everything we will consider a 'note' -->
-    <xsl:variable name="notes-xpath" select="/root/client-employment-status-other|/root/notes" />
+    <xsl:variable name="notes-xpath" select="/root/housing-tenure-other|/root/client-employment-status-other|/root/partner-employment-status-other|/root/notes" />
 
     <!-- Define the number of rows available for displaying notes on page one -->
     <xsl:variable name="available-rows-page-1" select="32" />
